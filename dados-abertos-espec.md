@@ -47,6 +47,9 @@ A partir das premissas e definições preliminares anteriores, e considerando a 
 
 	b. Forma de elaboração do arquivo em formato json (documentação legível por máquina), a partir das definições estabelecidas no processo de documentação legível por pessoas: a documentação dos metadados dos confecção do datapackage pode ser realizada pelo datapackage creator. Entretanto, essa ferramenta não exaure toda a gama necessária de descritores de metadados (datapackage creator) que a própria API do CKAN requer.
 	
+	c. Multiplicidade de fontes e formatos de dados a serem publicados no Portal de Dados Abertos (arquivos csv ou xls de emails, servidores de ftp, sítios governamentais) 
+
+	[^] _Many of the problems government confronts with technology are fundamentally about data integration: taking the disparate data sets living in a variety of locations and formats (SQL Server databases, exports from ancient ERP systems, Excel speadsheets on people’s desktops) and getting them into a place and shape where they’re actually usable._ https://daguar.github.io/2014/03/17/etl-for-america/
 
 # Especificação
 <a href="#top">(inicio)</a>

@@ -49,7 +49,6 @@ A partir das premissas e definições preliminares anteriores, e considerando a 
 	
 	c. Multiplicidade de fontes e formatos de dados a serem publicados no Portal de Dados Abertos (arquivos csv ou xls de emails, servidores de ftp, sítios governamentais) 
 
-	[^] _Many of the problems government confronts with technology are fundamentally about data integration: taking the disparate data sets living in a variety of locations and formats (SQL Server databases, exports from ancient ERP systems, Excel speadsheets on people’s desktops) and getting them into a place and shape where they’re actually usable._ https://daguar.github.io/2014/03/17/etl-for-america/
 
 # Especificação
 <a href="#top">(inicio)</a>
@@ -76,15 +75,6 @@ Essa solução deve conter ou permitir:
 
 Implementação de solução e capacitação para que custodiantes de dados realizem a confecção do documento descritivo dos metadados do conjunto de dados (datapackage.json).
 
-3. Extração e publicação: 
-
-Os custodiantes de dados dos diversos órgãos e entidades seguirão um fluxo pelo qual publicam seus conjuntos de dados abertos nos sítios governamentais respectivos.
-
-Um subsistema na DCTA/CGE deve ser implantado para rastrear e coletar tais conjuntos para atualização automática:
-
- - nos repositórios correspondentes no [github institucional da DCTA](https://github.com/dados-mg) com validação automática;
-
- - nos conjuntos de dados do [Portal de Dados Abertos (CKAN)](https://dados.mg.gov.br/);
 
 ## Obrigações/requisitos
  

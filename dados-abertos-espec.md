@@ -123,9 +123,11 @@ Um subsistema na DCTA/CGE deve ser implantado para rastrear e coletar tais conju
 
     - exemplo: https://dataedo.com/samples/html2/enterprise/#/doc/m103t3733/procurement/tables/pur-shipment-lines
 
-[data.world](https://data.world/kgarrett/covid-19-open-research-dataset)
+* [data.world](https://data.world/kgarrett/covid-19-open-research-dataset)
 
-[kaggle](https://www.kaggle.com/ajaypalsinghlo/world-happiness-report-2021)
+    - guia para edição de metadados: https://help.data.world/hc/en-us/articles/1260802115269-Custom-metadata
+
+* [kaggle](https://www.kaggle.com/ajaypalsinghlo/world-happiness-report-2021)
 
 * [dbt](https://www.getdbt.com/mrr-playbook/#!/overview)
 

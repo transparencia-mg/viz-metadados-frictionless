@@ -63,7 +63,9 @@ As atribuições em destaque salientam o papel da DCTA na concepção e implemen
 
 Dessa forma, a partir de julho de 2020, a seção de Dados Abertos do Portal da Transparência (http://www.transparencia.mg.gov.br/dados-abertos) passou a ser hospedada no  novo Portal de Dados Abertos (https://www.dados.mg.gov.br/). Com escopo mais amplo, o Portal de Dados Abertos visa ser ponto de referência para busca e acesso a dados públicos sobre quaisquer assuntos de interesse da sociedade, como saúde, educação, segurança pública, assistência social, esportes e turismo.
 
-O Portal de Dados Abertos utiliza a plataforma CKAN (Comprehensive Knowledge Analytics Network), ferramenta open source ofertada pela Open Knowledge Foundation. Além disso, com o intuito de aumentar a qualidade dos dados e metadados publicados, os conjuntos de dados desse portal são documentados conforme padrão de metadados Fricionless Data ('dados sem fricção'), uma especificação de descrição de dados legível por máquina que possibilita integrações com o CKAN e outras ferramentas, além da validação dos dados perante sua documentação.
+O Portal de Dados Abertos utiliza a plataforma CKAN (Comprehensive Knowledge Analytics Network), ferramenta open source ofertada pela Open Knowledge Foundation. Além disso, com o intuito de aumentar a qualidade dos dados e metadados publicados, os conjuntos de dados desse portal são documentados conforme padrão de metadados Fricionless Data ('dados sem fricção'), uma especificação de descrição de dados legível por máquina que possibilita integrações com o CKAN e outras ferramentas, além da validação dos dados perante sua documentação. 
+
+[^] ver trecho do Decreto Federal que trata de Compartilhamento amplo de Dados na seção [Integração/Dependências]() 
 
 ## Objetivos Estratégicos
 
@@ -175,6 +177,29 @@ Um subsistema na DCTA/CGE deve ser implantado para rastrear e coletar tais conju
 
 - permissões de rede PRODEMGE/CGE
 
+## Enquadramento nos requisitos e premissas das normas mais recentes
+
+### Lei Geral de Proteção de Dados
+
+### Decreto 10.046/2019
+
+(dispõe sobre a governança no compartilhamento de dados no âmbito da ADM Federal)
+
+> Seção II: Do compartilhamento amplo de dados 
+
+> Art. 11.  O compartilhamento amplo de dados dispensa autorização prévia pelo gestor de dados e será realizado pelos canais existentes para dados abertos e para transparência ativa, na forma da legislação.
+
+> § 1º  Na hipótese de o dado de compartilhamento amplo de que trata o caput não estar disponível em formato aberto, o solicitante de dados poderá requerer sua abertura junto ao gestor de dados.
+
+> (...)
+
+> § 3º  A Controladoria-Geral da União e o Comitê Interministerial de Governança, de que trata o Decreto nº 9.203, de 22 de novembro de 2017, poderão recomendar, quando econômica e operacionalmente viável, a abertura dos dados de compartilhamento amplo em transparência ativa.
+
+> § 4º  **Os solicitantes e recebedores de dados adotarão medidas para manter a integridade e a autenticidade das informações recebidas**.
+
+> § 5º  **Os dados de compartilhamento amplo serão catalogados no Portal Brasileiro de Dados Abertos em formato aberto**.
+
+* [^] OBS.: minuta de decreto análogo está sendo discutido pelas instâncias estaduais de governança, com alta probabilidade de replicação das definições sobre as categorias de compartilhamento de dados
 
 # Exemplos / Pesquisa
 <a href="#top">(inicio)</a>

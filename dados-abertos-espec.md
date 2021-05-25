@@ -114,13 +114,15 @@ A partir das premissas e definições preliminares anteriores, e considerando a 
 
 * Limitações e problemas a serem resolvidos:
 
-	a. Atualmente, não há mecanismo de compartilhar as versões em curso das alterações do dicionário de dados. O uso de google docs, por exemplo, é limitado para acertar conceitos e definições com as áreas de uma forma privativa e que sejam possíveis visualizações de todas as edições. Há uma necessidade de controle de versão, com visualizações estáticas para cada alteração, sem publicação, mas para circulação interna entre custodiante e gestor do Portal de Dados).
+	a. a. Há uma necessidade de controle de versão, com visualizações estáticas para cada alteração, sem publicação, mas para circulação interna entre custodiante e gestor do Portal de Dados, de alguns artefatos (metadados, dicionários, relacionamentos, diagramas). Exemplos:
 
-	b. Forma de elaboração do arquivo em formato json (documentação legível por máquina), a partir das definições estabelecidas no processo de documentação legível por pessoas: a documentação dos metadados dos confecção do datapackage pode ser realizada pelo datapackage creator. Entretanto, essa ferramenta não exaure toda a gama necessária de descritores de metadados (datapackage creator) que a própria API do CKAN requer.
+	    - O CKAN não permite visualização intermediária durante o processo de elaboração ou edição dos metadados, caso não esteja usando a interface gráfica. Ele tabmém não possibilita visualização dos relacionamentos entre tabelas ou explicitação das chaves primárias ou estrangeiras. 
+
+	    - O uso de google docs para a finalidade de compartilhar versões intermediárias dos dicionários de dados, por exemplo, é limitado para acertar conceitos e definições com as áreas de uma forma privativa e que sejam possíveis visualizações de todas as edições.
+
+	b. Forma de elaboração do arquivo em formato json (documentação legível por máquina), a partir das definições estabelecidas no processo de documentação legível por pessoas: a documentação dos metadados (elaboração do datapackage) pode ser realizada pelo datapackage creator. Entretanto, essa ferramenta não exaure toda a gama necessária de descritores de metadados (datapackage creator) que a própria API do CKAN requer. Após sua criação inicial, há uma dificuldade de se editar manualmente o arquivo em formato json gerado (a começar pela escolha da ferramenta de edição).
 	
 	c. Multiplicidade de fontes e formatos de dados a serem publicados no Portal de Dados Abertos (arquivos csv ou xls de emails, servidores de ftp, sítios governamentais) 
-
-	[^] _Many of the problems government confronts with technology are fundamentally about data integration: taking the disparate data sets living in a variety of locations and formats (SQL Server databases, exports from ancient ERP systems, Excel speadsheets on people’s desktops) and getting them into a place and shape where they’re actually usable._ https://daguar.github.io/2014/03/17/etl-for-america/
 
 # Especificação
 <a href="#top">(inicio)</a>
@@ -147,15 +149,6 @@ Essa solução deve conter ou permitir:
 
 Implementação de solução e capacitação para que custodiantes de dados realizem a confecção do documento descritivo dos metadados do conjunto de dados (datapackage.json).
 
-3. Extração e publicação: 
-
-Os custodiantes de dados dos diversos órgãos e entidades seguirão um fluxo pelo qual publicam seus conjuntos de dados abertos nos sítios governamentais respectivos.
-
-Um subsistema na DCTA/CGE deve ser implantado para rastrear e coletar tais conjuntos para atualização automática:
-
- - nos repositórios correspondentes no [github institucional da DCTA](https://github.com/dados-mg) com validação automática;
-
- - nos conjuntos de dados do [Portal de Dados Abertos (CKAN)](https://dados.mg.gov.br/);
 
 ## Obrigações/requisitos
  
@@ -204,15 +197,23 @@ Um subsistema na DCTA/CGE deve ser implantado para rastrear e coletar tais conju
 # Exemplos / Pesquisa
 <a href="#top">(inicio)</a>
 
-[Dataedo](https://dataedo.com/samples/html2/enterprise/#/doc/m99/hr/modules/hr)
+* [Dataedo](https://dataedo.com/samples/html2/enterprise/#/doc/m99/hr/modules/hr):
+    
+    - Contém diagramas de relacionamento; 
+     
+    - permitem navegar para as tabelas de dicionário de dados a partir dos hiperlinks contidos no diagrama;
+    
+    - para cada tabela, além do dicionário, apresenta as chaves primária e estrangeira e os relacionamentos possíveis entre tabelas (além do método de chamada para cruzá-las)
 
-[data.world](https://data.world/kgarrett/covid-19-open-research-dataset)
+    - exemplo: https://dataedo.com/samples/html2/enterprise/#/doc/m103t3733/procurement/tables/pur-shipment-lines
 
-[kaggle](https://www.kaggle.com/ajaypalsinghlo/world-happiness-report-2021)
+* [data.world](https://data.world/kgarrett/covid-19-open-research-dataset)
 
-[dbt](https://www.getdbt.com/mrr-playbook/#!/overview)
+    - guia para edição de metadados: https://help.data.world/hc/en-us/articles/1260802115269-Custom-metadata
 
-[datahub](https://datahub.io/core/gdp#readme)
+* [kaggle](https://www.kaggle.com/ajaypalsinghlo/world-happiness-report-2021)
+
+* [dbt](https://www.getdbt.com/mrr-playbook/#!/overview)
 
 
 # Dúvidas

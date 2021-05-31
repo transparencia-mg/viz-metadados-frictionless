@@ -170,6 +170,8 @@ Implementação de solução e capacitação para que custodiantes de dados real
 
 - permissões de rede PRODEMGE/CGE
 
+- [Desenvolvimento de sistemas](http://www.planejamento.mg.gov.br/pagina/gestao-governamental/gestao-de-ti/desenvolvimento-de-sistemas): diretrizes e exemplos para o estabelecimento de controles com base em padrões de mercado
+
 ## Enquadramento nos requisitos e premissas das normas mais recentes
 
 ### Lei Geral de Proteção de Dados
@@ -196,6 +198,18 @@ Implementação de solução e capacitação para que custodiantes de dados real
 
 # Exemplos / Pesquisa
 <a href="#top">(inicio)</a>
+
+* [Schema Collaboration](https://frictionlessdata.io/blog/2021/01/18/schema-collaboration/#what-problem-does-schema-collaboration-solve)
+
+    - usa a interface do datapackage creator como 'google docs' para edição colabotativa de um mesmo datapackage.json; necessita instalação de outro app (Docker); é uma ferramenta recente (criada em 2020, a referência do blog é de janeiro de 2021); faltariam os itens de especificação 1.1, 1.2 e 1.3
+
+    - [documentação](https://github.com/frictionlessdata/schema-collaboration/blob/master/documentation/User.md#schema-collaboration)
+
+> The solution in this tool fund was to build a system that uses Data Package Creator to enable data managers and researchers to create and share dataset schemas, edit them, post messages and export the schemas in different formats (text, Markdown, PDF). To encourage collaboration within a project multiple researchers can work on the same schema. Being able to view the description in human-readable formats makes it easier to spot mistakes and to integrate with third-party data repositories.
+
+> From a data manager’s perspective the tool allows them to keep tabs on the datasets being managed and their progress. It prevents details getting lost in emails and hopefully provides a nicer interface to encourage better collaboration.
+
+> In other words: think of a very simplified “Google Docs” specialised for data packages
 
 * [Dataedo](https://dataedo.com/samples/html2/enterprise/#/doc/m99/hr/modules/hr):
     

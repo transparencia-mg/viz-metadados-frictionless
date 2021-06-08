@@ -46,22 +46,22 @@ Tais diretrizes foram replicadas, atualmente, na [Lei 14.129 (Lei do Governo Dig
 A estrutura administrativa responsável por promover e induzir a aplicação de tais diretrizes no âmbito do poder Executivo do Estado de Minas Gerais é a Diretoria Central de Transparência Ativa (DCTA). Essa pasta, à luz do [Decreto estadual 47.774/2019](https://www.almg.gov.br/consulte/legislacao/completa/completa.html?tipo=DEC&num=47774&comp=&ano=2019), em seu artigo 44, tem como competência implementar as ações de transparência ativa do Poder Executivo, com atribuições de:
 
 > I – gerenciar e propor a evolução das consultas e demais funcionalidades do Portal da Transparência e do Portal de Dados Abertos do Poder Executivo, com o objetivo de aprimorar a divulgação das informações junto à sociedade;
-
+>
 > II – orientar e fomentar a transparência ativa nos sítios eletrônicos dos órgãos e entidades do Poder Executivo;
-
+>
 > **III – fomentar a disponibilização de informações públicas em formato aberto no Portal da Transparência e nos sítios eletrônicos dos órgãos e entidades do Poder Executivo**;
-
+>
 > **IV – planejar e coordenar o desenvolvimento das regras de negócio para as ferramentas e sistemas visando a promoção da transparência ativa no âmbito do Poder Executivo**;
-
+>
 > **V – orientar os agentes públicos quanto a disponibilização de informações nos sítios institucionais e nos demais assuntos pertinentes a sua área de atuação.**
 
 As atribuições em destaque salientam o papel da DCTA na concepção e implementação de um processo e regras para abrir, editar, documentar e publicar dados que assegurem aquelas diretrizes anteriormente citadas. Nesse sentido, faz parte do negócio da DCTA adotar:
 
-	a. pelo lado da demanda, um padrão de documentação de dados (metadados) que minimize o custo dos usuários em acessar e compreender os dados;
+1. pelo lado da demanda, um padrão de documentação de dados (metadados) que minimize o custo dos usuários em acessar e compreender os dados;
 
-	b. pelo lado da oferta, um processo com regras que seja o mais prático e fluido possível para os custodiantes de dados do Estado, desde que também se garanta a sua previsibilidade, autenticidade e compliance dos dados que estiverem sendo tratados 
+1.  pelo lado da oferta, um processo com regras que seja o mais prático e fluido possível para os custodiantes de dados do Estado, desde que também se garanta a sua previsibilidade, autenticidade e compliance dos dados que estiverem sendo tratados 
 
-Dessa forma, a partir de julho de 2020, a seção de Dados Abertos do Portal da Transparência (http://www.transparencia.mg.gov.br/dados-abertos) passou a ser hospedada no  novo Portal de Dados Abertos (https://www.dados.mg.gov.br/). Com escopo mais amplo, o Portal de Dados Abertos visa ser ponto de referência para busca e acesso a dados públicos sobre quaisquer assuntos de interesse da sociedade, como saúde, educação, segurança pública, assistência social, esportes e turismo.
+Dessa forma, a partir de julho de 2020, a seção de Dados Abertos do Portal da Transparência (http://www.transparencia.mg.gov.br/dados-abertos) passou a ser hospedada no novo Portal de Dados Abertos (https://www.dados.mg.gov.br/). Com escopo mais amplo, o Portal de Dados Abertos visa ser ponto de referência para busca e acesso a dados públicos sobre quaisquer assuntos de interesse da sociedade, como saúde, educação, segurança pública, assistência social, esportes e turismo.
 
 O Portal de Dados Abertos utiliza a plataforma CKAN (Comprehensive Knowledge Analytics Network), ferramenta open source ofertada pela Open Knowledge Foundation. Além disso, com o intuito de aumentar a qualidade dos dados e metadados publicados, os conjuntos de dados desse portal são documentados conforme padrão de metadados Fricionless Data ('dados sem fricção'), uma especificação de descrição de dados legível por máquina que possibilita integrações com o CKAN e outras ferramentas, além da validação dos dados perante sua documentação. 
 
@@ -89,109 +89,85 @@ Para o registro dos metadados, a DCTA utiliza a especificação dos dados sem fr
 
 As definições basilares sobre as especificações de metadados Frictionless Data, bem como outros requisitos e premissas da arquitetura do Portal de Dados Abertos são pontuadas a seguir:
 
-1. Especificações de metadados utilizada: Fricionless Data, da Open Knowledge Foundation. Esta premissa é central na visão de arquitetura do portal de Dados Abertos.
-
-De acordo com essa especificação, os dados devem ser organizados em pacotes (datapackages), que compreendem recursos (arquivos físicos na pasta ``data`` ou URL) com sua documentação de metadados (datapackage.json e schema.json)
-
-1.1. Recurso (resource)
-
-1.2. Metadados (datapackage e schema json)
-
-1.3. Conjunto de dados (datapackage)
-
-2. Sistema de controle de versão: Github
-
-3. Interface de publicação de dados utilizado: CKAN
-
-4. Custodiantes de dados
-
-5. Gestores do Portal de Dados Abertos
+1. Especificações de metadados utilizada: Fricionless Data, da Open Knowledge Foundation. Esta premissa é central na visão de arquitetura do portal de Dados Abertos. De acordo com essa especificação, os dados devem ser organizados em pacotes (datapackages), que compreendem recursos (arquivos físicos na pasta ``data`` ou URL) com sua documentação de metadados (datapackage.json e schema.json)
+    1. Recurso (resource)
+    1. Metadados (datapackage e schema json)
+    1. Conjunto de dados (datapackage)
+1. Sistema de controle de versão: Github
+1. Interface de publicação de dados utilizado: CKAN
+1. Custodiantes de dados
+1. Gestores do Portal de Dados Abertos
 
 
 # Motivação / contexto da demanda
 
 A partir das premissas e definições preliminares anteriores, e considerando a baixa experiência dos custodiantes de dados no manejo de ferramentas de dados, a demanda se estrutura na necessidade de se tornar o mais prático possível o caminho percorrido pelo custodiante dos dados a serem abertos, desde a documentação dos metadados, até a sua publicação e controle de versão/alterações.
 
-* Limitações e problemas a serem resolvidos:
-
-	a. a. Há uma necessidade de controle de versão, com visualizações estáticas para cada alteração, sem publicação, mas para circulação interna entre custodiante e gestor do Portal de Dados, de alguns artefatos (metadados, dicionários, relacionamentos, diagramas). Exemplos:
-
-	    - O CKAN não permite visualização intermediária durante o processo de elaboração ou edição dos metadados, caso não esteja usando a interface gráfica. Ele tabmém não possibilita visualização dos relacionamentos entre tabelas ou explicitação das chaves primárias ou estrangeiras. 
-
-	    - O uso de google docs para a finalidade de compartilhar versões intermediárias dos dicionários de dados, por exemplo, é limitado para acertar conceitos e definições com as áreas de uma forma privativa e que sejam possíveis visualizações de todas as edições.
-
-	b. Forma de elaboração do arquivo em formato json (documentação legível por máquina), a partir das definições estabelecidas no processo de documentação legível por pessoas: a documentação dos metadados (elaboração do datapackage) pode ser realizada pelo datapackage creator. Entretanto, essa ferramenta não exaure toda a gama necessária de descritores de metadados (datapackage creator) que a própria API do CKAN requer. Após sua criação inicial, há uma dificuldade de se editar manualmente o arquivo em formato json gerado (a começar pela escolha da ferramenta de edição).
-	
-	c. Multiplicidade de fontes e formatos de dados a serem publicados no Portal de Dados Abertos (arquivos csv ou xls de emails, servidores de ftp, sítios governamentais) 
+1. Limitações e problemas a serem resolvidos:
+    1. Há uma necessidade de controle de versão, com visualizações estáticas para cada alteração, sem publicação, mas para circulação interna entre custodiante e gestor do Portal de Dados, de alguns artefatos (metadados, dicionários, relacionamentos, diagramas). Exemplos:
+        1. O CKAN não permite visualização intermediária durante o processo de elaboração ou edição dos metadados, caso não esteja usando a interface gráfica. Ele tabmém não possibilita visualização dos relacionamentos entre tabelas ou explicitação das chaves primárias ou estrangeiras. 
+        1. O uso de google docs para a finalidade de compartilhar versões intermediárias dos dicionários de dados, por exemplo, é limitado para acertar conceitos e definições com as áreas de uma forma privativa e que sejam possíveis visualizações de todas as edições.
+    1. Forma de elaboração do arquivo em formato json (documentação legível por máquina), a partir das definições estabelecidas no processo de documentação legível por pessoas: a documentação dos metadados (elaboração do datapackage) pode ser realizada pelo datapackage creator. Entretanto, essa ferramenta não exaure toda a gama necessária de descritores de metadados (datapackage creator) que a própria API do CKAN requer. Após sua criação inicial, há uma dificuldade de se editar manualmente o arquivo em formato json gerado (a começar pela escolha da ferramenta de edição).
+    1. Multiplicidade de fontes e formatos de dados a serem publicados no Portal de Dados Abertos (arquivos csv ou xls de emails, servidores de ftp, sítios governamentais) 
 
 # Especificação
 <a href="#top">(inicio)</a>
 
 As necessidades de negócio, no processo de documentação de um conjunto de dados, que devem ser supridas com os itens especificados são:
 
-º  de utilização de um padrão de metadados para documentação (dados sem fricção, Frictinoless Data)
-
-º  de documentação legível por máquina (formato ``datapackage.json``)
-
-º  de versionamento da documentação
-
-º  de visualização da documentação
-
-º  de publicação da documentação
+- de utilização de um padrão de metadados para documentação (dados sem fricção, Frictinoless Data)
+- de documentação legível por máquina (formato `datapackage.json`)
+- de versionamento da documentação
+- de visualização da documentação
+- de publicação da documentação
 
 ## Itens
 
-1. Documentação legível por humanos: 
+### Documentação legível por humanos: 
 
 Implementação de solução e capacitação para que custodiantes de dados e gestores do Portal de Dados Abertos criem e controlem as alterações de versão dos dicionários de dados. Essas versões devem ter visualizações estáticas para cada (de forma análoga aos pull requests do github), mas sem necessidade de publicação, e somente com circulação restrita interna entre gestores do portal de Dados Abertos e custodiantes de dados.
 
 Essa solução deve conter ou permitir:
 
-1.1. visualização gráfica/diagrama RD (entidade relacionamento) que mostre recursos que têm relação entre si
+1. visualização gráfica/diagrama RD (entidade relacionamento) que mostre recursos que têm relação entre si
 
-![](static/DER.png)
+    ![](static/DER.png)
 
-1.2. navegação entre diagrama e dicionário (tabela), que possibilite a operabilidade de, em se clicando na tabela, o foco para o local do diagrama seja trazido para a visualização; (feição do dicionário de dados tem de responder a interações no diagrama)
+1. navegação entre diagrama e dicionário (tabela), que possibilite a operabilidade de, em se clicando na tabela, o foco para o local do diagrama seja trazido para a visualização; (feição do dicionário de dados tem de responder a interações no diagrama)
 
-![](static/DICT.png)
+    ![](static/DICT.png)
 
-1.3. visualização do dicionário tem de mostrar as restrições de cada variável (chave primária/secundária, etc) - essas funcionalidades deverão estar à disposição no momento da elaboração do datapackage (outras ferramentas existem quando ele está pronto, p. ex. = https://github.com/frictionlessdata/ckanext-validation)
+1. visualização do dicionário tem de mostrar as restrições de cada variável (chave primária/secundária, etc) - essas funcionalidades deverão estar à disposição no momento da elaboração do datapackage (outras ferramentas existem quando ele está pronto, p. ex. = https://github.com/frictionlessdata/ckanext-validation)
 
-![](static/ATTRIBUTTES.png)
+    ![](static/ATTRIBUTTES.png)
 
-![](static/KEYS.png)
+    ![](static/KEYS.png)
 
-1.4. um gerador de site estático: as funcionalidades da solução a ser implementada devem acontecer num formato de site completo, com design, sem nenhum componente de servidor que o sustente
+1. um gerador de site estático: as funcionalidades da solução a ser implementada devem acontecer num formato de site completo, com design, sem nenhum componente de servidor que o sustente
 
-1.5. visualização do dicionário tem de ser uma extensão no CKAN
+1. visualização do dicionário tem de ser uma extensão no CKAN
 
-![](static/CKAN.png)
+    ![](static/CKAN.png)
  
-2. Documentação legível por máquina: 
+### Documentação legível por máquina: 
 
 Implementação de solução e capacitação para que custodiantes de dados realizem a confecção do documento descritivo dos metadados do conjunto de dados (datapackage.json).
 
 
 ## Obrigações/requisitos
  
- A contratação envolverá:
+A contratação envolverá:
 
- 1. apresentação de alternativas de solução para os problemas apresentados, diante dos requisitos indicados
-
- 2. discussão com equipe gestora do Portal
-
- 3. implementação das soluções aprovadas de forma que a equipe da DCTA possa conduzí-las de forma independente do contratante
- 
- 4. elaboração de tutorial auto-instrucional da contratante para postagem no Portal de Dados Abertos e consumo dos órgãos/entidades custodiantes 
+1. apresentação de alternativas de solução para os problemas apresentados, diante dos requisitos indicados
+1. discussão com equipe gestora do Portal
+1. implementação das soluções aprovadas de forma que a equipe da DCTA possa conduzí-las de forma independente do contratante
+1. elaboração de tutorial auto-instrucional da contratante para postagem no Portal de Dados Abertos e consumo dos órgãos/entidades custodiantes 
 
 # Dependências / Integrações
 
 - CKAN
-
 - GITHUB
-
 - permissões de rede PRODEMGE/CGE
-
 - [Desenvolvimento de sistemas](http://www.planejamento.mg.gov.br/pagina/gestao-governamental/gestao-de-ti/desenvolvimento-de-sistemas): diretrizes e exemplos para o estabelecimento de controles com base em padrões de mercado
 
 ## Enquadramento nos requisitos e premissas das normas mais recentes
@@ -203,20 +179,20 @@ Implementação de solução e capacitação para que custodiantes de dados real
 (dispõe sobre a governança no compartilhamento de dados no âmbito da ADM Federal)
 
 > Seção II: Do compartilhamento amplo de dados 
-
+>
 > Art. 11.  O compartilhamento amplo de dados dispensa autorização prévia pelo gestor de dados e será realizado pelos canais existentes para dados abertos e para transparência ativa, na forma da legislação.
-
+>
 > § 1º  Na hipótese de o dado de compartilhamento amplo de que trata o caput não estar disponível em formato aberto, o solicitante de dados poderá requerer sua abertura junto ao gestor de dados.
-
+>
 > (...)
-
+>
 > § 3º  A Controladoria-Geral da União e o Comitê Interministerial de Governança, de que trata o Decreto nº 9.203, de 22 de novembro de 2017, poderão recomendar, quando econômica e operacionalmente viável, a abertura dos dados de compartilhamento amplo em transparência ativa.
-
+>
 > § 4º  **Os solicitantes e recebedores de dados adotarão medidas para manter a integridade e a autenticidade das informações recebidas**.
-
+>
 > § 5º  **Os dados de compartilhamento amplo serão catalogados no Portal Brasileiro de Dados Abertos em formato aberto**.
 
-* [^] OBS.: minuta de decreto análogo está sendo discutido pelas instâncias estaduais de governança, com alta probabilidade de replicação das definições sobre as categorias de compartilhamento de dados
+OBS.: minuta de decreto análogo está sendo discutido pelas instâncias estaduais de governança, com alta probabilidade de replicação das definições sobre as categorias de compartilhamento de dados
 
 # Exemplos / Pesquisa
 <a href="#top">(inicio)</a>
@@ -227,11 +203,11 @@ Implementação de solução e capacitação para que custodiantes de dados real
 
     - [documentação](https://github.com/frictionlessdata/schema-collaboration/blob/master/documentation/User.md#schema-collaboration)
 
-> The solution in this tool fund was to build a system that uses Data Package Creator to enable data managers and researchers to create and share dataset schemas, edit them, post messages and export the schemas in different formats (text, Markdown, PDF). To encourage collaboration within a project multiple researchers can work on the same schema. Being able to view the description in human-readable formats makes it easier to spot mistakes and to integrate with third-party data repositories.
-
-> From a data manager’s perspective the tool allows them to keep tabs on the datasets being managed and their progress. It prevents details getting lost in emails and hopefully provides a nicer interface to encourage better collaboration.
-
-> In other words: think of a very simplified “Google Docs” specialised for data packages
+    > The solution in this tool fund was to build a system that uses Data Package Creator to enable data managers and researchers to create and share dataset schemas, edit them, post messages and export the schemas in different formats (text, Markdown, PDF). To encourage collaboration within a project multiple researchers can work on the same schema. Being able to view the description in human-readable formats makes it easier to spot mistakes and to integrate with third-party data repositories.
+    >
+    > From a data manager’s perspective the tool allows them to keep tabs on the datasets being managed and their progress. It prevents details getting lost in emails and hopefully provides a nicer interface to encourage better collaboration.
+    >
+    > In other words: think of a very simplified “Google Docs” specialised for data packages
 
 * [Dataedo](https://dataedo.com/samples/html2/enterprise/#/doc/m99/hr/modules/hr):
     

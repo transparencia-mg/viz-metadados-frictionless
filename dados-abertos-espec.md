@@ -149,7 +149,7 @@ Essa solução deve conter ou permitir:
 
 1.1. visualização gráfica/diagrama RD (entidade relacionamento) que mostre recursos que têm relação entre si
 
-![](static/)
+![](static/DER.png)
 
 1.2. navegação entre diagrama e dicionário (tabela), que possibilite a operabilidade de, em se clicando na tabela, o foco para o local do diagrama seja trazido para a visualização; (feição do dicionário de dados tem de responder a interações no diagrama)
 

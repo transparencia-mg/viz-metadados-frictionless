@@ -127,6 +127,18 @@ A partir das premissas e definições preliminares anteriores, e considerando a 
 # Especificação
 <a href="#top">(inicio)</a>
 
+As necessidades de negócio, no processo de documentação de um conjunto de dados, que devem ser supridas com os itens especificados são:
+
+º  de utilização de um padrão de metadados para documentação (dados sem fricção, Frictinoless Data)
+
+º  de documentação legível por máquina (formato ``datapackage.json``)
+
+º  de versionamento da documentação
+
+º  de visualização da documentação
+
+º  de publicação da documentação
+
 ## Itens
 
 1. Documentação legível por humanos: 
@@ -135,15 +147,25 @@ Implementação de solução e capacitação para que custodiantes de dados e ge
 
 Essa solução deve conter ou permitir:
 
-1.1. visualização gráfica/diagrama RD (entidade relacionamento) que mostre recursos que têm relação entre si; 
+1.1. visualização gráfica/diagrama RD (entidade relacionamento) que mostre recursos que têm relação entre si
 
-1.2. navegação entre diagrama e dicionário (tabela), que possibilite a operabilidade de, em se clicando na tabela, o foco para o local do diagrama seja trazido para a visualização; (feição do dicionário de dados tem de responder a interações no diagrama);
+![](static/)
+
+1.2. navegação entre diagrama e dicionário (tabela), que possibilite a operabilidade de, em se clicando na tabela, o foco para o local do diagrama seja trazido para a visualização; (feição do dicionário de dados tem de responder a interações no diagrama)
+
+![](static/DICT.png)
 
 1.3. visualização do dicionário tem de mostrar as restrições de cada variável (chave primária/secundária, etc) - essas funcionalidades deverão estar à disposição no momento da elaboração do datapackage (outras ferramentas existem quando ele está pronto, p. ex. = https://github.com/frictionlessdata/ckanext-validation)
 
+![](static/ATTRIBUTTES.png)
+
+![](static/KEYS.png)
+
 1.4. um gerador de site estático: as funcionalidades da solução a ser implementada devem acontecer num formato de site completo, com design, sem nenhum componente de servidor que o sustente
 
-1.5. visualização do dicionário tem de ser uma extensão no CKAN;
+1.5. visualização do dicionário tem de ser uma extensão no CKAN
+
+![](static/CKAN.png)
  
 2. Documentação legível por máquina: 
 

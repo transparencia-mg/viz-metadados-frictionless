@@ -1,0 +1,24 @@
+codigo;area;descrição;UST
+e1;encontros;alinhamento inicial;1
+e2;encontros;formação time ágil;1
+e3;encontros;workshop PO;1
+r1;ritos;inception;1
+r2;ritos;refinamento;1
+r3;ritos;sprint planning;1
+r4;ritos;sprint review;1
+r5;ritos;sprint retrospective;1
+l1;liderança ágil;acompanhamento do scrum master;28
+h1;histórias;entendimento, refinamento, escrita e validação;14
+a1;arquitetura;definições;10
+ad1;análise e desenho;identidade visual;15
+ad2;análise e desenho;guia usabilidade;5
+ad3;análise e desenho;prototipação;7
+ad4;análise e desenho;prototipação;9
+b1;implementação back-end;de 1 história;19
+f1;implementação front-end;de 1 história;19
+t1;teste;preparação e implementação;8
+ec1;estudo;documentação e apresentação do estudo;1
+ce1;chamados de erro;solução de erros;4 a 40
+d1;dados;modelagem - criação;10
+d2;dados;modelagem - evolução;4 por história
+d3;dados;automatização carga ou extração;2 por tabela ou planilha

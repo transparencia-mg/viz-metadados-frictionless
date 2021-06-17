@@ -13,7 +13,7 @@ output:
 
 ## Objeto:
 
-Desenvolvimento de:
+Desenvolvimento das aplicações para otimização do processo de abertura e publicação de dados que contemple:
  
 - Programa de linha de comando para geração de site HTML estático para visualização dos metadados constantes de um data package
 
@@ -30,29 +30,26 @@ Permitir a visualização em HTML da documentação de um conjunto de dados real
   
 # Motivação / contexto da demanda
 
-A demanda se estrutura na necessidade de se tornar o mais prático possível o caminho percorrido pelo custodiante dos dados a serem abertos, desde a documentação dos metadados, até a sua publicação e controle de versão/alterações. Considera-se a baixa experiência dos custodiantes de dados no manejo de ferramentas de dados.
-
-1. Limitações e problemas a serem resolvidos:
-    1. Há uma necessidade de controle de versão, com visualizações estáticas para cada alteração, sem publicação, mas para circulação interna entre custodiante e gestor do Portal de Dados, de alguns artefatos (metadados, dicionários, relacionamentos, diagramas). Exemplos:
-        1. O CKAN não permite visualização intermediária durante o processo de elaboração ou edição dos metadados, caso não esteja usando a interface gráfica. Ele tabmém não possibilita visualização dos relacionamentos entre tabelas ou explicitação das chaves primárias ou estrangeiras. 
-        1. O uso de google docs para a finalidade de compartilhar versões intermediárias dos dicionários de dados, por exemplo, é limitado para acertar conceitos e definições com as áreas de uma forma privativa e que sejam possíveis visualizações de todas as edições.
-    1. Forma de elaboração do arquivo em formato json (documentação legível por máquina), a partir das definições estabelecidas no processo de documentação legível por pessoas: a documentação dos metadados (elaboração do datapackage) pode ser realizada pelo datapackage creator. Entretanto, essa ferramenta não exaure toda a gama necessária de descritores de metadados (datapackage creator) que a própria API do CKAN requer. Após sua criação inicial, há uma dificuldade de se editar manualmente o arquivo em formato json gerado (a começar pela escolha da ferramenta de edição). 
-
+ 
 ## Obrigações legais e Competência Institucional
 
 [A Lei Federal nº 12.527, de 18 de novembro 2011](http://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm), conhecida como Lei de Acesso à Informação (LAI), regulou o acesso a informações previsto na Constituição Federal de 1988. Esse acesso à divulgação espontânea de informações de interesse coletivo, produzidas ou custodiadas pelos órgãos e entidades da Administração Pública, é conhecido por Transparência Ativa. No âmbito do Poder Executivo Estadual de Minas Gerais, a transparência ativa foi regulamentada por meio do [Decreto nº 45.969, de 24 de maio de 2012](https://www.almg.gov.br/consulte/legislacao/completa/completa.html?tipo=DEC&num=45969&comp=&ano=2012). 
 
-Tanto a LAI como o Decreto definiram diretrizes a serem adotados nos Portais de Transparência e se relacionam ao processo de abertura e publicação de dados. Tais diretrizes foram replicadas, atualmente, na [Lei 14.129 (Lei do Governo Digital)](https://www.in.gov.br/en/web/dou/-/lei-n-14.129-de-29-de-marco-de-2021-311282132). A Lei 14.129 ainda detalhou um pouco mais alguns requisitos na promoção da transparência ativa de dados, quer sejam:
+Os dispositivos dessas normas que se relacionam-se às diretrizes do processo de abertura e publicação de dados são:
 
-* descrição das bases de dados com informação suficiente sobre estrutura e semântica dos dados, inclusive quanto à sua qualidade e à sua integridade;
+* presença de ferramenta de pesquisa de conteúdo que permita o acesso à informação de forma objetiva, transparente, clara e em linguagem de fácil compreensão;
 
-* permissão irrestrita de uso de bases de dados publicadas em formato aberto;
+* possibilidade de gravação de relatório em diversos formatos eletrônicos, inclusive abertos e não proprietários, tais como planilha e texto, de modo a facilitar a análise da informação;
 
-* completude de bases de dados, as quais devem ser disponibilizadas em sua forma primária, com o maior grau de granularidade possível, ou referenciar bases primárias, quando disponibilizadas de forma agregada;
+* possibilidade de acesso automatizado por sistemas externos em formatos abertos, estruturados e legíveis por máquina;
 
-* atualização periódica, mantido o histórico, de forma a garantir a perenidade de dados, a padronização de estruturas de informação e o valor dos dados à sociedade e a atender às necessidades de seus usuários;
+* divulgação das especificações básicas dos formatos utilizados para estruturação da informação;
 
-* intercâmbio de dados entre órgãos e entidades dos diferentes Poderes e esferas da Federação, respeitado o disposto no art. 26 da Lei nº 13.709, de 14 de agosto de 2018 (Lei Geral de Proteção de Dados Pessoais);
+* garantia a autenticidade e a integridade das informações disponíveis para acesso;
+
+* atualização das informações disponíveis para acesso;
+
+Tais diretrizes foram replicadas, atualmente, na [Lei 14.129 (Lei do Governo Digital)](https://www.in.gov.br/en/web/dou/-/lei-n-14.129-de-29-de-marco-de-2021-311282132), bem como também integram a [Resolução CGE n° 020, de 06/08/2014, da Controladoria Geral do Estado](http://pesquisalegislativa.mg.gov.br/LegislacaoCompleta.aspx?cod=171158&marc=Dados%20abertos) que estabelece conceitos e diretrizes, no âmbito da Administração direta, autárquica e fundacional do Poder Executivo Estadual, em matéria de dados abertos governamentais. Essa Resolução postula, ainda, que os dados abertos **devem permitir sua livre reutilização, consumo ou cruzamento em aplicações digitais desenvolvidas pela sociedade**. 
 
 A estrutura administrativa responsável por promover e induzir a aplicação de tais diretrizes no âmbito do poder Executivo do Estado de Minas Gerais é a Diretoria Central de Transparência Ativa (DCTA). Essa pasta, à luz do [Decreto estadual 47.774/2019](https://www.almg.gov.br/consulte/legislacao/completa/completa.html?tipo=DEC&num=47774&comp=&ano=2019), em seu artigo 44, tem como competência implementar as ações de transparência ativa do Poder Executivo, com atribuições de conceber e implementar um processo para abrir, editar, documentar, publicar e atualizar dados:
 
@@ -62,20 +59,15 @@ A estrutura administrativa responsável por promover e induzir a aplicação de 
 >
 > **V – orientar os agentes públicos quanto a disponibilização de informações nos sítios institucionais e nos demais assuntos pertinentes a sua área de atuação.**
 
-Nesse sentido, faz parte do negócio da DCTA adotar:
-
-1. pelo lado da demanda, um padrão de documentação de dados (metadados) que minimize o custo dos usuários em acessar e compreender os dados;
-
-1.  pelo lado da oferta, um processo com regras que seja o mais prático e fluido possível para os custodiantes de dados do Estado, desde que também se garanta a sua previsibilidade, autenticidade e compliance dos dados que estiverem sendo tratados 
-
-Dessa forma, o [Portal de Dados Abertos](https://www.dados.mg.gov.br/) utiliza a plataforma open source CKAN (Comprehensive Knowledge Analytics Network), bem como uma especificação de descrição de dados legível por máquina que possibilita integrações com o CKAN e outras ferramentas - Fricionless Data ('dados sem fricção'). 
-
 ## Objetivos Estratégicos
 
 Existe um compromisso institucional de abertura de dados, representado no indicador de incremento do PERCENTUAL DAS CONSULTAS DO PORTAL DA TRANSPARENCIA DIVULGADAS NO PORTAL DE DADOS ABERTOS DE MANEIRA TEMPESTIVA (%). Esse indicador possui metas para o horizonte 2021-2024 e foi pactuado no [Plano Plurianual de Ação Governamental](https://drive.google.com/drive/folders/1FiwRVScro1xL16flbq8mS91o7dpeTw-Z)(programa 032) e no [Planejamento Estratégico da CGE](https://cge.mg.gov.br/download/category/35-arquivos-diversos?download=426:planejamento-estrategico-2020-2023). A [Estrategia de Tecnologia de Informação e Comunicação (TIC)](http://planejamento.mg.gov.br/sites/default/files/documentos/gestao-governamental/gestao-de-ti/estrategia_2021_-_consulta_gestores_de_tic_0.pdf) do Estado também prevê uma diretriz de implantar 10 novos conjuntos de dados no Portal de Dados Abertos.
 
-Em consonância com (i) os princípios e normas de transparência e governo aberto expressos nas bases legais, bem como (ii) as competências institucionais da Diretoria Central de Transparência Ativa (DCTA), e também com (iii) os objetivos estratégicos acima enumerados, apresenta-se a contratação de solução de ETL para o Portal de Dados Abertos da Diretoria Central de Transparência da Controladoria Estadual de Minas Gerais, com foco nas etapas de edição e visualização dos metadados dos dados.
+A documentação de um conjunto de dados, a partir de ferramentas que propiciem a edição e visualização de metadados, auxilia o cumprimento dos objetivos estratégicos, pois pretende a facilitação do processo de abertura e publicação de dados e, dessa forma, a adesão de mais custodiantes de dados. Do ponto de vista normativo, permite o cumprimento das diretrizes de _acesso automatizado por sistemas externos em formatos abertos, estruturados e legíveis por máquina_ e _divulgação das especificações básicas dos formatos utilizados para estruturação da informação_ e _permitir sua livre reutilização, consumo ou cruzamento em aplicações digitais desenvolvidas pela sociedade_. A figura seguinte ilustra o ciclo almejado:
 
+![](static/cadeia-logica.png)
+
+Entretanto, com a configuração básica da plataforma utilizada, o CKAN, há a limitações a serem superadas. Ele não permite visualização intermediária durante o processo de elaboração ou edição dos metadados (para circulação interna entre custodiante e gestor do Portal de Dados, antes da publicação). Também não possibilita elaboração de artefatos como diagrama de relacionamentos entre tabelas ou explicitação de restrições de dados. É necessário, enfim, aprimorar a plataforma
 
 
 # Especificação

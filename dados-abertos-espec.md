@@ -8,7 +8,35 @@ output:
     toc: yes
 ---
 
+# Visão geral da demanda
+<a href="#top">(inicio)</a>
+
+## Objeto:
+
+Desenvolvimento de:
+ 
+- Programa de linha de comando para geração de site HTML estático para visualização dos metadados constantes de um data package
+
+- Customização do CKAN para visualização dos metadados de conjuntos de dados e seus recursos que foram documentados como data packages
+
+## Objetivo
+
+Permitir a visualização em HTML da documentação de um conjunto de dados realizada com o padrão de metadados Frictionless Data. A visualização deve ser possível:
+
+    i. durante o processo de produção da documentação pelos publicadores de dados, 
+
+    ii. após a catalogação do conjunto de dados na solução de catálogo de dados utilizada no Portal de Dados Abertos de Minas Gerais, o CKAN.
+
+  
 # Motivação / contexto da demanda
+
+A demanda se estrutura na necessidade de se tornar o mais prático possível o caminho percorrido pelo custodiante dos dados a serem abertos, desde a documentação dos metadados, até a sua publicação e controle de versão/alterações. Considera-se a baixa experiência dos custodiantes de dados no manejo de ferramentas de dados.
+
+1. Limitações e problemas a serem resolvidos:
+    1. Há uma necessidade de controle de versão, com visualizações estáticas para cada alteração, sem publicação, mas para circulação interna entre custodiante e gestor do Portal de Dados, de alguns artefatos (metadados, dicionários, relacionamentos, diagramas). Exemplos:
+        1. O CKAN não permite visualização intermediária durante o processo de elaboração ou edição dos metadados, caso não esteja usando a interface gráfica. Ele tabmém não possibilita visualização dos relacionamentos entre tabelas ou explicitação das chaves primárias ou estrangeiras. 
+        1. O uso de google docs para a finalidade de compartilhar versões intermediárias dos dicionários de dados, por exemplo, é limitado para acertar conceitos e definições com as áreas de uma forma privativa e que sejam possíveis visualizações de todas as edições.
+    1. Forma de elaboração do arquivo em formato json (documentação legível por máquina), a partir das definições estabelecidas no processo de documentação legível por pessoas: a documentação dos metadados (elaboração do datapackage) pode ser realizada pelo datapackage creator. Entretanto, essa ferramenta não exaure toda a gama necessária de descritores de metadados (datapackage creator) que a própria API do CKAN requer. Após sua criação inicial, há uma dificuldade de se editar manualmente o arquivo em formato json gerado (a começar pela escolha da ferramenta de edição). 
 
 ## Obrigações legais e Competência Institucional
 
@@ -48,25 +76,7 @@ Existe um compromisso institucional de abertura de dados, representado no indica
 
 Em consonância com (i) os princípios e normas de transparência e governo aberto expressos nas bases legais, bem como (ii) as competências institucionais da Diretoria Central de Transparência Ativa (DCTA), e também com (iii) os objetivos estratégicos acima enumerados, apresenta-se a contratação de solução de ETL para o Portal de Dados Abertos da Diretoria Central de Transparência da Controladoria Estadual de Minas Gerais, com foco nas etapas de edição e visualização dos metadados dos dados.
 
-# Visão geral da demanda
-<a href="#top">(inicio)</a>
 
-A partir das premissas citadas anteriormente, e considerando a baixa experiência dos custodiantes de dados no manejo de ferramentas de dados, a demanda se estrutura na necessidade de se tornar o mais prático possível o caminho percorrido pelo custodiante dos dados a serem abertos, desde a documentação dos metadados, até a sua publicação e controle de versão/alterações.
-
-Mais especificamente, o seu objetivo é permitir a visualização em HTML da documentação de um conjunto de dados realizada com o padrão de metadados Frictionless Data. A visualização deve ser possível durante o processo de produção da documentação pelos publicadores de dados, bem como após a catalogação do conjunto de dados na solução de catálogo de dados utilizada no Portal de Dados Abertos de Minas Gerais, o CKAN.
- 
-Para atender esses dois casos de uso devem ser desenvolvidos:
- 
-- Programa de linha de comando para geração de site HTML estático para visualização dos metadados constantes de um data package
-
-- Customização do CKAN para visualização dos metadados de conjuntos de dados e seus recursos que foram documentados como data packages
-
-1. Limitações e problemas a serem resolvidos:
-    1. Há uma necessidade de controle de versão, com visualizações estáticas para cada alteração, sem publicação, mas para circulação interna entre custodiante e gestor do Portal de Dados, de alguns artefatos (metadados, dicionários, relacionamentos, diagramas). Exemplos:
-        1. O CKAN não permite visualização intermediária durante o processo de elaboração ou edição dos metadados, caso não esteja usando a interface gráfica. Ele tabmém não possibilita visualização dos relacionamentos entre tabelas ou explicitação das chaves primárias ou estrangeiras. 
-        1. O uso de google docs para a finalidade de compartilhar versões intermediárias dos dicionários de dados, por exemplo, é limitado para acertar conceitos e definições com as áreas de uma forma privativa e que sejam possíveis visualizações de todas as edições.
-    1. Forma de elaboração do arquivo em formato json (documentação legível por máquina), a partir das definições estabelecidas no processo de documentação legível por pessoas: a documentação dos metadados (elaboração do datapackage) pode ser realizada pelo datapackage creator. Entretanto, essa ferramenta não exaure toda a gama necessária de descritores de metadados (datapackage creator) que a própria API do CKAN requer. Após sua criação inicial, há uma dificuldade de se editar manualmente o arquivo em formato json gerado (a começar pela escolha da ferramenta de edição).
-    1. Multiplicidade de fontes e formatos de dados a serem publicados no Portal de Dados Abertos (arquivos csv ou xls de emails, servidores de ftp, sítios governamentais) 
 
 # Especificação
 <a href="#top">(inicio)</a>

@@ -9,11 +9,10 @@ output:
 ---
 
 # Visão geral da demanda
-<a href="#top">(inicio)</a>
 
 ## Objeto:
 
-Desenvolvimento das aplicações para otimização do processo de abertura e publicação de dados que contemple:
+Desenvolvimento de aplicações para otimização do processo de abertura e publicação de dados, que contemplem:
  
 - Programa de linha de comando para geração de site HTML estático para visualização dos metadados constantes de um data package
 
@@ -23,9 +22,9 @@ Desenvolvimento das aplicações para otimização do processo de abertura e pub
 
 Permitir a visualização em HTML da documentação de um conjunto de dados realizada com o padrão de metadados Frictionless Data. A visualização deve ser possível:
 
-    i. durante o processo de produção da documentação pelos publicadores de dados, 
+  i. durante o processo de produção da documentação pelos publicadores de dados, 
 
-    ii. após a catalogação do conjunto de dados na solução de catálogo de dados utilizada no Portal de Dados Abertos de Minas Gerais, o CKAN.
+  ii. após a catalogação do conjunto de dados na solução de catálogo de dados utilizada no Portal de Dados Abertos de Minas Gerais, o CKAN.
 
   
 # Motivação / contexto da demanda
@@ -63,25 +62,37 @@ A estrutura administrativa responsável por promover e induzir a aplicação de 
 
 Existe um compromisso institucional de abertura de dados, representado no indicador de incremento do PERCENTUAL DAS CONSULTAS DO PORTAL DA TRANSPARENCIA DIVULGADAS NO PORTAL DE DADOS ABERTOS DE MANEIRA TEMPESTIVA (%). Esse indicador possui metas para o horizonte 2021-2024 e foi pactuado no [Plano Plurianual de Ação Governamental](https://drive.google.com/drive/folders/1FiwRVScro1xL16flbq8mS91o7dpeTw-Z)(programa 032) e no [Planejamento Estratégico da CGE](https://cge.mg.gov.br/download/category/35-arquivos-diversos?download=426:planejamento-estrategico-2020-2023). A [Estrategia de Tecnologia de Informação e Comunicação (TIC)](http://planejamento.mg.gov.br/sites/default/files/documentos/gestao-governamental/gestao-de-ti/estrategia_2021_-_consulta_gestores_de_tic_0.pdf) do Estado também prevê uma diretriz de implantar 10 novos conjuntos de dados no Portal de Dados Abertos.
 
-A documentação de um conjunto de dados, a partir de ferramentas que propiciem a edição e visualização de metadados, auxilia o cumprimento dos objetivos estratégicos, pois pretende a facilitação do processo de abertura e publicação de dados e, dessa forma, a adesão de mais custodiantes de dados. Do ponto de vista normativo, permite o cumprimento das diretrizes de _acesso automatizado por sistemas externos em formatos abertos, estruturados e legíveis por máquina_ e _divulgação das especificações básicas dos formatos utilizados para estruturação da informação_ e _permitir sua livre reutilização, consumo ou cruzamento em aplicações digitais desenvolvidas pela sociedade_. A figura seguinte ilustra o ciclo almejado:
+A documentação de um conjunto de dados, a partir de ferramentas que propiciem a edição e visualização de metadados, auxilia o cumprimento dos objetivos estratégicos, pois pretende a facilitação do processo de abertura e publicação de dados e, dessa forma, a adesão de mais custodiantes de dados. Do ponto de vista normativo, visa o cumprimento das diretrizes de _acesso automatizado por sistemas externos em formatos abertos, estruturados e legíveis por máquina_ e _divulgação das especificações básicas dos formatos utilizados para estruturação da informação_ e _permitir sua livre reutilização, consumo ou cruzamento em aplicações digitais desenvolvidas pela sociedade_. A figura seguinte ilustra o ciclo almejado:
 
 ![](static/cadeia-logica.png)
 
-Entretanto, com a configuração básica da plataforma utilizada, o CKAN, há a limitações a serem superadas. Ele não permite visualização intermediária durante o processo de elaboração ou edição dos metadados (para circulação interna entre custodiante e gestor do Portal de Dados, antes da publicação). Também não possibilita elaboração de artefatos como diagrama de relacionamentos entre tabelas ou explicitação de restrições de dados. É necessário, enfim, aprimorar a plataforma
+Entretanto, com a configuração básica da plataforma utilizada, o CKAN, há a limitações a serem superadas. Ele não permite visualização intermediária durante o processo de elaboração ou edição dos metadados (para circulação interna entre custodiante e gestor do Portal de Dados, antes da publicação). Também não possibilita elaboração de artefatos como diagrama de relacionamentos entre tabelas ou explicitação de restrições de dados. É necessário, enfim, aprimorar a plataforma.
 
 
 # Especificação
 <a href="#top">(inicio)</a>
 
-As necessidades de negócio, no processo de documentação de um conjunto de dados, que devem ser supridas com os itens especificados são:
+A solução deve conter ou permitir:
 
-- representação visual dos metadados -> arquitetura e identidade visual
 
-- metadados table schema -> metadados tabular data resource
 
-- diagramas estáticos -> diagramas ER
+1. REPRESENTAÇÃO VISUAL DOS METADADOS
 
-- diagramas interativos -> diagramas ER
+2. METADADOS TABLE SCHEMA
+
+3. DIAGRAMAS ESTÁTICOS: visualização gráfica/diagrama RD (entidade relacionamento) que mostre os recursos, seus elementos e relações:
+
+    ![](static/DER.png)
+
+4. DIAGRAMAS INTERATIVOS: navegação entre diagrama e dicionário (tabela), que possibilite a operabilidade de, em se clicando na tabela, o foco para o local do diagrama seja trazido para a visualização; (feição do dicionário de dados tem de responder a interações no diagrama)
+
+    ![](static/DICT.png)
+
+1. visualização do dicionário tem de mostrar as restrições de cada variável (chave primária/secundária, etc) - essas funcionalidades deverão estar à disposição no momento da elaboração do datapackage (outras ferramentas existem quando ele está pronto, p. ex. = https://github.com/frictionlessdata/ckanext-validation)
+
+    ![](static/ATTRIBUTTES.png)
+
+    ![](static/KEYS.png)
 
 - metadados de validação -> metadados de validação
 
@@ -93,84 +104,26 @@ As necessidades de negócio, no processo de documentação de um conjunto de dad
 
 - exportar diagramas para SVG
 
-## Itens
+## Dependências / Integrações
 
-### Documentação legível por humanos: 
+* Premissas
 
-Implementação de solução e capacitação para que custodiantes de dados e gestores do Portal de Dados Abertos criem e controlem as alterações de versão dos dicionários de dados. Essas versões devem ter visualizações estáticas para cada (de forma análoga aos pull requests do github), mas sem necessidade de publicação, e somente com circulação restrita interna entre gestores do portal de Dados Abertos e custodiantes de dados.
-
-Essa solução deve conter ou permitir:
-
-1. visualização gráfica/diagrama RD (entidade relacionamento) que mostre recursos que têm relação entre si
-
-    ![](static/DER.png)
-
-1. navegação entre diagrama e dicionário (tabela), que possibilite a operabilidade de, em se clicando na tabela, o foco para o local do diagrama seja trazido para a visualização; (feição do dicionário de dados tem de responder a interações no diagrama)
-
-    ![](static/DICT.png)
-
-1. visualização do dicionário tem de mostrar as restrições de cada variável (chave primária/secundária, etc) - essas funcionalidades deverão estar à disposição no momento da elaboração do datapackage (outras ferramentas existem quando ele está pronto, p. ex. = https://github.com/frictionlessdata/ckanext-validation)
-
-    ![](static/ATTRIBUTTES.png)
-
-    ![](static/KEYS.png)
-
-1. um gerador de site estático: as funcionalidades da solução a ser implementada devem acontecer num formato de site completo, com design, sem nenhum componente de servidor que o sustente
+1. gerador de site estático: as funcionalidades da solução a ser implementada devem acontecer num formato de site completo, com design, sem nenhum componente de servidor que o sustente
 
 1. visualização do dicionário tem de ser uma extensão no CKAN
 
     ![](static/CKAN.png)
- 
-### Documentação legível por máquina: 
 
-Implementação de solução e capacitação para que custodiantes de dados realizem a confecção do documento descritivo dos metadados do conjunto de dados (datapackage.json).
+* Ambiente Tecnológico
 
-
-## Obrigações/requisitos
- 
-A contratação envolverá:
-
-1. apresentação de alternativas de solução para os problemas apresentados, diante dos requisitos indicados
-1. discussão com equipe gestora do Portal
-1. implementação das soluções aprovadas de forma que a equipe da DCTA possa conduzí-las de forma independente do contratante
-1. elaboração de tutorial auto-instrucional da contratante para postagem no Portal de Dados Abertos e consumo dos órgãos/entidades custodiantes 
-
-# Dependências / Integrações
-
-- Ambiente Tecnológico (se necessário indicação)
-
-    - (Python, Jinja2 templates, Bootstrap, jQuery, TypeScript, React, Next.js, Geradores de Site Estático)
-    - https://docs.ckan.org/en/2.8/theming/index.html
-    - https://github.com/frictionlessdata/components
-    - https://github.com/datopian/portal.js
+  - (Python, Jinja2 templates, Bootstrap, jQuery, TypeScript, React, Next.js, Geradores de Site Estático)
+  - https://docs.ckan.org/en/2.8/theming/index.html
+  - https://github.com/frictionlessdata/components
+  - https://github.com/datopian/portal.js
 
 - permissões de rede PRODEMGE/CGE
 
 - [Desenvolvimento de sistemas](http://www.planejamento.mg.gov.br/pagina/gestao-governamental/gestao-de-ti/desenvolvimento-de-sistemas): diretrizes e exemplos para o estabelecimento de controles com base em padrões de mercado
-
-## Enquadramento nos requisitos e premissas das normas mais recentes
-
-### Lei Geral de Proteção de Dados
-
-### Decreto 10.046/2019
-
-(dispõe sobre a governança no compartilhamento de dados no âmbito da ADM Federal)
-
-> Seção II: Do compartilhamento amplo de dados 
->
-> Art. 11.  O compartilhamento amplo de dados dispensa autorização prévia pelo gestor de dados e será realizado pelos canais existentes para dados abertos e para transparência ativa, na forma da legislação.
->
-> § 1º  Na hipótese de o dado de compartilhamento amplo de que trata o caput não estar disponível em formato aberto, o solicitante de dados poderá requerer sua abertura junto ao gestor de dados.
->
-> (...)
->
-> § 3º  A Controladoria-Geral da União e o Comitê Interministerial de Governança, de que trata o Decreto nº 9.203, de 22 de novembro de 2017, poderão recomendar, quando econômica e operacionalmente viável, a abertura dos dados de compartilhamento amplo em transparência ativa.
->
-> § 4º  **Os solicitantes e recebedores de dados adotarão medidas para manter a integridade e a autenticidade das informações recebidas**.
->
-> § 5º  **Os dados de compartilhamento amplo serão catalogados no Portal Brasileiro de Dados Abertos em formato aberto**.
-
-OBS.: minuta de decreto análogo está sendo discutido pelas instâncias estaduais de governança, com alta probabilidade de replicação das definições sobre as categorias de compartilhamento de dados
 
 # Exemplos / Pesquisa
 <a href="#top">(inicio)</a>

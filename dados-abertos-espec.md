@@ -74,11 +74,13 @@ Entretanto, com a configuração básica da plataforma utilizada, o CKAN, há a 
 
 A solução deve conter ou permitir:
 
-
-
 1. REPRESENTAÇÃO VISUAL DOS METADADOS
 
+Tamanho dos ícones, estilo ícones de chaves primária (PK) e estrangeira (FK), disposição espacial
+
 2. METADADOS TABLE SCHEMA
+
+metadados do schema para cada recurso e busca/filtro/ocultação de colunas, mostra de detalhes, amostra de dados
 
 3. DIAGRAMAS ESTÁTICOS: visualização gráfica/diagrama RD (entidade relacionamento) que mostre os recursos, seus elementos e relações:
 
@@ -88,21 +90,29 @@ A solução deve conter ou permitir:
 
     ![](static/DICT.png)
 
-1. visualização do dicionário tem de mostrar as restrições de cada variável (chave primária/secundária, etc) - essas funcionalidades deverão estar à disposição no momento da elaboração do datapackage (outras ferramentas existem quando ele está pronto, p. ex. = https://github.com/frictionlessdata/ckanext-validation)
+    visualização do dicionário tem de mostrar as restrições de cada variável (chave primária/secundária, etc) - essas funcionalidades deverão estar à disposição no momento da elaboração do datapackage (outras ferramentas existem quando ele está pronto, p. ex. = https://github.com/frictionlessdata/ckanext-validation)
 
     ![](static/ATTRIBUTTES.png)
 
     ![](static/KEYS.png)
 
-- metadados de validação -> metadados de validação
 
-- metadados recursos vs schema -> metadados table schema
+5. METADADOS DE VALIDAÇÃO
 
-- metadados estatísticas descritivas -> metadados estatísticas descritivas
+6. METADADOS RECURSOS VS SCHEMA
+
+Particionamento
+
+7. METADADOS ESTATÍSTICAS DESCRITIVAS
+
+Amostra dos dados, médias, percentual de valores ausentes, etc
+
+* funcionalidades embutidas:
 
 - exportar para PDF
 
 - exportar diagramas para SVG
+
 
 ## Dependências / Integrações
 

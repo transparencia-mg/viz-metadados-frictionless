@@ -1,0 +1,48 @@
+project:
+  type: website
+
+website:
+  repo-url: https://github.com/transparencia-mg/viz-metadados-frictionless
+  repo-actions: [edit, issue]
+  navbar:
+    left:
+    - href: index.qmd
+      text: Home
+    right:
+      - href: glossario.qmd
+      - icon: github
+        href: https://github.com/transparencia-mg/viz-metadados-frictionless
+  sidebar:
+    style: floating
+    search: true
+    contents:
+      - section: Visão Geral
+        contents: 
+          - index.qmd
+          - motivacao-contexto.qmd
+      - section: Produção
+        contents:
+          - criacao.qmd
+      - section: Publicação
+        contents:
+          - catalogacao.qmd
+          - text: Importação de metadados
+            href: importacao-metadados.qmd
+          - text: Importação de dados
+            href: importacao-dados.qmd
+      - section: Visualização
+        contents:
+          - metadados-tableschema.qmd
+          - diagramas.qmd
+          - metadados-recurso.qmd
+          - metadados-validacao.qmd
+          - metadados-stats.qmd
+          - identidade-visual.qmd
+      - section: Acesso
+        contents:
+          - exportacao.qmd
+          - leitura.qmd
+          
+
+comments:
+  hypothesis: true

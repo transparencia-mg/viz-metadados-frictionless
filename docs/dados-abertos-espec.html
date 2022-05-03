@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-0.9.345">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>dados-abertos-espec</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link id="quarto-text-highlighting-styles" href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<script async="" src="https://hypothes.is/embed.js"></script>
+
+
+</head>
+
+<body class="nav-sidebar floating nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./index.html" aria-current="page">Home</a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./glossario.html">Glossário</a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/transparencia-mg/viz-metadados-frictionless"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">(Untitled)</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+    <div class="sidebar-item-container"> 
+        <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Visão Geral</a>
+      <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+        <i class="bi bi-chevron-right ms-2"></i>
+      </a>
+    </div>
+    <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Introdução</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./motivacao-contexto.html" class="sidebar-item-text sidebar-link">Contexto</a>
+  </div>
+</li>
+    </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+    <div class="sidebar-item-container"> 
+        <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">Produção</a>
+      <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+        <i class="bi bi-chevron-right ms-2"></i>
+      </a>
+    </div>
+    <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./criacao.html" class="sidebar-item-text sidebar-link">Criação</a>
+  </div>
+</li>
+    </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+    <div class="sidebar-item-container"> 
+        <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">Publicação</a>
+      <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+        <i class="bi bi-chevron-right ms-2"></i>
+      </a>
+    </div>
+    <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./catalogacao.html" class="sidebar-item-text sidebar-link">Catalogação</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./importacao-metadados.html" class="sidebar-item-text sidebar-link">Importação de metadados</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./importacao-dados.html" class="sidebar-item-text sidebar-link">Importação de dados</a>
+  </div>
+</li>
+    </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+    <div class="sidebar-item-container"> 
+        <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">Visualização</a>
+      <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+        <i class="bi bi-chevron-right ms-2"></i>
+      </a>
+    </div>
+    <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./metadados-tableschema.html" class="sidebar-item-text sidebar-link">Table Schema</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./diagramas.html" class="sidebar-item-text sidebar-link">Diagramas</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./metadados-recurso.html" class="sidebar-item-text sidebar-link">Recurso</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./metadados-validacao.html" class="sidebar-item-text sidebar-link">Validação</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./metadados-stats.html" class="sidebar-item-text sidebar-link">Estatísticas descritivas</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./identidade-visual.html" class="sidebar-item-text sidebar-link">Identidade Visual</a>
+  </div>
+</li>
+    </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+    <div class="sidebar-item-container"> 
+        <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">Acesso</a>
+      <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">
+        <i class="bi bi-chevron-right ms-2"></i>
+      </a>
+    </div>
+    <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./exportacao.html" class="sidebar-item-text sidebar-link">Download</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./leitura.html" class="sidebar-item-text sidebar-link">Leitura</a>
+  </div>
+</li>
+    </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+
+<section id="motivação-contexto-da-demanda" class="level1">
+<h1>Motivação / contexto da demanda</h1>
+<section id="obrigações-legais-e-competência-institucional" class="level2">
+<h2 class="anchored" data-anchor-id="obrigações-legais-e-competência-institucional">Obrigações legais e Competência Institucional</h2>
+<p><a href="http://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm">A Lei Federal nº 12.527, de 18 de novembro 2011</a>, conhecida como Lei de Acesso à Informação (LAI), regulou o acesso a informações previsto na Constituição Federal de 1988. Esse acesso à divulgação espontânea de informações de interesse coletivo, produzidas ou custodiadas pelos órgãos e entidades da Administração Pública, é conhecido por Transparência Ativa. No âmbito do Poder Executivo Estadual de Minas Gerais, a transparência ativa foi regulamentada por meio do <a href="https://www.almg.gov.br/consulte/legislacao/completa/completa.html?tipo=DEC&amp;num=45969&amp;comp=&amp;ano=2012">Decreto nº 45.969, de 24 de maio de 2012</a>.</p>
+<p>Tanto a LAI como o Decreto definiram diretrizes a serem adotados nos Portais de Transparência e se relacionam ao processo de abertura e publicação de dados. Tais diretrizes foram replicadas, atualmente, na <a href="https://www.in.gov.br/en/web/dou/-/lei-n-14.129-de-29-de-marco-de-2021-311282132">Lei 14.129 (Lei do Governo Digital)</a>. A Lei 14.129 ainda detalhou um pouco mais alguns requisitos na promoção da transparência ativa de dados, quer sejam:</p>
+<ul>
+<li><p>descrição das bases de dados com informação suficiente sobre estrutura e semântica dos dados, inclusive quanto à sua qualidade e à sua integridade;</p></li>
+<li><p>permissão irrestrita de uso de bases de dados publicadas em formato aberto;</p></li>
+<li><p>completude de bases de dados, as quais devem ser disponibilizadas em sua forma primária, com o maior grau de granularidade possível, ou referenciar bases primárias, quando disponibilizadas de forma agregada;</p></li>
+<li><p>atualização periódica, mantido o histórico, de forma a garantir a perenidade de dados, a padronização de estruturas de informação e o valor dos dados à sociedade e a atender às necessidades de seus usuários;</p></li>
+<li><p>intercâmbio de dados entre órgãos e entidades dos diferentes Poderes e esferas da Federação, respeitado o disposto no art. 26 da Lei nº 13.709, de 14 de agosto de 2018 (Lei Geral de Proteção de Dados Pessoais);</p></li>
+</ul>
+<p>A estrutura administrativa responsável por promover e induzir a aplicação de tais diretrizes no âmbito do poder Executivo do Estado de Minas Gerais é a Diretoria Central de Transparência Ativa (DCTA). Essa pasta, à luz do <a href="https://www.almg.gov.br/consulte/legislacao/completa/completa.html?tipo=DEC&amp;num=47774&amp;comp=&amp;ano=2019">Decreto estadual 47.774/2019</a>, em seu artigo 44, tem como competência implementar as ações de transparência ativa do Poder Executivo, com atribuições de conceber e implementar um processo para abrir, editar, documentar, publicar e atualizar dados:</p>
+<blockquote class="blockquote">
+<p><strong>III – fomentar a disponibilização de informações públicas em formato aberto no Portal da Transparência e nos sítios eletrônicos dos órgãos e entidades do Poder Executivo</strong>;</p>
+<p><strong>IV – planejar e coordenar o desenvolvimento das regras de negócio para as ferramentas e sistemas visando a promoção da transparência ativa no âmbito do Poder Executivo</strong>;</p>
+<p><strong>V – orientar os agentes públicos quanto a disponibilização de informações nos sítios institucionais e nos demais assuntos pertinentes a sua área de atuação.</strong></p>
+</blockquote>
+<p>Nesse sentido, faz parte do negócio da DCTA adotar:</p>
+<ol type="1">
+<li><p>pelo lado da demanda, um padrão de documentação de dados (metadados) que minimize o custo dos usuários em acessar e compreender os dados;</p></li>
+<li><p>pelo lado da oferta, um processo com regras que seja o mais prático e fluido possível para os custodiantes de dados do Estado, desde que também se garanta a sua previsibilidade, autenticidade e compliance dos dados que estiverem sendo tratados</p></li>
+</ol>
+<p>Dessa forma, o <a href="https://www.dados.mg.gov.br/">Portal de Dados Abertos</a> utiliza a plataforma open source CKAN (Comprehensive Knowledge Analytics Network), bem como uma especificação de descrição de dados legível por máquina que possibilita integrações com o CKAN e outras ferramentas - Fricionless Data (‘dados sem fricção’).</p>
+</section>
+<section id="objetivos-estratégicos" class="level2">
+<h2 class="anchored" data-anchor-id="objetivos-estratégicos">Objetivos Estratégicos</h2>
+<p>Existe um compromisso institucional de abertura de dados, representado no indicador de incremento do PERCENTUAL DAS CONSULTAS DO PORTAL DA TRANSPARENCIA DIVULGADAS NO PORTAL DE DADOS ABERTOS DE MANEIRA TEMPESTIVA (%). Esse indicador possui metas para o horizonte 2021-2024 e foi pactuado no <a href="https://drive.google.com/drive/folders/1FiwRVScro1xL16flbq8mS91o7dpeTw-Z">Plano Plurianual de Ação Governamental</a>(programa 032) e no <a href="https://cge.mg.gov.br/download/category/35-arquivos-diversos?download=426:planejamento-estrategico-2020-2023">Planejamento Estratégico da CGE</a>. A <a href="http://planejamento.mg.gov.br/sites/default/files/documentos/gestao-governamental/gestao-de-ti/estrategia_2021_-_consulta_gestores_de_tic_0.pdf">Estrategia de Tecnologia de Informação e Comunicação (TIC)</a> do Estado também prevê uma diretriz de implantar 10 novos conjuntos de dados no Portal de Dados Abertos.</p>
+<p>Em consonância com (i) os princípios e normas de transparência e governo aberto expressos nas bases legais, bem como (ii) as competências institucionais da Diretoria Central de Transparência Ativa (DCTA), e também com (iii) os objetivos estratégicos acima enumerados, apresenta-se a contratação de solução de ETL para o Portal de Dados Abertos da Diretoria Central de Transparência da Controladoria Estadual de Minas Gerais, com foco nas etapas de edição e visualização dos metadados dos dados.</p>
+</section>
+</section>
+<section id="visão-geral-da-demanda" class="level1">
+<h1>Visão geral da demanda</h1>
+<p><a href="#top">(inicio)</a></p>
+<p>A partir das premissas citadas anteriormente, e considerando a baixa experiência dos custodiantes de dados no manejo de ferramentas de dados, a demanda se estrutura na necessidade de se tornar o mais prático possível o caminho percorrido pelo custodiante dos dados a serem abertos, desde a documentação dos metadados, até a sua publicação e controle de versão/alterações.</p>
+<p>Mais especificamente, o seu objetivo é permitir a visualização em HTML da documentação de um conjunto de dados realizada com o padrão de metadados Frictionless Data. A visualização deve ser possível durante o processo de produção da documentação pelos publicadores de dados, bem como após a catalogação do conjunto de dados na solução de catálogo de dados utilizada no Portal de Dados Abertos de Minas Gerais, o CKAN.</p>
+<p>Para atender esses dois casos de uso devem ser desenvolvidos:</p>
+<ul>
+<li><p>Programa de linha de comando para geração de site HTML estático para visualização dos metadados constantes de um data package</p></li>
+<li><p>Customização do CKAN para visualização dos metadados de conjuntos de dados e seus recursos que foram documentados como data packages</p></li>
+</ul>
+<ol type="1">
+<li>Limitações e problemas a serem resolvidos:
+<ol type="1">
+<li>Há uma necessidade de controle de versão, com visualizações estáticas para cada alteração, sem publicação, mas para circulação interna entre custodiante e gestor do Portal de Dados, de alguns artefatos (metadados, dicionários, relacionamentos, diagramas). Exemplos:
+<ol type="1">
+<li>O CKAN não permite visualização intermediária durante o processo de elaboração ou edição dos metadados, caso não esteja usando a interface gráfica. Ele tabmém não possibilita visualização dos relacionamentos entre tabelas ou explicitação das chaves primárias ou estrangeiras.</li>
+<li>O uso de google docs para a finalidade de compartilhar versões intermediárias dos dicionários de dados, por exemplo, é limitado para acertar conceitos e definições com as áreas de uma forma privativa e que sejam possíveis visualizações de todas as edições.</li>
+</ol></li>
+<li>Forma de elaboração do arquivo em formato json (documentação legível por máquina), a partir das definições estabelecidas no processo de documentação legível por pessoas: a documentação dos metadados (elaboração do datapackage) pode ser realizada pelo datapackage creator. Entretanto, essa ferramenta não exaure toda a gama necessária de descritores de metadados (datapackage creator) que a própria API do CKAN requer. Após sua criação inicial, há uma dificuldade de se editar manualmente o arquivo em formato json gerado (a começar pela escolha da ferramenta de edição).</li>
+<li>Multiplicidade de fontes e formatos de dados a serem publicados no Portal de Dados Abertos (arquivos csv ou xls de emails, servidores de ftp, sítios governamentais)</li>
+</ol></li>
+</ol>
+</section>
+<section id="especificação" class="level1">
+<h1>Especificação</h1>
+<p><a href="#top">(inicio)</a></p>
+<p>As necessidades de negócio, no processo de documentação de um conjunto de dados, que devem ser supridas com os itens especificados são:</p>
+<ul>
+<li><p>representação visual dos metadados -&gt; arquitetura e identidade visual</p></li>
+<li><p>metadados table schema -&gt; metadados tabular data resource</p></li>
+<li><p>diagramas estáticos -&gt; diagramas ER</p></li>
+<li><p>diagramas interativos -&gt; diagramas ER</p></li>
+<li><p>metadados de validação -&gt; metadados de validação</p></li>
+<li><p>metadados recursos vs schema -&gt; metadados table schema</p></li>
+<li><p>metadados estatísticas descritivas -&gt; metadados estatísticas descritivas</p></li>
+<li><p>exportar para PDF</p></li>
+<li><p>exportar diagramas para SVG</p></li>
+</ul>
+<section id="itens" class="level2">
+<h2 class="anchored" data-anchor-id="itens">Itens</h2>
+<section id="documentação-legível-por-humanos" class="level3">
+<h3 class="anchored" data-anchor-id="documentação-legível-por-humanos">Documentação legível por humanos:</h3>
+<p>Implementação de solução e capacitação para que custodiantes de dados e gestores do Portal de Dados Abertos criem e controlem as alterações de versão dos dicionários de dados. Essas versões devem ter visualizações estáticas para cada (de forma análoga aos pull requests do github), mas sem necessidade de publicação, e somente com circulação restrita interna entre gestores do portal de Dados Abertos e custodiantes de dados.</p>
+<p>Essa solução deve conter ou permitir:</p>
+<ol type="1">
+<li><p>visualização gráfica/diagrama RD (entidade relacionamento) que mostre recursos que têm relação entre si</p>
+<p><img src="static/DER.png" class="img-fluid"></p></li>
+<li><p>navegação entre diagrama e dicionário (tabela), que possibilite a operabilidade de, em se clicando na tabela, o foco para o local do diagrama seja trazido para a visualização; (feição do dicionário de dados tem de responder a interações no diagrama)</p>
+<p><img src="static/DICT.png" class="img-fluid"></p></li>
+<li><p>visualização do dicionário tem de mostrar as restrições de cada variável (chave primária/secundária, etc) - essas funcionalidades deverão estar à disposição no momento da elaboração do datapackage (outras ferramentas existem quando ele está pronto, p.&nbsp;ex. = https://github.com/frictionlessdata/ckanext-validation)</p>
+<p><img src="static/ATTRIBUTTES.png" class="img-fluid"></p>
+<p><img src="static/KEYS.png" class="img-fluid"></p></li>
+<li><p>um gerador de site estático: as funcionalidades da solução a ser implementada devem acontecer num formato de site completo, com design, sem nenhum componente de servidor que o sustente</p></li>
+<li><p>visualização do dicionário tem de ser uma extensão no CKAN</p>
+<p><img src="static/CKAN.png" class="img-fluid"></p></li>
+</ol>
+</section>
+<section id="documentação-legível-por-máquina" class="level3">
+<h3 class="anchored" data-anchor-id="documentação-legível-por-máquina">Documentação legível por máquina:</h3>
+<p>Implementação de solução e capacitação para que custodiantes de dados realizem a confecção do documento descritivo dos metadados do conjunto de dados (datapackage.json).</p>
+</section>
+</section>
+<section id="obrigaçõesrequisitos" class="level2">
+<h2 class="anchored" data-anchor-id="obrigaçõesrequisitos">Obrigações/requisitos</h2>
+<p>A contratação envolverá:</p>
+<ol type="1">
+<li>apresentação de alternativas de solução para os problemas apresentados, diante dos requisitos indicados</li>
+<li>discussão com equipe gestora do Portal</li>
+<li>implementação das soluções aprovadas de forma que a equipe da DCTA possa conduzí-las de forma independente do contratante</li>
+<li>elaboração de tutorial auto-instrucional da contratante para postagem no Portal de Dados Abertos e consumo dos órgãos/entidades custodiantes</li>
+</ol>
+</section>
+</section>
+<section id="dependências-integrações" class="level1">
+<h1>Dependências / Integrações</h1>
+<ul>
+<li><p>Ambiente Tecnológico (se necessário indicação)</p>
+<ul>
+<li>(Python, Jinja2 templates, Bootstrap, jQuery, TypeScript, React, Next.js, Geradores de Site Estático)</li>
+<li>https://docs.ckan.org/en/2.8/theming/index.html</li>
+<li>https://github.com/frictionlessdata/components</li>
+<li>https://github.com/datopian/portal.js</li>
+</ul></li>
+<li><p>permissões de rede PRODEMGE/CGE</p></li>
+<li><p><a href="http://www.planejamento.mg.gov.br/pagina/gestao-governamental/gestao-de-ti/desenvolvimento-de-sistemas">Desenvolvimento de sistemas</a>: diretrizes e exemplos para o estabelecimento de controles com base em padrões de mercado</p></li>
+</ul>
+<section id="enquadramento-nos-requisitos-e-premissas-das-normas-mais-recentes" class="level2">
+<h2 class="anchored" data-anchor-id="enquadramento-nos-requisitos-e-premissas-das-normas-mais-recentes">Enquadramento nos requisitos e premissas das normas mais recentes</h2>
+<section id="lei-geral-de-proteção-de-dados" class="level3">
+<h3 class="anchored" data-anchor-id="lei-geral-de-proteção-de-dados">Lei Geral de Proteção de Dados</h3>
+</section>
+<section id="decreto-10.0462019" class="level3">
+<h3 class="anchored" data-anchor-id="decreto-10.0462019">Decreto 10.046/2019</h3>
+<p>(dispõe sobre a governança no compartilhamento de dados no âmbito da ADM Federal)</p>
+<blockquote class="blockquote">
+<p>Seção II: Do compartilhamento amplo de dados</p>
+<p>Art. 11. O compartilhamento amplo de dados dispensa autorização prévia pelo gestor de dados e será realizado pelos canais existentes para dados abertos e para transparência ativa, na forma da legislação.</p>
+<p>§ 1º Na hipótese de o dado de compartilhamento amplo de que trata o caput não estar disponível em formato aberto, o solicitante de dados poderá requerer sua abertura junto ao gestor de dados.</p>
+<p>(…)</p>
+<p>§ 3º A Controladoria-Geral da União e o Comitê Interministerial de Governança, de que trata o Decreto nº 9.203, de 22 de novembro de 2017, poderão recomendar, quando econômica e operacionalmente viável, a abertura dos dados de compartilhamento amplo em transparência ativa.</p>
+<p>§ 4º <strong>Os solicitantes e recebedores de dados adotarão medidas para manter a integridade e a autenticidade das informações recebidas</strong>.</p>
+<p>§ 5º <strong>Os dados de compartilhamento amplo serão catalogados no Portal Brasileiro de Dados Abertos em formato aberto</strong>.</p>
+</blockquote>
+<p>OBS.: minuta de decreto análogo está sendo discutido pelas instâncias estaduais de governança, com alta probabilidade de replicação das definições sobre as categorias de compartilhamento de dados</p>
+</section>
+</section>
+</section>
+<section id="exemplos-pesquisa" class="level1">
+<h1>Exemplos / Pesquisa</h1>
+<p><a href="#top">(inicio)</a></p>
+<ul>
+<li><p><a href="https://frictionlessdata.io/blog/2021/01/18/schema-collaboration/#what-problem-does-schema-collaboration-solve">Schema Collaboration</a></p>
+<ul>
+<li><p>usa a interface do datapackage creator como ‘google docs’ para edição colabotativa de um mesmo datapackage.json; necessita instalação de outro app (Docker); é uma ferramenta recente (criada em 2020, a referência do blog é de janeiro de 2021); faltariam os itens de especificação 1.1, 1.2 e 1.3</p></li>
+<li><p><a href="https://github.com/frictionlessdata/schema-collaboration/blob/master/documentation/User.md#schema-collaboration">documentação</a></p></li>
+</ul>
+<blockquote class="blockquote">
+<p>The solution in this tool fund was to build a system that uses Data Package Creator to enable data managers and researchers to create and share dataset schemas, edit them, post messages and export the schemas in different formats (text, Markdown, PDF). To encourage collaboration within a project multiple researchers can work on the same schema. Being able to view the description in human-readable formats makes it easier to spot mistakes and to integrate with third-party data repositories.</p>
+<p>From a data manager’s perspective the tool allows them to keep tabs on the datasets being managed and their progress. It prevents details getting lost in emails and hopefully provides a nicer interface to encourage better collaboration.</p>
+<p>In other words: think of a very simplified “Google Docs” specialised for data packages</p>
+</blockquote></li>
+<li><p><a href="https://dataedo.com/samples/html2/enterprise/#/doc/m99/hr/modules/hr">Dataedo</a>:</p>
+<ul>
+<li><p>Contém diagramas de relacionamento;</p></li>
+<li><p>permitem navegar para as tabelas de dicionário de dados a partir dos hiperlinks contidos no diagrama;</p></li>
+<li><p>para cada tabela, além do dicionário, apresenta as chaves primária e estrangeira e os relacionamentos possíveis entre tabelas (além do método de chamada para cruzá-las)</p></li>
+<li><p>exemplo: https://dataedo.com/samples/html2/enterprise/#/doc/m103t3733/procurement/tables/pur-shipment-lines</p></li>
+</ul></li>
+<li><p><a href="https://data.world/kgarrett/covid-19-open-research-dataset">data.world</a></p>
+<ul>
+<li>guia para edição de metadados: https://help.data.world/hc/en-us/articles/1260802115269-Custom-metadata</li>
+</ul></li>
+<li><p><a href="https://www.kaggle.com/ajaypalsinghlo/world-happiness-report-2021">kaggle</a></p></li>
+<li><p><a href="https://www.getdbt.com/mrr-playbook/#!/overview">dbt</a></p></li>
+</ul>
+</section>
+<section id="dúvidas" class="level1">
+<h1>Dúvidas</h1>
+<p><a href="#top">(inicio)</a></p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

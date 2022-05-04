@@ -45,6 +45,8 @@ Uma descrição detalhada de cada necessidade está disponível via _menu latera
 
 ### Produção
 
+- DEVT Framework
+
 ### Publicação
 
 ### Visualização

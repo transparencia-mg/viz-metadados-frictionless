@@ -24,6 +24,7 @@ website:
       - section: Produção
         contents:
           - criacao.md
+          - validacao.md
       - section: Publicação
         contents:
           - catalogacao.md

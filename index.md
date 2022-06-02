@@ -45,6 +45,9 @@ Uma descrição detalhada de cada necessidade está disponível via _menu latera
 
 ### Produção
 
+A macroetapa de Produção consiste nas atividades necessárias para que um _data package_ válido seja produzido. 
+Ela também inclui as atividades de incorporar alterações no _data package_.
+
 - DEVT Framework
 
 ### Publicação

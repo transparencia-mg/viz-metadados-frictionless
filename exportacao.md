@@ -3,27 +3,23 @@ title: Download
 toc: true
 ---
 
-exportação (download) de data packages
-
-- Context
-- What
-    - Acceptance criteria
-- Why
-- How
-- Open questions
-- Examples/Research
-    - Low-fidelity mockup
-    - Other examples
-
 ## What
 
-Permitir o download de conjuntos de dados como pacotes de dados via interface gráfica e URL.
+Permitir o download, com controle de versão, de conjuntos de dados como data packages zipados via botão na interface gráfica e URL dedicada.
 
 ## Open questions
 
-- Vide open questions da importação e armazenamento de data packages [[20220420T105955]]
+- O download deve ser do arquivo `datapackage.json` e arquivos de dados ou somente do arquivo `datapackage.json`? Somente o arquivo `datapackage.json` impede que o consumidor realize facilmente um backup local dos arquivos de dados. Isso tem valor, especialmente tendo em vista que o CKAN não oferece versionamento de dados.
+
+- `frictionless-r` suporta a leitura de data packages zipados?
+
+- Vide open questions da [importação e armazenamento de data packages](importacao-metadados.md)
 
 ## Examples/Research
+
+- [package.to_zip](https://framework.frictionlessdata.io/docs/references/api-reference/#packageto_zip)
+
+- [Compression of resources](https://specs.frictionlessdata.io/patterns/#compression-of-resources)
 
 - [ckanapi](https://github.com/ckan/ckanapi) - Pacote Python, acessível via interface CLI, que simplifica a interação com a [API do CKAN](http://docs.ckan.org/en/2.9/api/index.html). Ele possui [funcionalidade para exportação](https://github.com/ckan/ckanapi#bulk-dataset-and-resource-export---datapackagejson-format) de conjuntos de dados como pacotes de dados
 
@@ -42,4 +38,6 @@ Permitir o download de conjuntos de dados como pacotes de dados via interface gr
 
 - Github zip archive download
 
+- [[20210623T210814]] frictionless - mime type
 
+- [ckanext-versions](https://github.com/datopian/ckanext-versions)

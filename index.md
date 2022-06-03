@@ -52,7 +52,9 @@ Ela também inclui as atividades de incorporar alterações no _data package_.
 
 ### Publicação
 
-### Visualização
+### Acesso
+
+### Uso
 
 Essa demanda visa permitir a visualização em HTML da documentação de um conjunto de dados realizada com o padrão de metadados [Frictionless Data](https://specs.frictionlessdata.io/).
 
@@ -86,5 +88,3 @@ A visualização em uma página HTML dos metadados constantes do `datapackage.js
 Nesse caso, o trabalho de _design_ de interação e interface para elaboração de uma identidade visual atrativa, mas, principalmente, para representação de todos os metadados presentes nas especificações _Frictionless_ em uma única página HTML será reutilizado tanto no gerador de site estático quando na extensão do CKAN.
 
 A possibilidade de reuso de componentes entre essas duas entregas faz parte das definições arquiteturais.
-
-### Acesso

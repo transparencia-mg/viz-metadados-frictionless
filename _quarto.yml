@@ -33,18 +33,20 @@ website:
             href: importacao-metadados.md
           - text: Importação de dados
             href: importacao-dados.md
-      - section: Visualização
-        contents:
-          - metadados-tableschema.md
-          - diagramas.md
-          - metadados-recurso.md
-          - metadados-validacao.md
-          - metadados-stats.md
+      - section: Distribuição
+        contents: 
           - identidade-visual.md
+          - metadados-validacao.md
       - section: Acesso
         contents:
           - exportacao.md
           - leitura.md
+      - section: Uso
+        contents:
+          - metadados-tableschema.md
+          - diagramas.md
+          - metadados-recurso.md
+          - metadados-stats.md
           
 
 comments:

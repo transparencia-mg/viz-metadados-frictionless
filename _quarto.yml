@@ -10,6 +10,7 @@ website:
     - href: index.md
       text: Home
     right:
+      - href: legislacao.md
       - href: glossario.md
       - icon: github
         href: https://github.com/transparencia-mg/viz-metadados-frictionless

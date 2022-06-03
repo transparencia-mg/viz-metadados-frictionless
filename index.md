@@ -6,7 +6,7 @@ bibliography: references.bib
 
 Esse documento é um registro das necessidades do cliente[^1] identificadas para fins das intervenções no [Portal de Dados Abertos](https://www.dados.mg.gov.br) (PdA) no âmbito do subprojeto “Melhorias no Portal de Transparência e de Dados Abertos do Estado de Minas Gerais” que consta do projeto “Fortalecimento e reestruturação tecnológica da Controladoria Geral do Estado (CGE)”.
 
-Atualmente os dados categorizado em nível de compartilhamento amplo no âmbito da Administração Pública direta, autárquica e fundacional do Poder Executivo Estadual devem obrigatoriamente ser catalogados em formato aberto no PdA por força do [Decreto nº 48.383/2022](legislacao.qmd#decreto-48383-de-18032022) (art. 27, § 3º).
+Atualmente os dados categorizado em nível de compartilhamento amplo no âmbito da Administração Pública direta, autárquica e fundacional do Poder Executivo Estadual devem obrigatoriamente ser catalogados em formato aberto no PdA por força do [Decreto nº 48.383/2022](legislacao.md#decreto-48383-de-18032022) (art. 27, § 3º).
 
 [Dados de compartilhamento amplo são dados públicos que não estão sujeitos a nenhuma restrição de acesso, cuja divulgação deve ser pública e garantida a qualquer interessado, na forma da legislação.]{.aside}
 
@@ -19,7 +19,7 @@ Em outras palavras, o PdA visa endereçar as questões de _findability_ e _disco
 
 Como forma de reduzir os custos de transação ao longo do ciclo de vida dos dados abertos, a CGE adotou[^regulamentacao-adocao-padrao] o padrão de metadados [_Frictionless_](https://frictionlessdata.io/) para documentar conjuntos de dados. 
 Dados documentados de acordo com esse padrão são chamados de _data packages_.
-As necessidades deste projeto estão relacionadas as etapas de produção, publicação, visualização e acesso de [_data packages_](glossario#data-package) por parte dos usuários (produtores e consumidores) do [Portal de Dados Abertos](https://dados.mg.gov.br/) (PdA).
+As necessidades deste projeto estão relacionadas as etapas de produção, publicação, visualização e acesso de [_data packages_](glossario.md#data-package) por parte dos usuários (produtores e consumidores) do [Portal de Dados Abertos](https://dados.mg.gov.br/) (PdA).
 
 [^1]: Em outras palavras, esse documento representa o backlog do produto, entregável da Ideação - etapa que tem como objetivo capturar e priorizar necessidades, olhando-as com maior clareza e profundidade, imergindo no problema para compreender o contexto e a perspectiva do cliente - que de acordo com o item 1.1.6.2 do Termo de Referência deve ser realizada pela CONTRATANTE. 
 
@@ -37,7 +37,7 @@ Essas ações indicam um compromisso com a adoção de um processo de abertura d
 
 ![](static/20220428T150210.drawio.svg)
 
-O contexto detalhado, incluindo discussão das escolhas tecnológicas, estão disponíveis [neste link](motivacao-contexto.qmd).
+O contexto detalhado, incluindo discussão das escolhas tecnológicas, estão disponíveis [neste link](motivacao-contexto.md).
 
 ## Necessidades
 

@@ -238,6 +238,20 @@
     "text": "Além disso, com o intuito de aumentar a qualidade dos dados e metadados publicados, os novos conjuntos de dados serão documentados conforme padrão de metadados legível por máquina. Isso possibilita, por exemplo, a validação automática sobre se os dados estão em conformidade com a documentação."
   },
   {
+    "objectID": "testes-usabilidade.html",
+    "href": "testes-usabilidade.html",
+    "title": "Testes Usabilidade",
+    "section": "",
+    "text": "Identificar qual conjunto de dados possui as informações relevantes\nIdentificar quais tabelas possuem as informações relevantes\nIdentificar quais colunas possuem as informações relevantes\nIdentificar quais linhas possuem as informações relevantes\n\n\n\nO Caderno de Serviços Prodemge descreve os parâmetros que se aplicam a toda e qualquer contratação de Serviços de TIC da Prodemge ($FORNECEDOR) pelos Órgãos e Entidades do Executivo Estadual.\nUm dos itens de serviço existentes no caderno é o de “Hospedagem de Sistemas em Ambiente Dedicado de Baixa Plataforma” ($ITEM_SERVICO).\nEnquanto Gestor de Contratos, você deseja saber\n\nO valor médio anual (\\(VALOR_HOMOLOGADO) dos contratos para os últimos três anos (\\)DATA)\nOs links para os termos contratuais ($FORNECEDOR) dos contratos mais recentes que tenham valor próximo\nMapa comparativo de preços\n\nÓrgão\nContrato\nValor\nURL\n\nhttps://planejamento.mg.gov.br/pagina/gestao-governamental/gestao-de-ti/compras-de-tic#:~:text=Caderno%20de%20Servi%C3%A7os%20Prodemge\nhttps://planejamento.mg.gov.br/sites/default/files/documentos/gestao-governamental/gestao-de-ti/caderno_de_servicos_prodemge_-_v_322.pdf#page=29\nhttps://planejamento.mg.gov.br/sites/default/files/documentos/gestao-governamental/gestao-de-ti/anexo_ii_-codigos_dos_servicos_no_catmas-_v_32.pdf\nhttp://www.pesquisalegislativa.mg.gov.br/LegislacaoCompleta.aspx?cod=180241&marc=\nhttp://www.pesquisalegislativa.mg.gov.br/LegislacaoCompleta.aspx?cod=173778&marc="
+  },
+  {
+    "objectID": "testes-usabilidade.html#links",
+    "href": "testes-usabilidade.html#links",
+    "title": "Testes Usabilidade",
+    "section": "Links",
+    "text": "Links\n\nVide https://trello.com/c/t22QaS9M para referências sobre os testes de usabilidade conduzidos para o Portal da Transparência."
+  },
+  {
     "objectID": "motivacao-contexto.html",
     "href": "motivacao-contexto.html",
     "title": "Contexto",

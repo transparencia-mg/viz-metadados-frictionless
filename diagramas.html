@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-0.9.531">
+<meta name="generator" content="quarto-0.9.536">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -269,6 +269,7 @@ ul.task-list{list-style: none;}
   <li><a href="#low-fidelity-mockup" id="toc-low-fidelity-mockup" class="nav-link" data-scroll-target="#low-fidelity-mockup">Low-fidelity mockup</a></li>
   <li><a href="#other-examples" id="toc-other-examples" class="nav-link" data-scroll-target="#other-examples">Other examples</a></li>
   </ul></li>
+  <li><a href="#research" id="toc-research" class="nav-link" data-scroll-target="#research">Research</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/transparencia-mg/viz-metadados-frictionless/edit/main/diagramas.md" class="toc-action">Edit this page</a></p><p><a href="https://github.com/transparencia-mg/viz-metadados-frictionless/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -308,11 +309,11 @@ ul.task-list{list-style: none;}
 <li><p>Se múltiplos recursos compartilham o mesmo <em>table schema</em> (após expansão e dereferenciamento) o diagrama deve apresentar apenas aqueles que são únicos, com indicação que existem outros.</p>
 <p>O objetivo aqui é facilitar a compreensão da modelagem conceitual dos dados. Por exemplo, todos os 100+ recursos do conjunto <a href="https://dados.mg.gov.br/dataset/remuneracao-servidores-ativos">remuneracao-servidores-ativos</a> compartilham o mesmo <em>table schema</em>?</p></li>
 <li><p>Informações adicionais (tooltip) dos campos (<code>fields.title</code> e <code>fields.description</code>) devem ser exibidas quando o cursor do mouse passar em cima do mesmo</p></li>
-<li><p>Exportar para PDF</p></li>
-<li><p>Exportar diagramas para SVG</p></li>
-<li><p>~Informações adicionais (tooltip) dos recursos (<code>resource.title</code> e <code>resource.description</code>) devem ser exibidas quando o cursos do mouse passar em cima do mesmo~</p></li>
-<li><p>~Customização da visibilidade das colunas nos diagramas~</p></li>
-<li><p>~Interatividade entre diagramas e dicionários de dados~</p></li>
+<li><p><del>Exportar para PDF</del></p></li>
+<li><p><del>Exportar diagramas para SVG</del></p></li>
+<li><p><del>Informações adicionais (tooltip) dos recursos (<code>resource.title</code> e <code>resource.description</code>) devem ser exibidas quando o cursos do mouse passar em cima do mesmo</del></p></li>
+<li><p><del>Customização da visibilidade das colunas nos diagramas</del></p></li>
+<li><p><del>Interatividade entre diagramas e dicionários de dados</del></p></li>
 </ol>
 </section>
 </section>
@@ -322,13 +323,13 @@ ul.task-list{list-style: none;}
 </section>
 <section id="how" class="level2">
 <h2 class="anchored" data-anchor-id="how">How</h2>
-<p>O diagrama deve ser implementado como um <a href="https://github.com/frictionlessdata/components">componente react frictionless</a>.</p>
+<p>O diagrama deve ser implementado como um <a href="https://github.com/frictionlessdata/components">componente react frictionless</a> antes de ser integrado ao CKAN e ao gerador de site estático.</p>
 </section>
 <section id="examples" class="level2">
 <h2 class="anchored" data-anchor-id="examples">Examples</h2>
 <section id="low-fidelity-mockup" class="level3">
 <h3 class="anchored" data-anchor-id="low-fidelity-mockup">Low-fidelity mockup</h3>
-<p><img src="20220419T211500.drawio.svg" class="img-fluid"></p>
+<p><img src="static/20220419T211500.drawio.svg" class="img-fluid"></p>
 </section>
 <section id="other-examples" class="level3">
 <h3 class="anchored" data-anchor-id="other-examples">Other examples</h3>
@@ -362,9 +363,20 @@ ul.task-list{list-style: none;}
 <li>Resize to visible ($diagrama)</li>
 </ul></li>
 </ul>
-
-
 </section>
+</section>
+<section id="research" class="level2">
+<h2 class="anchored" data-anchor-id="research">Research</h2>
+<ul>
+<li><p>Feature suggestion: Export package to ER diagram <a href="https://github.com/frictionlessdata/frictionless-py/issues/1118">#1118</a></p></li>
+<li><p><a href="https://discuss.okfn.org/t/the-tabular-data-package-as-the-one-source-for-data-definition/8598">The Tabular Data Package as the one source for data definition</a></p>
+<blockquote class="blockquote">
+<p>OpenReferral already has a Tabular Data Package, an Entity Relation Diagram and an API. I think the second two are manually crafted from the first. I want an automated way of generating the second two (and more) from the first. […] Essentially I want one single machine-readable source defining a data standard from which I can generate ERD, schemas and human-readable documentation.</p>
+</blockquote></li>
+<li><p><a href="https://github.com/iburadempa/jts_erd">jts_erd: Create an ERD from JSON-table-schemas</a></p></li>
+</ul>
+
+
 </section>
 
 </main> <!-- /main -->

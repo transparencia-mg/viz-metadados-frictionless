@@ -165,7 +165,7 @@
     "href": "diagramas.html",
     "title": "Diagramas",
     "section": "",
-    "text": "Diagrama interativo dos recursos (table schemas) de um pacote de dados. Devem ser representados no diagrama:\n\nNomes dos campos (fields.name)\nTipos dos campos (fields.type(fields.format))\nChaves primárias (schema.primaryKey)\nChaves estrangeiras (schema.foreignKeys)\nRelacionamentos\n\nNo CKAN o diagrama deve estar localizado em uma aba própria na raiz do conjunto de dados.\n\n\n\nSe múltiplos recursos compartilham o mesmo table schema (após expansão e dereferenciamento) o diagrama deve apresentar apenas aqueles que são únicos, com indicação que existem outros.\nO objetivo aqui é facilitar a compreensão da modelagem conceitual dos dados. Por exemplo, todos os 100+ recursos do conjunto remuneracao-servidores-ativos compartilham o mesmo table schema?\nInformações adicionais (tooltip) dos campos (fields.title e fields.description) devem ser exibidas quando o cursor do mouse passar em cima do mesmo\nExportar para PDF\nExportar diagramas para SVG\n~Informações adicionais (tooltip) dos recursos (resource.title e resource.description) devem ser exibidas quando o cursos do mouse passar em cima do mesmo~\n~Customização da visibilidade das colunas nos diagramas~\n~Interatividade entre diagramas e dicionários de dados~"
+    "text": "Diagrama interativo dos recursos (table schemas) de um pacote de dados. Devem ser representados no diagrama:\n\nNomes dos campos (fields.name)\nTipos dos campos (fields.type(fields.format))\nChaves primárias (schema.primaryKey)\nChaves estrangeiras (schema.foreignKeys)\nRelacionamentos\n\nNo CKAN o diagrama deve estar localizado em uma aba própria na raiz do conjunto de dados.\n\n\n\nSe múltiplos recursos compartilham o mesmo table schema (após expansão e dereferenciamento) o diagrama deve apresentar apenas aqueles que são únicos, com indicação que existem outros.\nO objetivo aqui é facilitar a compreensão da modelagem conceitual dos dados. Por exemplo, todos os 100+ recursos do conjunto remuneracao-servidores-ativos compartilham o mesmo table schema?\nInformações adicionais (tooltip) dos campos (fields.title e fields.description) devem ser exibidas quando o cursor do mouse passar em cima do mesmo\nExportar para PDF\nExportar diagramas para SVG\nInformações adicionais (tooltip) dos recursos (resource.title e resource.description) devem ser exibidas quando o cursos do mouse passar em cima do mesmo\nCustomização da visibilidade das colunas nos diagramas\nInteratividade entre diagramas e dicionários de dados"
   },
   {
     "objectID": "diagramas.html#why",
@@ -179,7 +179,7 @@
     "href": "diagramas.html#how",
     "title": "Diagramas",
     "section": "How",
-    "text": "How\nO diagrama deve ser implementado como um componente react frictionless."
+    "text": "How\nO diagrama deve ser implementado como um componente react frictionless antes de ser integrado ao CKAN e ao gerador de site estático."
   },
   {
     "objectID": "diagramas.html#examples",
@@ -187,6 +187,13 @@
     "title": "Diagramas",
     "section": "Examples",
     "text": "Examples\n\nLow-fidelity mockup\n\n\n\nOther examples\n\nO aspecto de interatividade é capturado no dbdiagram e Quick_DBD\nQliksense Data Model Viewer\nPower BI Model View\nhttps://dbdiagram.io/d\n\nDiagramas interativos ($diagrama)\nTooltip para tabelas e colunas ($diagrama)\nAuto-arrange\n\ndbt docs\n\nDiagrama com controle de visibilidade ($diagrama)\nBotão esquerdo com opções de foco “Hide this and parents” “Hide this and children” ($diagrama)\n\ndataedo\n\nDiagrama responsivo conectado a tabela associada ($diagrama)\n\nData model diagrams in R\n\nFocused Data Model ($diagrama)\nHide non-key columns ($diagrama)\n\nOracle Data Modeler\n\nSelect neighbors ($diagrama)\nResize to visible ($diagrama)"
+  },
+  {
+    "objectID": "diagramas.html#research",
+    "href": "diagramas.html#research",
+    "title": "Diagramas",
+    "section": "Research",
+    "text": "Research\n\nFeature suggestion: Export package to ER diagram #1118\nThe Tabular Data Package as the one source for data definition\n\nOpenReferral already has a Tabular Data Package, an Entity Relation Diagram and an API. I think the second two are manually crafted from the first. I want an automated way of generating the second two (and more) from the first. […] Essentially I want one single machine-readable source defining a data standard from which I can generate ERD, schemas and human-readable documentation.\n\njts_erd: Create an ERD from JSON-table-schemas"
   },
   {
     "objectID": "resumo-SEPLAG-2021-06-16.html",

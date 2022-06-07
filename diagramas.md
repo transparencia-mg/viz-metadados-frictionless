@@ -21,11 +21,11 @@ No CKAN o diagrama deve estar localizado em uma aba própria na raiz do conjunto
 
     O objetivo aqui é facilitar a compreensão da modelagem conceitual dos dados. Por exemplo, todos os 100+ recursos do conjunto [remuneracao-servidores-ativos](https://dados.mg.gov.br/dataset/remuneracao-servidores-ativos) compartilham o mesmo _table schema_?
 1. Informações adicionais (tooltip) dos campos (`fields.title` e `fields.description`) devem ser exibidas quando o cursor do mouse passar em cima do mesmo
-1. Exportar para PDF
-1. Exportar diagramas para SVG
-1. ~Informações adicionais (tooltip) dos recursos (`resource.title` e `resource.description`) devem ser exibidas quando o cursos do mouse passar em cima do mesmo~
-1. ~Customização da visibilidade das colunas nos diagramas~
-1. ~Interatividade entre diagramas e dicionários de dados~
+1. ~~Exportar para PDF~~
+1. ~~Exportar diagramas para SVG~~
+1. ~~Informações adicionais (tooltip) dos recursos (`resource.title` e `resource.description`) devem ser exibidas quando o cursos do mouse passar em cima do mesmo~~
+1. ~~Customização da visibilidade das colunas nos diagramas~~
+1. ~~Interatividade entre diagramas e dicionários de dados~~
 
 ## Why
 
@@ -33,13 +33,13 @@ Facilitar a compreensão dos relacionamentos entre recursos por meio de uma repr
 
 ## How
 
-O diagrama deve ser implementado como um [componente react frictionless](https://github.com/frictionlessdata/components).
+O diagrama deve ser implementado como um [componente react frictionless](https://github.com/frictionlessdata/components) antes de ser integrado ao CKAN e ao gerador de site estático.
 
 ## Examples
 
 ### Low-fidelity mockup
 
-![](20220419T211500.drawio.svg)
+![](static/20220419T211500.drawio.svg)
 
 ### Other examples
 
@@ -73,3 +73,13 @@ O diagrama deve ser implementado como um [componente react frictionless](https:/
   
   - Select neighbors ($diagrama)
   - Resize to visible ($diagrama)
+
+## Research
+
+- Feature suggestion: Export package to ER diagram [#1118](https://github.com/frictionlessdata/frictionless-py/issues/1118)
+
+- [The Tabular Data Package as the one source for data definition](https://discuss.okfn.org/t/the-tabular-data-package-as-the-one-source-for-data-definition/8598)
+
+    > OpenReferral already has a Tabular Data Package, an Entity Relation Diagram and an API. I think the second two are manually crafted from the first. I want an automated way of generating the second two (and more) from the first. [...] Essentially I want one single machine-readable source defining a data standard from which I can generate ERD, schemas and human-readable documentation.
+
+- [jts_erd: Create an ERD from JSON-table-schemas](https://github.com/iburadempa/jts_erd)

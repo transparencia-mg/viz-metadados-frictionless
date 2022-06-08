@@ -44,7 +44,7 @@ V - completude de bases de dados, as quais devem ser disponibilizadas em sua for
 
 VI - atualização periódica, mantido o histórico, de forma a garantir a perenidade de dados, a padronização de estruturas de informação e o valor dos dados à sociedade e a atender às necessidades de seus usuários;
 
-~VII - designação clara, disponibilizados os dados de contato, de unidade responsável pela publicação, pela atualização, pela evolução e pela manutenção de cada base de dados aberta, incluída a prestação de assistência quanto ao uso dos dados (VETADO);~
+~~VII - designação clara, disponibilizados os dados de contato, de unidade responsável pela publicação, pela atualização, pela evolução e pela manutenção de cada base de dados aberta, incluída a prestação de assistência quanto ao uso dos dados (VETADO);~~
 
 VIII - respeito à privacidade dos dados pessoais e dos dados sensíveis, sem prejuízo dos demais requisitos elencados, conforme a Lei nº 13.709, de 14 de agosto de 2018 (Lei Geral de Proteção de Dados Pessoais);
 

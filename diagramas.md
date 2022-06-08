@@ -21,9 +21,9 @@ No CKAN o diagrama deve estar localizado em uma aba própria na raiz do conjunto
 
     O objetivo aqui é facilitar a compreensão da modelagem conceitual dos dados. Por exemplo, todos os 100+ recursos do conjunto [remuneracao-servidores-ativos](https://dados.mg.gov.br/dataset/remuneracao-servidores-ativos) compartilham o mesmo _table schema_?
 1. Informações adicionais (tooltip) dos campos (`fields.title` e `fields.description`) devem ser exibidas quando o cursor do mouse passar em cima do mesmo
+1. Informações adicionais (tooltip) dos recursos (`resource.title` e `resource.description`) devem ser exibidas quando o cursos do mouse passar em cima do mesmo
 1. ~~Exportar para PDF~~
 1. ~~Exportar diagramas para SVG~~
-1. ~~Informações adicionais (tooltip) dos recursos (`resource.title` e `resource.description`) devem ser exibidas quando o cursos do mouse passar em cima do mesmo~~
 1. ~~Customização da visibilidade das colunas nos diagramas~~
 1. ~~Interatividade entre diagramas e dicionários de dados~~
 

@@ -151,21 +151,21 @@
     "href": "metadados-tableschema.html",
     "title": "Table Schema",
     "section": "",
-    "text": "Busca no dicionário de dados"
+    "text": "Full-text fuzzy search no dicionário de dados\nRenderização do markdown da propriedade description\nSímbolo para representação de chave primária, chave estrangeira, unique e required\nenum com detalhes adicionais\nExemplos de dados (sample values; data preview)\nFlexibilidade para campos ad-hoc (estado e município)\nFootnotes and annotations"
   },
   {
     "objectID": "metadados-tableschema.html#examples",
     "href": "metadados-tableschema.html#examples",
     "title": "Table Schema",
     "section": "Examples",
-    "text": "Examples\n\ndbt docs\n\nExpandir detalhes de coluna (More…) ($tabela)\n\ndataedo\n\nChave estrangeira clicavel ($tabela)\nSímbolo para representação de chave primária e estrangeira ($tabela)\nBacklinks com chaves estrangeiras de outras tabelas ($tabela)"
+    "text": "Examples\n\nhttps://github.com/fjuniorr/age7-data-dictionary\ndbt docs\n\nExpandir detalhes de coluna (More…) ($tabela)\n\ndataedo\n\nChave estrangeira clicavel ($tabela)\nSímbolo para representação de chave primária e estrangeira ($tabela)\nBacklinks com chaves estrangeiras de outras tabelas ($tabela)\n\nModelo de Dados Projeto Lins (ModeloDados_Lins_v0.9_junho2020.pdf)\nIncluir coluna com exemplos dos valores"
   },
   {
     "objectID": "diagramas.html",
     "href": "diagramas.html",
     "title": "Diagramas",
     "section": "",
-    "text": "Diagrama interativo dos recursos (table schemas) de um pacote de dados. Devem ser representados no diagrama:\n\nNomes dos campos (fields.name)\nTipos dos campos (fields.type(fields.format))\nChaves primárias (schema.primaryKey)\nChaves estrangeiras (schema.foreignKeys)\nRelacionamentos\n\nNo CKAN o diagrama deve estar localizado em uma aba própria na raiz do conjunto de dados.\n\n\n\nSe múltiplos recursos compartilham o mesmo table schema (após expansão e dereferenciamento) o diagrama deve apresentar apenas aqueles que são únicos, com indicação que existem outros.\nO objetivo aqui é facilitar a compreensão da modelagem conceitual dos dados. Por exemplo, todos os 100+ recursos do conjunto remuneracao-servidores-ativos compartilham o mesmo table schema?\nInformações adicionais (tooltip) dos campos (fields.title e fields.description) devem ser exibidas quando o cursor do mouse passar em cima do mesmo\nExportar para PDF\nExportar diagramas para SVG\nInformações adicionais (tooltip) dos recursos (resource.title e resource.description) devem ser exibidas quando o cursos do mouse passar em cima do mesmo\nCustomização da visibilidade das colunas nos diagramas\nInteratividade entre diagramas e dicionários de dados"
+    "text": "Diagrama interativo dos recursos (table schemas) de um pacote de dados. Devem ser representados no diagrama:\n\nNomes dos campos (fields.name)\nTipos dos campos (fields.type(fields.format))\nChaves primárias (schema.primaryKey)\nChaves estrangeiras (schema.foreignKeys)\nRelacionamentos\n\nNo CKAN o diagrama deve estar localizado em uma aba própria na raiz do conjunto de dados.\n\n\n\nSe múltiplos recursos compartilham o mesmo table schema (após expansão e dereferenciamento) o diagrama deve apresentar apenas aqueles que são únicos, com indicação que existem outros.\nO objetivo aqui é facilitar a compreensão da modelagem conceitual dos dados. Por exemplo, todos os 100+ recursos do conjunto remuneracao-servidores-ativos compartilham o mesmo table schema?\nInformações adicionais (tooltip) dos campos (fields.title e fields.description) devem ser exibidas quando o cursor do mouse passar em cima do mesmo\nInformações adicionais (tooltip) dos recursos (resource.title e resource.description) devem ser exibidas quando o cursos do mouse passar em cima do mesmo\nExportar para PDF\nExportar diagramas para SVG\nCustomização da visibilidade das colunas nos diagramas\nInteratividade entre diagramas e dicionários de dados"
   },
   {
     "objectID": "diagramas.html#why",

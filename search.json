@@ -207,7 +207,7 @@
     "href": "diagramas.html#open-questions",
     "title": "Diagramas",
     "section": "Open questions",
-    "text": "Open questions\n\nA visualização dos table schemas no lugar dos recursos resolve em alguns casos, como na da remuneração, a questão da igualdade lógica entre recursos diferentes. No entanto, para o caso bastante comum de partições com base em data (eg. ano), mesmo a utilização do table schema não vai funcionar pois eles podem ser diferentes (o table schema do dm_empenho_desp_2002, mas o ft_despesa_2002 é igual do dm_empenho_desp_2003, mas o ft_despesa_2002 é diferente de ft_despesa_2003 por causa das chaves estrangeiras). A utilização da funcionalidade de data in multiple files poderia ser uma solução, mas pode dificultar a manipulação e inspeção das validações."
+    "text": "Open questions\n\nA visualização dos table schemas no lugar dos recursos resolve em alguns casos, como na da remuneração, a questão da igualdade lógica entre recursos diferentes. No entanto, para o caso bastante comum de partições com base em data (eg. ano), mesmo a utilização do table schema não vai funcionar pois eles podem ser diferentes (o table schema do dm_empenho_desp_2002, mas o ft_despesa_2002 é igual do dm_empenho_desp_2003, mas o ft_despesa_2002 é diferente de ft_despesa_2003 por causa das chaves estrangeiras). A utilização da funcionalidade de data in multiple files poderia ser uma solução, mas pode dificultar a manipulação e inspeção das validações. Vale uma investigação de como as ferramentas tradicionais lidam com a visualização em bancos de dados, como dbeaver e Aqua Data Studio."
   },
   {
     "objectID": "resumo-SEPLAG-2021-06-16.html",

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-0.9.563">
+<meta name="generator" content="quarto-0.9.566">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -380,7 +380,7 @@ ul.task-list{list-style: none;}
 <section id="open-questions" class="level2">
 <h2 class="anchored" data-anchor-id="open-questions">Open questions</h2>
 <ul>
-<li>A visualização dos <strong>table schemas</strong> no lugar dos recursos resolve em alguns casos, como na da remuneração, a questão da igualdade lógica entre recursos diferentes. No entanto, para o caso bastante comum de partições com base em data (eg. ano), mesmo a utilização do <em>table schema</em> não vai funcionar pois eles podem ser diferentes (o table schema do <a href="https://github.com/transparencia-mg/age7/blob/main/schemas/ft_despesa_2003.yaml">dm_empenho_desp_2002</a>, mas o <a href="https://github.com/transparencia-mg/age7/blob/main/schemas/dm_empenho_desp_2002.yaml">ft_despesa_2002</a> é igual do <a href="https://github.com/transparencia-mg/age7/blob/main/schemas/ft_despesa_2002.yaml">dm_empenho_desp_2003</a>, mas o <a href="https://github.com/transparencia-mg/age7/blob/main/schemas/dm_empenho_desp_2002.yaml">ft_despesa_2002</a> é diferente de <a href="https://github.com/transparencia-mg/age7/blob/main/schemas/ft_despesa_2002.yaml">ft_despesa_2003</a> por causa das chaves estrangeiras). A utilização da funcionalidade de <a href="https://github.com/dados-mg/issues/issues/12">data in multiple files</a> poderia ser uma solução, mas pode dificultar a manipulação e inspeção das validações.</li>
+<li>A visualização dos <strong>table schemas</strong> no lugar dos recursos resolve em alguns casos, como na da remuneração, a questão da igualdade lógica entre recursos diferentes. No entanto, para o caso bastante comum de partições com base em data (eg. ano), mesmo a utilização do <em>table schema</em> não vai funcionar pois eles podem ser diferentes (o table schema do <a href="https://github.com/transparencia-mg/age7/blob/main/schemas/ft_despesa_2003.yaml">dm_empenho_desp_2002</a>, mas o <a href="https://github.com/transparencia-mg/age7/blob/main/schemas/dm_empenho_desp_2002.yaml">ft_despesa_2002</a> é igual do <a href="https://github.com/transparencia-mg/age7/blob/main/schemas/ft_despesa_2002.yaml">dm_empenho_desp_2003</a>, mas o <a href="https://github.com/transparencia-mg/age7/blob/main/schemas/dm_empenho_desp_2002.yaml">ft_despesa_2002</a> é diferente de <a href="https://github.com/transparencia-mg/age7/blob/main/schemas/ft_despesa_2002.yaml">ft_despesa_2003</a> por causa das chaves estrangeiras). A utilização da funcionalidade de <a href="https://github.com/dados-mg/issues/issues/12">data in multiple files</a> poderia ser uma solução, mas pode dificultar a manipulação e inspeção das validações. Vale uma investigação de como as ferramentas tradicionais lidam com a visualização em bancos de dados, como <a href="https://github.com/dbeaver/dbeaver/issues/8735">dbeaver</a> e <a href="https://www.aquaclusters.com/app/home/project/public/aquadatastudio/issue/13884">Aqua Data Studio</a>.</li>
 </ul>
 
 

@@ -32,3 +32,11 @@ toc: true
     Incluir coluna com exemplos dos valores
 
     ![](static/20220607T202406.png)
+
+## Research
+
+- [ckanext-resourcedictionary](https://github.com/keitaroinc/ckanext-resourcedictionary). CKAN extension that extends the default CKAN Data Dictionary functionality by adding the possibility to create a data dictionary before actual data is uploaded to datastore.
+    
+    > Extends the default CKAN Data Dictionary functionality by adding possibility to create data dictionary before actual data is uploaded to datastore. For resources that don't have datastore records, the data dictionary can be edited in every way (adding/removing/editing fields) and even completely deleted. For resources that contain datastore records editing data dictionary is limited only to the info properties of a field. Resource dictionary fields, labels and notes are added to the SOLR index as a resource extras.
+
+- Notas de rodapé é um [caso de uso](https://www.w3.org/annotation/wiki/Use_Cases/Annotating_CSV_Data) importante para dados tabulares, previsto em algumas gramaticas de tabelas (como no [pacote R gt](https://gt.rstudio.com/)). A propriedade [notes](https://www.w3.org/TR/2015/REC-tabular-metadata-20151217/#table-notes) definida no âmbito da W3C pode ser reaproveitada para fins de [anotações gerais](https://www.w3.org/TR/tabular-data-primer/#cell-annotations), mas que deveriam ser tratadas de forma especial no dicionário de dados.

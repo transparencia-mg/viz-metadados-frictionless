@@ -10,6 +10,8 @@ toc: true
 - Exemplos de dados (sample values; data preview)
 - Flexibilidade para campos ad-hoc (estado e município)
 - Footnotes and annotations
+- O dicionário de dados não deve estar vinculado ao datastore
+
 
 ## Examples
 

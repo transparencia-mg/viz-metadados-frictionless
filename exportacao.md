@@ -11,7 +11,11 @@ Permitir o download, com controle de versão, de conjuntos de dados como data pa
 
 - O download deve ser do arquivo `datapackage.json` e arquivos de dados ou somente do arquivo `datapackage.json`? Somente o arquivo `datapackage.json` impede que o consumidor realize facilmente um backup local dos arquivos de dados. Isso tem valor, especialmente tendo em vista que o CKAN não oferece versionamento de dados.
 
+- Na implementação do [CKAN DataHub](https://old.datahub.io/dataset/mallzee-dataset) o botão `Download Data Package` faz download apenas do arquivo `datapackage.json`. Isso implica que a propriedade `resource.path` deve utilizar URLs no lugar de caminhos relativos para que o mesmo funcione localmente. 
+
 - `frictionless-r` suporta a leitura de data packages zipados?
+
+- O versionamento proporcionado pelo activity_id na versão 2.9 do CKAN somente versiona os metadados (isso não é claro para o usuário). Permitir o download com controle de versão seria permitir que os arquivos de dados de versões anteriores também estivessem acessíveis, por exemplo adicionando `activity_id=d5b34496-735a-437d-85a5-d52e61a79d89` na URL
 
 - Vide open questions da [importação e armazenamento de data packages](importacao-metadados.md)
 

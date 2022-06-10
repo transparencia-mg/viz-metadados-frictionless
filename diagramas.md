@@ -25,7 +25,7 @@ No CKAN o diagrama deve estar localizado em uma aba própria na raiz do conjunto
 1. ~~Exportar para PDF~~
 1. ~~Exportar diagramas para SVG~~
 1. ~~Customização da visibilidade das colunas nos diagramas~~
-1. ~~Interatividade entre diagramas e dicionários de dados~~
+1. ~~Interatividade entre diagramas e dicionários de dados (Clique redireciona para dicionário de dados relevante em nova página) ~~
 
 ## Why
 

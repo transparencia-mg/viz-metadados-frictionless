@@ -32,7 +32,7 @@
     "href": "exportacao.html#open-questions",
     "title": "Download",
     "section": "Open questions",
-    "text": "Open questions\n\nO download deve ser do arquivo datapackage.json e arquivos de dados ou somente do arquivo datapackage.json? Somente o arquivo datapackage.json impede que o consumidor realize facilmente um backup local dos arquivos de dados. Isso tem valor, especialmente tendo em vista que o CKAN não oferece versionamento de dados.\nfrictionless-r suporta a leitura de data packages zipados?\nVide open questions da importação e armazenamento de data packages"
+    "text": "Open questions\n\nO download deve ser do arquivo datapackage.json e arquivos de dados ou somente do arquivo datapackage.json? Somente o arquivo datapackage.json impede que o consumidor realize facilmente um backup local dos arquivos de dados. Isso tem valor, especialmente tendo em vista que o CKAN não oferece versionamento de dados.\nNa implementação do CKAN DataHub o botão Download Data Package faz download apenas do arquivo datapackage.json. Isso implica que a propriedade resource.path deve utilizar URLs no lugar de caminhos relativos para que o mesmo funcione localmente.\nfrictionless-r suporta a leitura de data packages zipados?\nO versionamento proporcionado pelo activity_id na versão 2.9 do CKAN somente versiona os metadados (isso não é claro para o usuário). Permitir o download com controle de versão seria permitir que os arquivos de dados de versões anteriores também estivessem acessíveis, por exemplo adicionando activity_id=d5b34496-735a-437d-85a5-d52e61a79d89 na URL\nVide open questions da importação e armazenamento de data packages"
   },
   {
     "objectID": "exportacao.html#examplesresearch",
@@ -151,7 +151,7 @@
     "href": "metadados-tableschema.html",
     "title": "Table Schema",
     "section": "",
-    "text": "Full-text fuzzy search no dicionário de dados\nRenderização do markdown da propriedade description\nSímbolo para representação de chave primária, chave estrangeira, unique e required\nenum com detalhes adicionais\nExemplos de dados (sample values; data preview)\nFlexibilidade para campos ad-hoc (estado e município)\nFootnotes and annotations"
+    "text": "Full-text fuzzy search no dicionário de dados\nRenderização do markdown da propriedade description\nSímbolo para representação de chave primária, chave estrangeira, unique e required\nenum com detalhes adicionais\nExemplos de dados (sample values; data preview)\nFlexibilidade para campos ad-hoc (estado e município)\nFootnotes and annotations\nO dicionário de dados não deve estar vinculado ao datastore"
   },
   {
     "objectID": "metadados-tableschema.html#examples",
@@ -161,11 +161,18 @@
     "text": "Examples\n\nhttps://github.com/fjuniorr/age7-data-dictionary\ndbt docs\n\nExpandir detalhes de coluna (More…) ($tabela)\n\ndataedo\n\nChave estrangeira clicavel ($tabela)\nSímbolo para representação de chave primária e estrangeira ($tabela)\nBacklinks com chaves estrangeiras de outras tabelas ($tabela)\n\nModelo de Dados Projeto Lins (ModeloDados_Lins_v0.9_junho2020.pdf)\nIncluir coluna com exemplos dos valores"
   },
   {
+    "objectID": "metadados-tableschema.html#research",
+    "href": "metadados-tableschema.html#research",
+    "title": "Table Schema",
+    "section": "Research",
+    "text": "Research\n\nckanext-resourcedictionary. CKAN extension that extends the default CKAN Data Dictionary functionality by adding the possibility to create a data dictionary before actual data is uploaded to datastore.\n\nExtends the default CKAN Data Dictionary functionality by adding possibility to create data dictionary before actual data is uploaded to datastore. For resources that don’t have datastore records, the data dictionary can be edited in every way (adding/removing/editing fields) and even completely deleted. For resources that contain datastore records editing data dictionary is limited only to the info properties of a field. Resource dictionary fields, labels and notes are added to the SOLR index as a resource extras.\n\nNotas de rodapé é um caso de uso importante para dados tabulares, previsto em algumas gramaticas de tabelas (como no pacote R gt). A propriedade notes definida no âmbito da W3C pode ser reaproveitada para fins de anotações gerais, mas que deveriam ser tratadas de forma especial no dicionário de dados."
+  },
+  {
     "objectID": "diagramas.html",
     "href": "diagramas.html",
     "title": "Diagramas",
     "section": "",
-    "text": "Diagrama interativo dos recursos (table schemas) de um pacote de dados. Devem ser representados no diagrama:\n\nNomes dos campos (fields.name)\nTipos dos campos (fields.type(fields.format))\nChaves primárias (schema.primaryKey)\nChaves estrangeiras (schema.foreignKeys)\nRelacionamentos\n\nNo CKAN o diagrama deve estar localizado em uma aba própria na raiz do conjunto de dados.\n\n\n\nSe múltiplos recursos compartilham o mesmo table schema (após expansão e dereferenciamento) o diagrama deve apresentar apenas aqueles que são únicos, com indicação que existem outros.\nO objetivo aqui é facilitar a compreensão da modelagem conceitual dos dados. Por exemplo, todos os 100+ recursos do conjunto remuneracao-servidores-ativos compartilham o mesmo table schema?\nInformações adicionais (tooltip) dos campos (fields.title e fields.description) devem ser exibidas quando o cursor do mouse passar em cima do mesmo\nInformações adicionais (tooltip) dos recursos (resource.title e resource.description) devem ser exibidas quando o cursos do mouse passar em cima do mesmo\nExportar para PDF\nExportar diagramas para SVG\nCustomização da visibilidade das colunas nos diagramas\nInteratividade entre diagramas e dicionários de dados"
+    "text": "Diagrama interativo dos recursos (table schemas) de um pacote de dados. Devem ser representados no diagrama:\n\nNomes dos campos (fields.name)\nTipos dos campos (fields.type(fields.format))\nChaves primárias (schema.primaryKey)\nChaves estrangeiras (schema.foreignKeys)\nRelacionamentos\n\nNo CKAN o diagrama deve estar localizado em uma aba própria na raiz do conjunto de dados.\n\n\n\nSe múltiplos recursos compartilham o mesmo table schema (após expansão e dereferenciamento) o diagrama deve apresentar apenas aqueles que são únicos, com indicação que existem outros.\nO objetivo aqui é facilitar a compreensão da modelagem conceitual dos dados. Por exemplo, todos os 100+ recursos do conjunto remuneracao-servidores-ativos compartilham o mesmo table schema?\nInformações adicionais (tooltip) dos campos (fields.title e fields.description) devem ser exibidas quando o cursor do mouse passar em cima do mesmo\nInformações adicionais (tooltip) dos recursos (resource.title e resource.description) devem ser exibidas quando o cursos do mouse passar em cima do mesmo\nExportar para PDF\nExportar diagramas para SVG\nCustomização da visibilidade das colunas nos diagramas\n~~Interatividade entre diagramas e dicionários de dados (Clique redireciona para dicionário de dados relevante em nova página) ~~"
   },
   {
     "objectID": "diagramas.html#why",
@@ -194,6 +201,13 @@
     "title": "Diagramas",
     "section": "Research",
     "text": "Research\n\nFeature suggestion: Export package to ER diagram #1118\nThe Tabular Data Package as the one source for data definition\n\nOpenReferral already has a Tabular Data Package, an Entity Relation Diagram and an API. I think the second two are manually crafted from the first. I want an automated way of generating the second two (and more) from the first. […] Essentially I want one single machine-readable source defining a data standard from which I can generate ERD, schemas and human-readable documentation.\n\njts_erd: Create an ERD from JSON-table-schemas"
+  },
+  {
+    "objectID": "diagramas.html#open-questions",
+    "href": "diagramas.html#open-questions",
+    "title": "Diagramas",
+    "section": "Open questions",
+    "text": "Open questions\n\nA visualização dos table schemas no lugar dos recursos resolve em alguns casos, como na da remuneração, a questão da igualdade lógica entre recursos diferentes. No entanto, para o caso bastante comum de partições com base em data (eg. ano), mesmo a utilização do table schema não vai funcionar pois eles podem ser diferentes (o table schema do dm_empenho_desp_2002, mas o ft_despesa_2002 é igual do dm_empenho_desp_2003, mas o ft_despesa_2002 é diferente de ft_despesa_2003 por causa das chaves estrangeiras). A utilização da funcionalidade de data in multiple files poderia ser uma solução, mas pode dificultar a manipulação e inspeção das validações."
   },
   {
     "objectID": "resumo-SEPLAG-2021-06-16.html",

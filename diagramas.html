@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-0.9.545">
+<meta name="generator" content="quarto-0.9.563">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -270,6 +270,7 @@ ul.task-list{list-style: none;}
   <li><a href="#other-examples" id="toc-other-examples" class="nav-link" data-scroll-target="#other-examples">Other examples</a></li>
   </ul></li>
   <li><a href="#research" id="toc-research" class="nav-link" data-scroll-target="#research">Research</a></li>
+  <li><a href="#open-questions" id="toc-open-questions" class="nav-link" data-scroll-target="#open-questions">Open questions</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/transparencia-mg/viz-metadados-frictionless/edit/main/diagramas.md" class="toc-action">Edit this page</a></p><p><a href="https://github.com/transparencia-mg/viz-metadados-frictionless/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -313,7 +314,7 @@ ul.task-list{list-style: none;}
 <li><p><del>Exportar para PDF</del></p></li>
 <li><p><del>Exportar diagramas para SVG</del></p></li>
 <li><p><del>Customização da visibilidade das colunas nos diagramas</del></p></li>
-<li><p><del>Interatividade entre diagramas e dicionários de dados</del></p></li>
+<li><p>~~Interatividade entre diagramas e dicionários de dados (Clique redireciona para dicionário de dados relevante em nova página) ~~</p></li>
 </ol>
 </section>
 </section>
@@ -374,6 +375,12 @@ ul.task-list{list-style: none;}
 <p>OpenReferral already has a Tabular Data Package, an Entity Relation Diagram and an API. I think the second two are manually crafted from the first. I want an automated way of generating the second two (and more) from the first. […] Essentially I want one single machine-readable source defining a data standard from which I can generate ERD, schemas and human-readable documentation.</p>
 </blockquote></li>
 <li><p><a href="https://github.com/iburadempa/jts_erd">jts_erd: Create an ERD from JSON-table-schemas</a></p></li>
+</ul>
+</section>
+<section id="open-questions" class="level2">
+<h2 class="anchored" data-anchor-id="open-questions">Open questions</h2>
+<ul>
+<li>A visualização dos <strong>table schemas</strong> no lugar dos recursos resolve em alguns casos, como na da remuneração, a questão da igualdade lógica entre recursos diferentes. No entanto, para o caso bastante comum de partições com base em data (eg. ano), mesmo a utilização do <em>table schema</em> não vai funcionar pois eles podem ser diferentes (o table schema do <a href="https://github.com/transparencia-mg/age7/blob/main/schemas/ft_despesa_2003.yaml">dm_empenho_desp_2002</a>, mas o <a href="https://github.com/transparencia-mg/age7/blob/main/schemas/dm_empenho_desp_2002.yaml">ft_despesa_2002</a> é igual do <a href="https://github.com/transparencia-mg/age7/blob/main/schemas/ft_despesa_2002.yaml">dm_empenho_desp_2003</a>, mas o <a href="https://github.com/transparencia-mg/age7/blob/main/schemas/dm_empenho_desp_2002.yaml">ft_despesa_2002</a> é diferente de <a href="https://github.com/transparencia-mg/age7/blob/main/schemas/ft_despesa_2002.yaml">ft_despesa_2003</a> por causa das chaves estrangeiras). A utilização da funcionalidade de <a href="https://github.com/dados-mg/issues/issues/12">data in multiple files</a> poderia ser uma solução, mas pode dificultar a manipulação e inspeção das validações.</li>
 </ul>
 
 

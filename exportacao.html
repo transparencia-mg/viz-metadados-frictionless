@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-0.9.545">
+<meta name="generator" content="quarto-0.9.563">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -291,7 +291,9 @@ ul.task-list{list-style: none;}
 <h2 class="anchored" data-anchor-id="open-questions">Open questions</h2>
 <ul>
 <li><p>O download deve ser do arquivo <code>datapackage.json</code> e arquivos de dados ou somente do arquivo <code>datapackage.json</code>? Somente o arquivo <code>datapackage.json</code> impede que o consumidor realize facilmente um backup local dos arquivos de dados. Isso tem valor, especialmente tendo em vista que o CKAN não oferece versionamento de dados.</p></li>
+<li><p>Na implementação do <a href="https://old.datahub.io/dataset/mallzee-dataset">CKAN DataHub</a> o botão <code>Download Data Package</code> faz download apenas do arquivo <code>datapackage.json</code>. Isso implica que a propriedade <code>resource.path</code> deve utilizar URLs no lugar de caminhos relativos para que o mesmo funcione localmente.</p></li>
 <li><p><code>frictionless-r</code> suporta a leitura de data packages zipados?</p></li>
+<li><p>O versionamento proporcionado pelo activity_id na versão 2.9 do CKAN somente versiona os metadados (isso não é claro para o usuário). Permitir o download com controle de versão seria permitir que os arquivos de dados de versões anteriores também estivessem acessíveis, por exemplo adicionando <code>activity_id=d5b34496-735a-437d-85a5-d52e61a79d89</code> na URL</p></li>
 <li><p>Vide open questions da <a href="./importacao-metadados.html">importação e armazenamento de data packages</a></p></li>
 </ul>
 </section>

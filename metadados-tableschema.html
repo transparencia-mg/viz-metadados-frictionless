@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-0.9.545">
+<meta name="generator" content="quarto-0.9.563">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -259,6 +259,7 @@ ul.task-list{list-style: none;}
    
   <ul>
   <li><a href="#examples" id="toc-examples" class="nav-link active" data-scroll-target="#examples">Examples</a></li>
+  <li><a href="#research" id="toc-research" class="nav-link" data-scroll-target="#research">Research</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/transparencia-mg/viz-metadados-frictionless/edit/main/metadados-tableschema.md" class="toc-action">Edit this page</a></p><p><a href="https://github.com/transparencia-mg/viz-metadados-frictionless/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -289,6 +290,7 @@ ul.task-list{list-style: none;}
 <li>Exemplos de dados (sample values; data preview)</li>
 <li>Flexibilidade para campos ad-hoc (estado e município)</li>
 <li>Footnotes and annotations</li>
+<li>O dicionário de dados não deve estar vinculado ao datastore</li>
 </ul>
 <section id="examples" class="level2">
 <h2 class="anchored" data-anchor-id="examples">Examples</h2>
@@ -307,6 +309,16 @@ ul.task-list{list-style: none;}
 <li><p>Modelo de Dados Projeto Lins (ModeloDados_Lins_v0.9_junho2020.pdf)</p>
 <p>Incluir coluna com exemplos dos valores</p>
 <p><img src="static/20220607T202406.png" class="img-fluid"></p></li>
+</ul>
+</section>
+<section id="research" class="level2">
+<h2 class="anchored" data-anchor-id="research">Research</h2>
+<ul>
+<li><p><a href="https://github.com/keitaroinc/ckanext-resourcedictionary">ckanext-resourcedictionary</a>. CKAN extension that extends the default CKAN Data Dictionary functionality by adding the possibility to create a data dictionary before actual data is uploaded to datastore.</p>
+<blockquote class="blockquote">
+<p>Extends the default CKAN Data Dictionary functionality by adding possibility to create data dictionary before actual data is uploaded to datastore. For resources that don’t have datastore records, the data dictionary can be edited in every way (adding/removing/editing fields) and even completely deleted. For resources that contain datastore records editing data dictionary is limited only to the info properties of a field. Resource dictionary fields, labels and notes are added to the SOLR index as a resource extras.</p>
+</blockquote></li>
+<li><p>Notas de rodapé é um <a href="https://www.w3.org/annotation/wiki/Use_Cases/Annotating_CSV_Data">caso de uso</a> importante para dados tabulares, previsto em algumas gramaticas de tabelas (como no <a href="https://gt.rstudio.com/">pacote R gt</a>). A propriedade <a href="https://www.w3.org/TR/2015/REC-tabular-metadata-20151217/#table-notes">notes</a> definida no âmbito da W3C pode ser reaproveitada para fins de <a href="https://www.w3.org/TR/tabular-data-primer/#cell-annotations">anotações gerais</a>, mas que deveriam ser tratadas de forma especial no dicionário de dados.</p></li>
 </ul>
 
 

@@ -13,6 +13,14 @@ Ela é independente das etapas de validação (de dados) e da catalogação no P
 - CLI
 - Github Actions
 
+## What
+
+- Aplicação Web para preenchimento de metadados e exportação de um _data package_
+
+## How
+
+- Como forma de evitar o acoplamento ao CKAN e simplificar o esforço de desenvolvimento, a aplicação WEB deve ser _standalone_
+
 ## Examples / Research
 
 - [Data Package Creator](https://create.frictionlessdata.io/) ([datapackage-ui](https://github.com/frictionlessdata/datapackage-ui) e [tableschema-ui](https://github.com/frictionlessdata/tableschema-ui)) - Aplicativo WEB para criação de _data packages_ gerenciado pela OKFN. Atenderia a necessidade (de não ser necessário edição manual do `datapackage.json` gerado) se permitisse a inclusão de propriedade adicionais. As seguintes são particularmente problemáticas tendo em vista nossa experiência: 

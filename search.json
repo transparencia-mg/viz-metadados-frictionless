@@ -224,6 +224,20 @@
     "text": "Essa necessidade lida com a criação e eventuais atualizações de um data package. Ela é independente das etapas de validação (de dados) e da catalogação no PdA, mas faz sentido que seja ofertado para os publicadores uma experiência integrada.\n\nGUI Desktop\nGUI Web\nCLI\nGithub Actions"
   },
   {
+    "objectID": "criacao.html#what",
+    "href": "criacao.html#what",
+    "title": "Criação",
+    "section": "What",
+    "text": "What\n\nAplicação Web para preenchimento de metadados e exportação de um data package"
+  },
+  {
+    "objectID": "criacao.html#how",
+    "href": "criacao.html#how",
+    "title": "Criação",
+    "section": "How",
+    "text": "How\n\nComo forma de evitar o acoplamento ao CKAN e simplificar o esforço de desenvolvimento, a aplicação WEB deve ser standalone"
+  },
+  {
     "objectID": "criacao.html#examples-research",
     "href": "criacao.html#examples-research",
     "title": "Criação",

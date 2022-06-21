@@ -35,6 +35,9 @@ Ela é independente das etapas de validação (de dados) e da catalogação no P
 
     Vide [Trello](https://trello.com/c/EjwZN0sh/152-estabelecer-conjunto-obrigat%C3%B3rio-de-metadados-para-o-dados-mg#comment-5f2162928434a452c8a04be1) para uma discussão sobre metadados obrigatórios relevante para essa discussão.
 
+- O projeto [schema-collaboration](https://github.com/frictionlessdata/schema-collaboration) teve como objetivo resolver o problema de criação colaborativa de data packages. O issue Integration with git [#14](https://github.com/frictionlessdata/schema-collaboration/issues/14) serve de inspiração sobre como o Data Package Creator pode ser um [hackmd](https://hackmd.io/) para data packages em relação a integração com repositórios de controle de versão.
+
+
 - [Frictionless Components - Schema Editor](https://components.frictionlessdata.io/?path=/story/components-schema--empty) ([Repo](https://github.com/frictionlessdata/components))
 
 - [Frictionless Application](https://application.frictionlessdata.io/) ([Repo](https://github.com/frictionlessdata/application)) - Data management application for Browser and Desktop that provides functionality to describe, extract, validate, and transform tabular data

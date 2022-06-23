@@ -158,7 +158,7 @@
     "href": "ppt_alinhamento-inicial.html#produção-publicação",
     "title": "Reunião Alinhamento Inicial - Visão e Backlog do Produto",
     "section": "Produção & Publicação",
-    "text": "Produção & Publicação\n\nAplicação Web para criação de um data package\nAplicação Web para atualização de um data package\nAplicação Web para validação dos dados de um data package\nAplicação Web para publicação no CKAN de um data package\nBotão para importação de um data package no CKAN\nBotão para atualização de um data package no CKAN"
+    "text": "Produção & Publicação\n\nAplicação Web para criação de um data package válido para importação no CKAN\nAplicação Web para atualização de um data package\nAplicação Web para validação dos dados de um data package\nAplicação Web para publicação no CKAN de um data package\nBotão para importação de um data package no CKAN\nBotão para atualização de um data package no CKAN"
   },
   {
     "objectID": "ppt_alinhamento-inicial.html#distribuição",

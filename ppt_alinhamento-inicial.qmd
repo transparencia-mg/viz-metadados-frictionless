@@ -41,6 +41,9 @@ flowchart LR
 
 - Tema para customização da identidade visual do CKAN (8/10)
 - Exploração, instalação e configuração da extensão `ckanext-validation` (2/10)
+- Estatísticas de acesso e downloads de conjuntos de dados e arquivos
+- URLs dos conjuntos de dados com _namespace_ da organização
+- Arquivamento (_read only_) de conjuntos de dados 
 
 ## Acesso & Uso
 

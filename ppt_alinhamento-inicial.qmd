@@ -1,0 +1,54 @@
+---
+title: "Reunião Alinhamento Inicial - Visão e Backlog do Produto"
+author: "Diretoria Central de Transparência Ativa/CGE"
+format: revealjs
+---
+
+# Contexto
+
+## Atores do Ecossistema
+
+![Atores no ecossistema de dados abertos. Fonte: @okbr2021](static/20220503T210959.png){#fig-ecossistema-dados}
+
+## Ciclo de vida dos dados
+
+```{mermaid}
+flowchart LR
+  A[Produção] --> B[Publicação]
+  B --> C[Distribuição]
+  C --> D[Acesso]
+  D --> E[Uso]
+```
+
+## Ferramentas
+
+::: {layout="[[40,-20,40], [100]]"}
+![Frictionless Software](https://frictionlessdata.io/img/home/software.png)
+
+![Frictionless Standards](https://frictionlessdata.io/img/home/standards.png)
+
+![CKAN](https://ckan.org/static/img/logo.svg)
+:::
+
+# Necessidades Backlog do Produto
+
+## Produção & Publicação
+
+- Aplicação WEB para criação/atualização de um _data package_ válido para importação/publicação no PdA (6/10)
+- Interface gráfica (botão) no CKAN para importação/atualização de um _data package_ (3/10)
+
+## Distribuição
+
+- Tema para customização da identidade visual do CKAN (8/10)
+- Exploração, instalação e configuração da extensão `ckanext-validation` (2/10)
+
+## Acesso & Uso
+
+- Permitir _bulk_ download de conjuntos de dados como data packages via botão (7/10)
+- Permitir a leitura direta de conjuntos de dados do CKAN com ferramentas frictionless (5/10)
+- Visualização dos metadados da spec _table schema_ no dicionário de dados (1/10)
+- Visualização de diagrama interativo dos recursos (4/10)
+- Visualização dos metadados dos recursos (9/10)
+- Visualização de metadados de estatísticas descritivas (10/10)
+
+# Simulação

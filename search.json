@@ -133,46 +133,46 @@
     "text": "Examples/Research\n\nPublish Your Data Package Online - Explicação das alternativas para disponibização na internet de pacotes de dados (It’s Only Files Online). O CKAN precisaria ser alterado para seguir as Key Tips desse artigo.\nConflito entre nome dos conjuntos de dados criados de forma descentralizada por ausência de namespaces #52\nA proposta de valor do frictionless é fazer com que o capítulo não seja https://r4ds.had.co.nz/data-import.html\nSe a instalação de ferramentas é uma fonte de custo e fricção, conseguimos permitir a integração do CKAN com notebooks computacional, como Binder? Vide Binder + Zenodo: A how-to guide e Six easy ways to run your Jupyter Notebook in the cloud"
   },
   {
-    "objectID": "ppt_alinhamento-inicial.html#atores-do-ecossistema",
-    "href": "ppt_alinhamento-inicial.html#atores-do-ecossistema",
+    "objectID": "ppt_alinhamento-inicial.html#pessoas",
+    "href": "ppt_alinhamento-inicial.html#pessoas",
     "title": "Reunião Alinhamento Inicial - Visão e Backlog do Produto",
-    "section": "Atores do Ecossistema",
-    "text": "Atores do Ecossistema\n\nFigure 1: Atores no ecossistema de dados abertos. Fonte: @okbr2021"
+    "section": "Pessoas",
+    "text": "Pessoas\n\nFigure 1: Atores no ecossistema de dados abertos. Fonte: @okbr2021"
   },
   {
-    "objectID": "ppt_alinhamento-inicial.html#ciclo-de-vida-dos-dados",
-    "href": "ppt_alinhamento-inicial.html#ciclo-de-vida-dos-dados",
+    "objectID": "ppt_alinhamento-inicial.html#processo",
+    "href": "ppt_alinhamento-inicial.html#processo",
     "title": "Reunião Alinhamento Inicial - Visão e Backlog do Produto",
-    "section": "Ciclo de vida dos dados",
-    "text": "Ciclo de vida dos dados\n\n\n\n\nflowchart LR\n  A[Produção] --> B[Publicação]\n  B --> C[Distribuição]\n  C --> D[Acesso]\n  D --> E[Uso]"
+    "section": "Processo",
+    "text": "Processo\n\n\n\n\nflowchart LR\n  A[Produção] --> B[Publicação]\n  B --> C[Distribuição]\n  C --> D[Acesso]\n  D --> E[Uso]"
   },
   {
-    "objectID": "ppt_alinhamento-inicial.html#ferramentas",
-    "href": "ppt_alinhamento-inicial.html#ferramentas",
+    "objectID": "ppt_alinhamento-inicial.html#tecnologia",
+    "href": "ppt_alinhamento-inicial.html#tecnologia",
     "title": "Reunião Alinhamento Inicial - Visão e Backlog do Produto",
-    "section": "Ferramentas",
-    "text": "Ferramentas\n\n\n\n\n\n\nFrictionless Software\n\n\n\n\n \n\n\n\n\n\nFrictionless Standards\n\n\n\n\n\n\n\n\n\nCKAN"
+    "section": "Tecnologia",
+    "text": "Tecnologia\n\n\n\n\n\n\nFrictionless Software\n\n\n\n\n \n\n\n\n\n\nFrictionless Standards"
   },
   {
     "objectID": "ppt_alinhamento-inicial.html#produção-publicação",
     "href": "ppt_alinhamento-inicial.html#produção-publicação",
     "title": "Reunião Alinhamento Inicial - Visão e Backlog do Produto",
     "section": "Produção & Publicação",
-    "text": "Produção & Publicação\n\nAplicação WEB para criação/atualização de um data package válido para importação/publicação no PdA (6/10)\nInterface gráfica (botão) no CKAN para importação/atualização de um data package (3/10)"
+    "text": "Produção & Publicação\n\nAplicação Web para criação de um data package\nAplicação Web para atualização de um data package\nAplicação Web para validação dos dados de um data package\nAplicação Web para publicação no CKAN de um data package\nBotão para importação de um data package no CKAN\nBotão para atualização de um data package no CKAN"
   },
   {
     "objectID": "ppt_alinhamento-inicial.html#distribuição",
     "href": "ppt_alinhamento-inicial.html#distribuição",
     "title": "Reunião Alinhamento Inicial - Visão e Backlog do Produto",
     "section": "Distribuição",
-    "text": "Distribuição\n\nTema para customização da identidade visual do CKAN (8/10)\nExploração, instalação e configuração da extensão ckanext-validation (2/10)"
+    "text": "Distribuição\n\nTema para customização da identidade visual do CKAN\nExploração, instalação e configuração da extensão ckanext-validation\nEstatísticas de acesso e downloads de conjuntos de dados e arquivos\nURLs dos conjuntos de dados com namespace da organização\nArquivamento (read only) de conjuntos de dados"
   },
   {
     "objectID": "ppt_alinhamento-inicial.html#acesso-uso",
     "href": "ppt_alinhamento-inicial.html#acesso-uso",
     "title": "Reunião Alinhamento Inicial - Visão e Backlog do Produto",
     "section": "Acesso & Uso",
-    "text": "Acesso & Uso\n\nPermitir bulk download de conjuntos de dados como data packages via botão (7/10)\nPermitir a leitura direta de conjuntos de dados do CKAN com ferramentas frictionless (5/10)\nVisualização dos metadados da spec table schema no dicionário de dados (1/10)\nVisualização de diagrama interativo dos recursos (4/10)\nVisualização dos metadados dos recursos (9/10)\nVisualização de metadados de estatísticas descritivas (10/10)"
+    "text": "Acesso & Uso\n\nBotão para bulk download de conjuntos de dados\nLeitura direta de conjuntos de dados do CKAN com ferramentas frictionless\nVisualização dos metadados da spec table schema no dicionário de dados\nVisualização de diagrama interativo dos recursos\nVisualização dos metadados dos recursos\nVisualização de metadados de estatísticas descritivas"
   },
   {
     "objectID": "exportacao.html",

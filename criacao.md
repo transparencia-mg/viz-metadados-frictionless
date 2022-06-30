@@ -28,7 +28,8 @@ Ela é independente das etapas de validação (de dados) e da catalogação no P
     - `owner_org`: obrigatória para publicação no PdA
     - `dialect.delimiter`: CSVs no Brasil utilizam `;`
     - `schema.fields.number.decimalChar` e `schema.fields.number.groupChar`: CSVs exportados do excel
-    
+    - arquivos dentro da pasta `data`
+
     Além disso, a inferência dos tipos das colunas parece ser pior que a do `frictionless-py`.
 
     Ele foi utilizado em algumas oficinas mão na massa conduzidas pela DTA (adicionar links para gravações) e foi substituída durante a a inclusão do `frictionless-py describe` na oficina. 
@@ -39,6 +40,8 @@ Ela é independente das etapas de validação (de dados) e da catalogação no P
 
 
 - [Frictionless Components - Schema Editor](https://components.frictionlessdata.io/?path=/story/components-schema--empty) ([Repo](https://github.com/frictionlessdata/components))
+
+    ![](static/20220623T131939.png)
 
 - [Frictionless Application](https://application.frictionlessdata.io/) ([Repo](https://github.com/frictionlessdata/application)) - Data management application for Browser and Desktop that provides functionality to describe, extract, validate, and transform tabular data
 

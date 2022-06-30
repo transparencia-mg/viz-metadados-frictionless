@@ -326,7 +326,7 @@
     "href": "metadados-recurso.html",
     "title": "Recurso",
     "section": "",
-    "text": "Read more/less… ou View more/less\nSumarização de recursos que possuem o mesmo table schema\nResumo metadados (tamanho, n linhas)"
+    "text": "Read more/less… ou View more/less\nSumarização de recursos que possuem o mesmo table schema\nResumo metadados (tamanho, n linhas)\nTooltip para as propriedades (eg. o que significa temporal?)\nConversão para português dos metadados que existem no Frictionless mas não existem no CKAN (temporal, accrualPeriodicity)\nRenderização de propriedades (eg. Email, licença e accrualPeriodicity)"
   },
   {
     "objectID": "metadados-recurso.html#examples",

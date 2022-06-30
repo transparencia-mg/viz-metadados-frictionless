@@ -25,29 +25,31 @@ website:
           - motivacao-contexto.md
       - section: Produção
         contents:
-          - necessidades/criacao.md
-          - necessidades/validacao.md
+          - necessidades/web-app-criacao.md
+          - necessidades/web-app-atualizacao.md
+          - necessidades/web-app-validacao.md
+          - necessidades/web-app-catalogacao.md
       - section: Publicação
         contents:
-          - necessidades/catalogacao.md
-          - text: Importação de metadados
-            href: necessidades/importacao-metadados.md
-          - text: Importação de dados
-            href: necessidades/importacao-dados.md
+          - necessidades/importacao.md
+          - necessidades/atualizacao.md
       - section: Distribuição
         contents: 
           - necessidades/identidade-visual.md
-          - necessidades/metadados-validacao.md
+          - necessidades/validacao.md
+          - necessidades/web-analytics.md
+          - necessidades/dataset-namespace.md
+          - necessidades/dataset-archive.md
       - section: Acesso
         contents:
           - necessidades/exportacao.md
           - necessidades/leitura.md
       - section: Uso
         contents:
-          - necessidades/metadados-tableschema.md
+          - necessidades/dicionario-dados.md
           - necessidades/diagramas.md
-          - necessidades/metadados-recurso.md
-          - necessidades/metadados-stats.md
+          - necessidades/metadados.md
+          - necessidades/estatisticas-descritivas.md
           
 
 comments:

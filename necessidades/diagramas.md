@@ -39,7 +39,7 @@ O diagrama deve ser implementado como um [componente react frictionless](https:/
 
 ### Low-fidelity mockup
 
-![](static/20220419T211500.drawio.svg)
+![](/static/20220419T211500.drawio.svg)
 
 ### Other examples
 

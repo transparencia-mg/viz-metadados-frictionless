@@ -31,7 +31,7 @@ toc: true
 
     Incluir coluna com exemplos dos valores
 
-    ![](static/20220607T202406.png)
+    ![](/static/20220607T202406.png)
 
 ## Research
 

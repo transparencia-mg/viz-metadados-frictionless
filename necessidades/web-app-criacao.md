@@ -41,7 +41,7 @@ Ela é independente das etapas de validação (de dados) e da catalogação no P
 
 - [Frictionless Components - Schema Editor](https://components.frictionlessdata.io/?path=/story/components-schema--empty) ([Repo](https://github.com/frictionlessdata/components))
 
-    ![](static/20220623T131939.png)
+    ![](/static/20220623T131939.png)
 
 - [Frictionless Application](https://application.frictionlessdata.io/) ([Repo](https://github.com/frictionlessdata/application)) - Data management application for Browser and Desktop that provides functionality to describe, extract, validate, and transform tabular data
 

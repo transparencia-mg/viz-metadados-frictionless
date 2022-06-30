@@ -1,24 +1,227 @@
 [
   {
-    "objectID": "metadados-tableschema.html",
-    "href": "metadados-tableschema.html",
-    "title": "Table Schema",
+    "objectID": "necessidades/web-app-validacao.html",
+    "href": "necessidades/web-app-validacao.html",
+    "title": "Validação",
+    "section": "",
+    "text": "https://github.com/frictionlessdata/goodtables-ui"
+  },
+  {
+    "objectID": "necessidades/web-app-criacao.html",
+    "href": "necessidades/web-app-criacao.html",
+    "title": "Criação",
+    "section": "",
+    "text": "Essa necessidade lida com a criação e eventuais atualizações de um data package. Ela é independente das etapas de validação (de dados) e da catalogação no PdA, mas faz sentido que seja ofertado para os publicadores uma experiência integrada.\n\nGUI Desktop\nGUI Web\nCLI\nGithub Actions"
+  },
+  {
+    "objectID": "necessidades/web-app-criacao.html#what",
+    "href": "necessidades/web-app-criacao.html#what",
+    "title": "Criação",
+    "section": "What",
+    "text": "What\n\nAplicação Web para preenchimento de metadados e exportação de um data package"
+  },
+  {
+    "objectID": "necessidades/web-app-criacao.html#how",
+    "href": "necessidades/web-app-criacao.html#how",
+    "title": "Criação",
+    "section": "How",
+    "text": "How\n\nComo forma de evitar o acoplamento ao CKAN e simplificar o esforço de desenvolvimento, a aplicação WEB deve ser standalone"
+  },
+  {
+    "objectID": "necessidades/web-app-criacao.html#examples-research",
+    "href": "necessidades/web-app-criacao.html#examples-research",
+    "title": "Criação",
+    "section": "Examples / Research",
+    "text": "Examples / Research\n\nData Package Creator (datapackage-ui e tableschema-ui) - Aplicativo WEB para criação de data packages gerenciado pela OKFN. Atenderia a necessidade (de não ser necessário edição manual do datapackage.json gerado) se permitisse a inclusão de propriedade adicionais. As seguintes são particularmente problemáticas tendo em vista nossa experiência:\n\nowner_org: obrigatória para publicação no PdA\ndialect.delimiter: CSVs no Brasil utilizam ;\nschema.fields.number.decimalChar e schema.fields.number.groupChar: CSVs exportados do excel\narquivos dentro da pasta data\n\nAlém disso, a inferência dos tipos das colunas parece ser pior que a do frictionless-py.\nEle foi utilizado em algumas oficinas mão na massa conduzidas pela DTA (adicionar links para gravações) e foi substituída durante a a inclusão do frictionless-py describe na oficina.\nVide Trello para uma discussão sobre metadados obrigatórios relevante para essa discussão.\nO projeto schema-collaboration teve como objetivo resolver o problema de criação colaborativa de data packages. O issue Integration with git #14 serve de inspiração sobre como o Data Package Creator pode ser um hackmd para data packages em relação a integração com repositórios de controle de versão.\nFrictionless Components - Schema Editor (Repo)\n\nFrictionless Application (Repo) - Data management application for Browser and Desktop that provides functionality to describe, extract, validate, and transform tabular data\nData Curator - Data Curator is a simple desktop data editor to help describe, validate and share usable open data.\nMetatab and Metapack\nPlanilhas Templates STN\nckanext-validation - label:“Schema Creator” CKAN extension for validating Data Packages using Table Schema.\nhttps://github.com/transparencia-mg/acordo-judicial-reparacao-vale\nCreate a UI element/workflow that allows a user to add properties and values to the data package that may not have been defined in the Data Package’s JSON Schema #11\n\nclosing. the built in json-editor functionality is good enough for our use case\n\nUI for editing YAML/JSON backed by version control\n\nI built something like that when I needed expose config changes to non-technical peers using https://github.com/rjsf-team/react-jsonschema-form + one POST function that checkouts git and commit a change\n\nMultiple types does not work #700\n[Proposal] JSON UI Schema: define UI behaviours for all current elements #252\nhttps://github.com/brutusin/json-forms\nhttps://github.com/eclipsesource/jsonforms\nhttps://github.com/jsonform/jsonform"
+  },
+  {
+    "objectID": "necessidades/dicionario-dados.html",
+    "href": "necessidades/dicionario-dados.html",
+    "title": "Dicionário de dados",
     "section": "",
     "text": "Full-text fuzzy search no dicionário de dados\nRenderização do markdown da propriedade description\nSímbolo para representação de chave primária, chave estrangeira, unique e required\nenum com detalhes adicionais\nExemplos de dados (sample values; data preview)\nFlexibilidade para campos ad-hoc (estado e município)\nFootnotes and annotations\nO dicionário de dados não deve estar vinculado ao datastore"
   },
   {
-    "objectID": "metadados-tableschema.html#examples",
-    "href": "metadados-tableschema.html#examples",
-    "title": "Table Schema",
+    "objectID": "necessidades/dicionario-dados.html#examples",
+    "href": "necessidades/dicionario-dados.html#examples",
+    "title": "Dicionário de dados",
     "section": "Examples",
     "text": "Examples\n\nhttps://github.com/fjuniorr/age7-data-dictionary\ndbt docs\n\nExpandir detalhes de coluna (More…) ($tabela)\n\ndataedo\n\nChave estrangeira clicavel ($tabela)\nSímbolo para representação de chave primária e estrangeira ($tabela)\nBacklinks com chaves estrangeiras de outras tabelas ($tabela)\n\nModelo de Dados Projeto Lins (ModeloDados_Lins_v0.9_junho2020.pdf)\nIncluir coluna com exemplos dos valores"
   },
   {
-    "objectID": "metadados-tableschema.html#research",
-    "href": "metadados-tableschema.html#research",
-    "title": "Table Schema",
+    "objectID": "necessidades/dicionario-dados.html#research",
+    "href": "necessidades/dicionario-dados.html#research",
+    "title": "Dicionário de dados",
     "section": "Research",
     "text": "Research\n\nckanext-resourcedictionary. CKAN extension that extends the default CKAN Data Dictionary functionality by adding the possibility to create a data dictionary before actual data is uploaded to datastore.\n\nExtends the default CKAN Data Dictionary functionality by adding possibility to create data dictionary before actual data is uploaded to datastore. For resources that don’t have datastore records, the data dictionary can be edited in every way (adding/removing/editing fields) and even completely deleted. For resources that contain datastore records editing data dictionary is limited only to the info properties of a field. Resource dictionary fields, labels and notes are added to the SOLR index as a resource extras.\n\nNotas de rodapé é um caso de uso importante para dados tabulares, previsto em algumas gramaticas de tabelas (como no pacote R gt). A propriedade notes definida no âmbito da W3C pode ser reaproveitada para fins de anotações gerais, mas que deveriam ser tratadas de forma especial no dicionário de dados."
+  },
+  {
+    "objectID": "necessidades/atualizacao.html",
+    "href": "necessidades/atualizacao.html",
+    "title": "Atualização",
+    "section": "",
+    "text": "A catalogação está focada na perspectiva da experiência que o produtor de dados possui para publicar pacotes de dados no Portal de Dados Abertos.\nO objetivo é oferecer tanto uma interface web GUI, quanto uma interface CLI (dpckan) para a catalogação."
+  },
+  {
+    "objectID": "necessidades/atualizacao.html#links",
+    "href": "necessidades/atualizacao.html#links",
+    "title": "Atualização",
+    "section": "Links",
+    "text": "Links\n\nPublish Data - Datopian\nPublish functionality covers the whole area of creating and editing datasets and resources, including data upload. The core job story is something like:\n\nWhen a Data Curator has a data file or dataset they want to add it to their data portal/platform quickly and easily so that it is available there.\n\nPublication can be divided by its mode:\n\nManual: publication is done by people via a user interfaces or other tool\nProgrammatic: publication is done programatically using APIs and is usually part of automated processes\nHybrid: which combines manual and programmatic. An example would be harvesting where setup and configuration may be done in a UI manually with the process then running automatically and programmatically (in addition, some new harvesting flows require manual programmatic setup e.g. writing a harvester in Python for a new source data format)."
+  },
+  {
+    "objectID": "necessidades/leitura.html",
+    "href": "necessidades/leitura.html",
+    "title": "Leitura",
+    "section": "",
+    "text": "Permitir a leitura direta, com controle de versão, de conjuntos de dados do CKAN com as ferramentas frictionless (Python, R, JS)\nfrom frictionless import Package\n\ndp = Package('https://dados.mg.gov.br/dataset/name/datapackage.json')\ndf = dp.get_resource('resource_name').to_pandas()\nlibrary(frictionless)\n\ndp <- read_package('https://dados.mg.gov.br/dataset/name/datapackage.json')\ndf <- read_resource(dp, 'resource_name')\n\n\n\nSnippets na interface de usuário devem indicar como fazer a leitura com diferentes ferramentas.\nExemplos:\n\nOpen Data Blend\nQuilt\nDatahub"
+  },
+  {
+    "objectID": "necessidades/leitura.html#open-questions",
+    "href": "necessidades/leitura.html#open-questions",
+    "title": "Leitura",
+    "section": "Open questions",
+    "text": "Open questions\n\nÉ possível a leitura do datapackage.json a partir da URL raiz do conjunto de dados https://dados.mg.gov.br/dataset/name/?\nTanto o Datahub quanto o Datahub CKAN utilizam a propriedade resource.path como URLs e não como caminhos relativos. Existe alguma vantagem em alterar o resource.path dos data packages durante a importação ou exportação no lugar de alterar as rotas da aplicação? Com esse tipo de alteração o link https://dados.mg.gov.br/dataset/12253b1a-1171-4453-90f8-f84517cf147b/resource/f0486981-a883-45f2-815d-b3ebca32e6b7/download/datapackage.json passaria a funcionar para leitura.\nPode existir um descolamento entre a propriedade resource.path do data package e a propriedade resource.url do CKAN?"
+  },
+  {
+    "objectID": "necessidades/leitura.html#examplesresearch",
+    "href": "necessidades/leitura.html#examplesresearch",
+    "title": "Leitura",
+    "section": "Examples/Research",
+    "text": "Examples/Research\n\nPublish Your Data Package Online - Explicação das alternativas para disponibização na internet de pacotes de dados (It’s Only Files Online). O CKAN precisaria ser alterado para seguir as Key Tips desse artigo.\nConflito entre nome dos conjuntos de dados criados de forma descentralizada por ausência de namespaces #52\nA proposta de valor do frictionless é fazer com que o capítulo não seja https://r4ds.had.co.nz/data-import.html\nSe a instalação de ferramentas é uma fonte de custo e fricção, conseguimos permitir a integração do CKAN com notebooks computacional, como Binder? Vide Binder + Zenodo: A how-to guide e Six easy ways to run your Jupyter Notebook in the cloud"
+  },
+  {
+    "objectID": "necessidades/exportacao.html",
+    "href": "necessidades/exportacao.html",
+    "title": "Download",
+    "section": "",
+    "text": "Permitir o download, com controle de versão, de conjuntos de dados como data packages zipados via botão na interface gráfica e URL dedicada."
+  },
+  {
+    "objectID": "necessidades/exportacao.html#open-questions",
+    "href": "necessidades/exportacao.html#open-questions",
+    "title": "Download",
+    "section": "Open questions",
+    "text": "Open questions\n\nO download deve ser do arquivo datapackage.json e arquivos de dados ou somente do arquivo datapackage.json? Somente o arquivo datapackage.json impede que o consumidor realize facilmente um backup local dos arquivos de dados. Isso tem valor, especialmente tendo em vista que o CKAN não oferece versionamento de dados.\nNa implementação do CKAN DataHub o botão Download Data Package faz download apenas do arquivo datapackage.json. Isso implica que a propriedade resource.path deve utilizar URLs no lugar de caminhos relativos para que o mesmo funcione localmente.\nfrictionless-r suporta a leitura de data packages zipados?\nO versionamento proporcionado pelo activity_id na versão 2.9 do CKAN somente versiona os metadados (isso não é claro para o usuário). Permitir o download com controle de versão seria permitir que os arquivos de dados de versões anteriores também estivessem acessíveis, por exemplo adicionando activity_id=d5b34496-735a-437d-85a5-d52e61a79d89 na URL\nVide open questions da importação e armazenamento de data packages"
+  },
+  {
+    "objectID": "necessidades/exportacao.html#examplesresearch",
+    "href": "necessidades/exportacao.html#examplesresearch",
+    "title": "Download",
+    "section": "Examples/Research",
+    "text": "Examples/Research\n\npackage.to_zip\nCompression of resources\nckanapi - Pacote Python, acessível via interface CLI, que simplifica a interação com a API do CKAN. Ele possui funcionalidade para exportação de conjuntos de dados como pacotes de dados\nckanapi dump datasets --remote https://homologa.cge.mg.gov.br/ violencia-mulher  # outputs dataset metadata\nckanapi dump datasets --remote https://homologa.cge.mg.gov.br/ --datapackages=output violencia-mulher \nckanapi dump datasets --remote https://homologa.cge.mg.gov.br/ --datapackages=. violencia-mulher \nckanapi dump datasets --remote https://dados.gov.br/ --datapackages=. comissao-propria-de-avaliacao\nVide Investigar bug ckanapi dump datasets #454.\nTry this: Frictionless data.world - Exemplo de outro catalogo de dados, data.world, que implementou uma funcionalidade para exportação de pacotes de dados\nCKAN DataHub - Exemplo de botão Download Data Package e URL https://old.datahub.io/dataset/mallzee-dataset/datapackage.json com extensão\nGithub zip archive download\n[[20210623T210814]] frictionless - mime type\nckanext-versions"
+  },
+  {
+    "objectID": "necessidades/estatisticas-descritivas.html",
+    "href": "necessidades/estatisticas-descritivas.html",
+    "title": "Estatísticas descritivas",
+    "section": "",
+    "text": "Amostra dos dados\nMetadados de diff"
+  },
+  {
+    "objectID": "necessidades/validacao.html",
+    "href": "necessidades/validacao.html",
+    "title": "Validação",
+    "section": "",
+    "text": "Exploração, instalação e configuração da extensão ckanext-validation com suporte para CKAN 2.9+/python3 e validação utilizando frictionless-py."
+  },
+  {
+    "objectID": "necessidades/validacao.html#how",
+    "href": "necessidades/validacao.html#how",
+    "title": "Validação",
+    "section": "How",
+    "text": "How\nPreferenciamento o fork da CGE deve ser realizado em cima da versão da OKFN. No entanto, cabe avaliação se o fork da Keitaro, que parece ser mais atual e já oferecer suporte para o CKAN 2.9, não seria uma alternativa mais simples."
+  },
+  {
+    "objectID": "necessidades/validacao.html#examples-research",
+    "href": "necessidades/validacao.html#examples-research",
+    "title": "Validação",
+    "section": "Examples / Research",
+    "text": "Examples / Research\n\nupgrading to latest goodtables/frictionless-py #54\n[WIP] CKAN 2.9 / Python 3Py3 #55\nCkan 2.9 #6"
+  },
+  {
+    "objectID": "necessidades/metadados.html",
+    "href": "necessidades/metadados.html",
+    "title": "Metadados",
+    "section": "",
+    "text": "Read more/less… ou View more/less\nSumarização de recursos que possuem o mesmo table schema\nResumo metadados (tamanho, n linhas)\nTooltip para as propriedades (eg. o que significa temporal?)\nConversão para português dos metadados que existem no Frictionless mas não existem no CKAN (temporal, accrualPeriodicity)\nRenderização de propriedades (eg. Email, licença e accrualPeriodicity)"
+  },
+  {
+    "objectID": "necessidades/metadados.html#examples",
+    "href": "necessidades/metadados.html#examples",
+    "title": "Metadados",
+    "section": "Examples",
+    "text": "Examples\n\nDesigning “Read More” And “Continue Reading” Links"
+  },
+  {
+    "objectID": "necessidades/diagramas.html",
+    "href": "necessidades/diagramas.html",
+    "title": "Diagramas",
+    "section": "",
+    "text": "Diagrama interativo dos recursos (table schemas) de um pacote de dados. Devem ser representados no diagrama:\n\nNomes dos campos (fields.name)\nTipos dos campos (fields.type(fields.format))\nChaves primárias (schema.primaryKey)\nChaves estrangeiras (schema.foreignKeys)\nRelacionamentos\n\nNo CKAN o diagrama deve estar localizado em uma aba própria na raiz do conjunto de dados.\n\n\n\nSe múltiplos recursos compartilham o mesmo table schema (após expansão e dereferenciamento) o diagrama deve apresentar apenas aqueles que são únicos, com indicação que existem outros.\nO objetivo aqui é facilitar a compreensão da modelagem conceitual dos dados. Por exemplo, todos os 100+ recursos do conjunto remuneracao-servidores-ativos compartilham o mesmo table schema?\nInformações adicionais (tooltip) dos campos (fields.title e fields.description) devem ser exibidas quando o cursor do mouse passar em cima do mesmo\nInformações adicionais (tooltip) dos recursos (resource.title e resource.description) devem ser exibidas quando o cursos do mouse passar em cima do mesmo\nExportar para PDF\nExportar diagramas para SVG\nCustomização da visibilidade das colunas nos diagramas\n~~Interatividade entre diagramas e dicionários de dados (Clique redireciona para dicionário de dados relevante em nova página) ~~"
+  },
+  {
+    "objectID": "necessidades/diagramas.html#why",
+    "href": "necessidades/diagramas.html#why",
+    "title": "Diagramas",
+    "section": "Why",
+    "text": "Why\nFacilitar a compreensão dos relacionamentos entre recursos por meio de uma representação visual/gráfica."
+  },
+  {
+    "objectID": "necessidades/diagramas.html#how",
+    "href": "necessidades/diagramas.html#how",
+    "title": "Diagramas",
+    "section": "How",
+    "text": "How\nO diagrama deve ser implementado como um componente react frictionless antes de ser integrado ao CKAN e ao gerador de site estático."
+  },
+  {
+    "objectID": "necessidades/diagramas.html#examples",
+    "href": "necessidades/diagramas.html#examples",
+    "title": "Diagramas",
+    "section": "Examples",
+    "text": "Examples\n\nLow-fidelity mockup\n\n\n\nOther examples\n\nO aspecto de interatividade é capturado no dbdiagram e Quick_DBD\nQliksense Data Model Viewer\nPower BI Model View\nhttps://dbdiagram.io/d\n\nDiagramas interativos ($diagrama)\nTooltip para tabelas e colunas ($diagrama)\nAuto-arrange\n\ndbt docs\n\nDiagrama com controle de visibilidade ($diagrama)\nBotão esquerdo com opções de foco “Hide this and parents” “Hide this and children” ($diagrama)\n\ndataedo\n\nDiagrama responsivo conectado a tabela associada ($diagrama)\n\nData model diagrams in R\n\nFocused Data Model ($diagrama)\nHide non-key columns ($diagrama)\n\nOracle Data Modeler\n\nSelect neighbors ($diagrama)\nResize to visible ($diagrama)"
+  },
+  {
+    "objectID": "necessidades/diagramas.html#research",
+    "href": "necessidades/diagramas.html#research",
+    "title": "Diagramas",
+    "section": "Research",
+    "text": "Research\n\nFeature suggestion: Export package to ER diagram #1118\nThe Tabular Data Package as the one source for data definition\n\nOpenReferral already has a Tabular Data Package, an Entity Relation Diagram and an API. I think the second two are manually crafted from the first. I want an automated way of generating the second two (and more) from the first. […] Essentially I want one single machine-readable source defining a data standard from which I can generate ERD, schemas and human-readable documentation.\n\njts_erd: Create an ERD from JSON-table-schemas"
+  },
+  {
+    "objectID": "necessidades/diagramas.html#open-questions",
+    "href": "necessidades/diagramas.html#open-questions",
+    "title": "Diagramas",
+    "section": "Open questions",
+    "text": "Open questions\n\nA visualização dos table schemas no lugar dos recursos resolve em alguns casos, como na da remuneração, a questão da igualdade lógica entre recursos diferentes. No entanto, para o caso bastante comum de partições com base em data (eg. ano), mesmo a utilização do table schema não vai funcionar pois eles podem ser diferentes (o table schema do dm_empenho_desp_2002, mas o ft_despesa_2002 é igual do dm_empenho_desp_2003, mas o ft_despesa_2002 é diferente de ft_despesa_2003 por causa das chaves estrangeiras). A utilização da funcionalidade de data in multiple files poderia ser uma solução, mas pode dificultar a manipulação e inspeção das validações. Vale uma investigação de como as ferramentas tradicionais lidam com a visualização em bancos de dados, como dbeaver e Aqua Data Studio."
+  },
+  {
+    "objectID": "necessidades/importacao.html",
+    "href": "necessidades/importacao.html",
+    "title": "Importação",
+    "section": "",
+    "text": "Context\nWhat\n\nAcceptance criteria\n\nWhy\nHow\nOpen questions\nExamples/Research\n\nLow-fidelity mockup\nOther examples"
+  },
+  {
+    "objectID": "necessidades/importacao.html#context",
+    "href": "necessidades/importacao.html#context",
+    "title": "Importação",
+    "section": "Context",
+    "text": "Context\nApesar de serem ambas iniciativas da Open Knowledge, o CKAN não possui suporte nativo para a importação de pacotes de dados. Atualmente a CGE tem feito a importação por meio de uma ferramenta CLI desenvolvida internamente, o dpckan. O dpckan atualmente faz o mapeamento de algumas propriedades entre frictionless e CKAN, mas ainda armazena o arquivo datapackage.json como um recurso adicional no conjunto de dados do CKAN.\nApesar da importância de um fluxo de importação programático que permita a automatização das publicações e atualizações, as oficinas piloto com os órgãos e entidades tem demonstrado a importância de um fluxo de importação manual via interface gráfica para usuários iniciantes e/ou não técnicos1."
+  },
+  {
+    "objectID": "necessidades/importacao.html#open-questions",
+    "href": "necessidades/importacao.html#open-questions",
+    "title": "Importação",
+    "section": "Open questions",
+    "text": "Open questions\n\nComo o pacote de dados e seu conteúdo devem ser armazenados no CKAN?\nÉ possível uma conversão ida-e-volta sem perda de metadados (lossless) entre um pacote de dados frictionless e um conjunto de dados CKAN?\nComo permitir que alterações nos metadados sejam realizadas pela interface gráfica e/ou interface de linha de comando? Vide dpckan#153"
+  },
+  {
+    "objectID": "necessidades/importacao.html#examplesresearch",
+    "href": "necessidades/importacao.html#examplesresearch",
+    "title": "Importação",
+    "section": "Examples/Research",
+    "text": "Examples/Research\n\nReplicação e sincronização de um data package com CKAN - Discussão sobre o fluxo de importação de pacotes de dados armazenados em um repositório git com indicação de ferramentas possivelmente úteis oferecidas por um ex-desenvolvedor da Open Knowledge. Ele relatou que a extensão ckanext-datapackager é próxima do que precisamos, mas não permite sobrescrever um conjunto de dados já existente.\nFrictionless CKAN Mapper - Bibliotecas em Python e Javascript para conversão de pacotes de dados frictionless e conjuntos de dados CKAN.\nCKAN Client Guide - Guia da Datopian sobre as bibliotecas ckan-client-py e ckan-client-js para interação programática com uma instância do CKAN\nSupport for Simple Data Format Data Packages #778 - Discussão sobre importação e exportação de pacotes de dados usando Open Refine\nAdvance CKAN plugin to the stable state #475\nCKAN - Data Curator Integration"
   },
   {
     "objectID": "motivacao-contexto.html",
@@ -26,13 +229,6 @@
     "title": "Contexto",
     "section": "",
     "text": "Charmaine Chua, assistant professor of global studies at the University of California, Santa Barbara, has spent most of her career studying the growth and politics of the global logistics system. She explains that the move toward containerization did not take place overnight. Ports had to implement massive infrastructure upgrades, in turn radically reconfiguring the urban ecosystem. “It was a process not just about the box but about organizing the whole world transportation system in order to standardize the process in which containers would travel,” she said. “It requires ecological changes to port cities and massive expansions of trucking and shipping spaces that have huge consequences both for the lived environment for people who live in these cities as well as the ecological damage it has done to ports.” But the cost savings were hard to ignore.\n– https://prospect.org/economy/hidden-costs-of-containerization/\n\n\nLinks\n\nYou Can’t Buy Integration\n\nhttp://www.charlespetzold.com/etc/CSAML.html\n\nCSV IS NOT AN INTERFACE\nInterface, Interoperability, Integration—Quick Guide for Distributors\nhttps://www.amazon.com.br/Container-Principle-How-Changes-Think/dp/0262028573\nhttps://www.amazon.com.br/Box-Shipping-Container-Smaller-Economy/dp/0691136408\nhttps://www.amazon.com/Box-That-Changed-World-Illustrated/dp/1891131958\n\n\n\n\n\n\nFootnotes\n\n\nIn computing, an interface is a shared boundary across which two or more separate/independent components of a computer system exchange information (or communicate).↩︎"
-  },
-  {
-    "objectID": "metadados-stats.html",
-    "href": "metadados-stats.html",
-    "title": "Estatísticas descritivas",
-    "section": "",
-    "text": "Amostra dos dados\nMetadados de diff"
   },
   {
     "objectID": "index.html",
@@ -56,48 +252,6 @@
     "text": "Necessidades\nUma descrição detalhada de cada necessidade está disponível via menu lateral, essa seção visa oferecer uma visão de alto nível sobre cada uma das macroetapas do ciclo de vida idealizado para os dados abertos no EMG.\n\nProdução\nA macroetapa de Produção consiste nas atividades necessárias para que um data package válido seja produzido. Ela também inclui as atividades de incorporar alterações no data package.\n\nDEVT Framework\n\n\n\nPublicação\n\n\nAcesso\n\n\nUso\nEssa demanda visa permitir a visualização em HTML da documentação de um conjunto de dados realizada com o padrão de metadados Frictionless Data.\n\n\n\n\n\n\nNote\n\n\n\nA recomendação Boas Práticas para Dados na Web da W3C recomenda em sua boa prática 1 que\n\nFornecer metadados é um requisito fundamental na publicação de dados na Web, porque os publicadores de dados e os consumidores de dados podem não se conhecer mutuamente. Portanto, é essencial fornecer informações que auxiliem pessoas e aplicações de computadores a compreenderem os dados, assim como outros aspectos importantes que descrevam o conjunto de dados ou a distribuição.\n\nNo padrão de metadados Frictionless Data, o fornecimento de metadados legíveis por máquina é feita no arquivo datapackage.json. No entanto, o fornecimento de metadados legíveis por pessoas não possui uma opção clara no ecossistema de ferramentas atual.\n\n\nA visualização deve ser possível durante o processo de produção da documentação pelos publicadores de dados, bem como após a catalogação do conjunto de dados na solução de catálogo de dados utilizada em Minas Gerais, o CKAN.\nPara atender esses dois casos de uso devem ser desenvolvidos:\n\nPrograma de linha de comando para geração de site HTML estático para visualização dos metadados constantes de um data package\nExtensão do CKAN para customização das páginas de visualização dos metadados do conjuntos de dados e seus recursos que foram documentados como data packages\n\nA visualização nos dois casos deve, na medida do possível, ser a mesma.\n\n\n\n\n\n\nImportant\n\n\n\nNa etapa de análise comparativa de soluções deve ser especialmente considerado se os esforços de desenvolvimento serão para\n\nutilização de uma solução pronta, ou\nconstrução de uma solução totalmente customizada, ou\nadaptação de solução de código aberto existente, com eventual contribuição para o projeto original mediante alinhamento de direção com os responsáveis.\n\n\n\nA visualização em uma página HTML dos metadados constantes do datapackage.json visa sintetizar, inclusive com utilização de diagramas, os metadados padronizados constantes de data packages tabulares, especialmente os constantes da especificação table schema.\nNesse caso, o trabalho de design de interação e interface para elaboração de uma identidade visual atrativa, mas, principalmente, para representação de todos os metadados presentes nas especificações Frictionless em uma única página HTML será reutilizado tanto no gerador de site estático quando na extensão do CKAN.\nA possibilidade de reuso de componentes entre essas duas entregas faz parte das definições arquiteturais."
   },
   {
-    "objectID": "criacao.html",
-    "href": "criacao.html",
-    "title": "Criação",
-    "section": "",
-    "text": "Essa necessidade lida com a criação e eventuais atualizações de um data package. Ela é independente das etapas de validação (de dados) e da catalogação no PdA, mas faz sentido que seja ofertado para os publicadores uma experiência integrada.\n\nGUI Desktop\nGUI Web\nCLI\nGithub Actions"
-  },
-  {
-    "objectID": "criacao.html#what",
-    "href": "criacao.html#what",
-    "title": "Criação",
-    "section": "What",
-    "text": "What\n\nAplicação Web para preenchimento de metadados e exportação de um data package"
-  },
-  {
-    "objectID": "criacao.html#how",
-    "href": "criacao.html#how",
-    "title": "Criação",
-    "section": "How",
-    "text": "How\n\nComo forma de evitar o acoplamento ao CKAN e simplificar o esforço de desenvolvimento, a aplicação WEB deve ser standalone"
-  },
-  {
-    "objectID": "criacao.html#examples-research",
-    "href": "criacao.html#examples-research",
-    "title": "Criação",
-    "section": "Examples / Research",
-    "text": "Examples / Research\n\nData Package Creator (datapackage-ui e tableschema-ui) - Aplicativo WEB para criação de data packages gerenciado pela OKFN. Atenderia a necessidade (de não ser necessário edição manual do datapackage.json gerado) se permitisse a inclusão de propriedade adicionais. As seguintes são particularmente problemáticas tendo em vista nossa experiência:\n\nowner_org: obrigatória para publicação no PdA\ndialect.delimiter: CSVs no Brasil utilizam ;\nschema.fields.number.decimalChar e schema.fields.number.groupChar: CSVs exportados do excel\narquivos dentro da pasta data\n\nAlém disso, a inferência dos tipos das colunas parece ser pior que a do frictionless-py.\nEle foi utilizado em algumas oficinas mão na massa conduzidas pela DTA (adicionar links para gravações) e foi substituída durante a a inclusão do frictionless-py describe na oficina.\nVide Trello para uma discussão sobre metadados obrigatórios relevante para essa discussão.\nO projeto schema-collaboration teve como objetivo resolver o problema de criação colaborativa de data packages. O issue Integration with git #14 serve de inspiração sobre como o Data Package Creator pode ser um hackmd para data packages em relação a integração com repositórios de controle de versão.\nFrictionless Components - Schema Editor (Repo)\n\nFrictionless Application (Repo) - Data management application for Browser and Desktop that provides functionality to describe, extract, validate, and transform tabular data\nData Curator - Data Curator is a simple desktop data editor to help describe, validate and share usable open data.\nMetatab and Metapack\nPlanilhas Templates STN\nckanext-validation - label:“Schema Creator” CKAN extension for validating Data Packages using Table Schema.\nhttps://github.com/transparencia-mg/acordo-judicial-reparacao-vale\nCreate a UI element/workflow that allows a user to add properties and values to the data package that may not have been defined in the Data Package’s JSON Schema #11\n\nclosing. the built in json-editor functionality is good enough for our use case\n\nUI for editing YAML/JSON backed by version control\n\nI built something like that when I needed expose config changes to non-technical peers using https://github.com/rjsf-team/react-jsonschema-form + one POST function that checkouts git and commit a change\n\nMultiple types does not work #700\n[Proposal] JSON UI Schema: define UI behaviours for all current elements #252\nhttps://github.com/brutusin/json-forms\nhttps://github.com/eclipsesource/jsonforms\nhttps://github.com/jsonform/jsonform"
-  },
-  {
-    "objectID": "catalogacao.html",
-    "href": "catalogacao.html",
-    "title": "Catalogação",
-    "section": "",
-    "text": "A catalogação está focada na perspectiva da experiência que o produtor de dados possui para publicar pacotes de dados no Portal de Dados Abertos.\nO objetivo é oferecer tanto uma interface web GUI, quanto uma interface CLI (dpckan) para a catalogação."
-  },
-  {
-    "objectID": "catalogacao.html#links",
-    "href": "catalogacao.html#links",
-    "title": "Catalogação",
-    "section": "Links",
-    "text": "Links\n\nPublish Data - Datopian\nPublish functionality covers the whole area of creating and editing datasets and resources, including data upload. The core job story is something like:\n\nWhen a Data Curator has a data file or dataset they want to add it to their data portal/platform quickly and easily so that it is available there.\n\nPublication can be divided by its mode:\n\nManual: publication is done by people via a user interfaces or other tool\nProgrammatic: publication is done programatically using APIs and is usually part of automated processes\nHybrid: which combines manual and programmatic. An example would be harvesting where setup and configuration may be done in a UI manually with the process then running automatically and programmatically (in addition, some new harvesting flows require manual programmatic setup e.g. writing a harvester in Python for a new source data format)."
-  },
-  {
     "objectID": "resumo-SEPLAG-2021-06-02.html",
     "href": "resumo-SEPLAG-2021-06-02.html",
     "title": "",
@@ -112,88 +266,46 @@
     "text": "de negócio:\n\nuso de especificações de Frictionless Data para garantir qualidade de metadados;\npossibilidade de recepcionamento de dados de múltiplas fontes (i.e. e-mail, servidores de FTP, URL de sítios governamentais, etc)\nuso do CKAN como plataforma de publicação dos dados abertos\n\nde capacitação:\n\npreparação e entrega de conteúdos (vídeos, apostilas, slides) auto-instrucionais sobre instação e operação das soluções a serem implantadas\n\nlegais:\n\nLAI\nLGPD\nLei do Governo Digital\n\nde manutenção:\n\nvia atualizações de pacotes de softwares livres, pelos próprios gestores dos portais\n\ntemporais:\n\ncompatibilidade das extensões com atualizações do python, do CKAN, do frictionless.py\n\nde segurança:\n\ncompliance do processo (preservação do histórico de alterações, garantias para integridade e autenticidade dos dados nos processos de carga, transformação e publicação em que forem envolvidos)\n\nsociais, ambientais e culturais\n\ndocumentação legível e compreensível por humanos, atendendo a políticas, princípios e diretrizes de Governo Aberto, Simplificação, Controle Social e Participação, Integridade e Compliance\n\n\n\n\n\n\nde arquitetura tecnológica, composta de hardware, software, padrões de interoperabilidade, linguagens de programação, interfaces, dentre outros:\nde projeto e de implementação, que estabelecem o processo de desenvolvimento de software, técnicas, métodos, forma de gestão, de documentação, dentre outros:\nde implantação, que definem o processo de disponibilização da solução em ambiente de produção, dentre outros:\n\nimplementação precedida por testes e validação em ambiente de homologação, seguindo analogias de pull requests em branches separados, que não sejam o master/main\n\nde garantia e manutenção, que definem a forma como será conduzida a manutenção e a comunicação entre as partes envolvidas;\nde capacitação, que definem o ambiente tecnológico dos treinamentos a serem ministrados, os perfis dos instrutores, dentre outros;\n\nanalogias com Software Carpentry\n\nde experiência profissional da equipe que executará os serviços relacionados à solução de TIC, que definem a natureza da experiência profissional exigida e as respectivas formas de comprovação dessa experiência, dentre outros:\n\nexperiência e habilidade no desenvolvimento, implementação e capacitação em ferramentas de ETL de dados\nexperiência e habilidade no uso, manutenção e disseminação de software livres, especialmente python e github\n\nde formação da equipe que projetará, implementará e implantará a solução de TIC, que definem cursos acadêmicos e técnicos, formas de comprovação dessa formação, dentre outros;\nde metodologia de trabalho;"
   },
   {
-    "objectID": "leitura.html",
-    "href": "leitura.html",
-    "title": "Leitura",
-    "section": "",
-    "text": "Permitir a leitura direta, com controle de versão, de conjuntos de dados do CKAN com as ferramentas frictionless (Python, R, JS)\nfrom frictionless import Package\n\ndp = Package('https://dados.mg.gov.br/dataset/name/datapackage.json')\ndf = dp.get_resource('resource_name').to_pandas()\nlibrary(frictionless)\n\ndp <- read_package('https://dados.mg.gov.br/dataset/name/datapackage.json')\ndf <- read_resource(dp, 'resource_name')\n\n\n\nSnippets na interface de usuário devem indicar como fazer a leitura com diferentes ferramentas.\nExemplos:\n\nOpen Data Blend\nQuilt\nDatahub"
-  },
-  {
-    "objectID": "leitura.html#open-questions",
-    "href": "leitura.html#open-questions",
-    "title": "Leitura",
-    "section": "Open questions",
-    "text": "Open questions\n\nÉ possível a leitura do datapackage.json a partir da URL raiz do conjunto de dados https://dados.mg.gov.br/dataset/name/?\nTanto o Datahub quanto o Datahub CKAN utilizam a propriedade resource.path como URLs e não como caminhos relativos. Existe alguma vantagem em alterar o resource.path dos data packages durante a importação ou exportação no lugar de alterar as rotas da aplicação? Com esse tipo de alteração o link https://dados.mg.gov.br/dataset/12253b1a-1171-4453-90f8-f84517cf147b/resource/f0486981-a883-45f2-815d-b3ebca32e6b7/download/datapackage.json passaria a funcionar para leitura.\nPode existir um descolamento entre a propriedade resource.path do data package e a propriedade resource.url do CKAN?"
-  },
-  {
-    "objectID": "leitura.html#examplesresearch",
-    "href": "leitura.html#examplesresearch",
-    "title": "Leitura",
-    "section": "Examples/Research",
-    "text": "Examples/Research\n\nPublish Your Data Package Online - Explicação das alternativas para disponibização na internet de pacotes de dados (It’s Only Files Online). O CKAN precisaria ser alterado para seguir as Key Tips desse artigo.\nConflito entre nome dos conjuntos de dados criados de forma descentralizada por ausência de namespaces #52\nA proposta de valor do frictionless é fazer com que o capítulo não seja https://r4ds.had.co.nz/data-import.html\nSe a instalação de ferramentas é uma fonte de custo e fricção, conseguimos permitir a integração do CKAN com notebooks computacional, como Binder? Vide Binder + Zenodo: A how-to guide e Six easy ways to run your Jupyter Notebook in the cloud"
-  },
-  {
-    "objectID": "ppt_alinhamento-inicial.html#pessoas",
-    "href": "ppt_alinhamento-inicial.html#pessoas",
+    "objectID": "ppt/ppt_alinhamento-inicial.html#pessoas",
+    "href": "ppt/ppt_alinhamento-inicial.html#pessoas",
     "title": "Reunião Alinhamento Inicial - Visão e Backlog do Produto",
     "section": "Pessoas",
     "text": "Pessoas\n\nFigure 1: Atores no ecossistema de dados abertos. Fonte: @okbr2021"
   },
   {
-    "objectID": "ppt_alinhamento-inicial.html#processo",
-    "href": "ppt_alinhamento-inicial.html#processo",
+    "objectID": "ppt/ppt_alinhamento-inicial.html#processo",
+    "href": "ppt/ppt_alinhamento-inicial.html#processo",
     "title": "Reunião Alinhamento Inicial - Visão e Backlog do Produto",
     "section": "Processo",
     "text": "Processo\n\n\n\n\nflowchart LR\n  A[Produção] --> B[Publicação]\n  B --> C[Distribuição]\n  C --> D[Acesso]\n  D --> E[Uso]"
   },
   {
-    "objectID": "ppt_alinhamento-inicial.html#tecnologia",
-    "href": "ppt_alinhamento-inicial.html#tecnologia",
+    "objectID": "ppt/ppt_alinhamento-inicial.html#tecnologia",
+    "href": "ppt/ppt_alinhamento-inicial.html#tecnologia",
     "title": "Reunião Alinhamento Inicial - Visão e Backlog do Produto",
     "section": "Tecnologia",
     "text": "Tecnologia\n\n\n\n\n\n\nFrictionless Software\n\n\n\n\n \n\n\n\n\n\nFrictionless Standards"
   },
   {
-    "objectID": "ppt_alinhamento-inicial.html#produção-publicação",
-    "href": "ppt_alinhamento-inicial.html#produção-publicação",
+    "objectID": "ppt/ppt_alinhamento-inicial.html#produção-publicação",
+    "href": "ppt/ppt_alinhamento-inicial.html#produção-publicação",
     "title": "Reunião Alinhamento Inicial - Visão e Backlog do Produto",
     "section": "Produção & Publicação",
     "text": "Produção & Publicação\n\nAplicação Web para criação de um data package válido para importação no CKAN\nAplicação Web para atualização de um data package\nAplicação Web para validação dos dados de um data package\nAplicação Web para publicação no CKAN de um data package\nBotão para importação de um data package no CKAN\nBotão para atualização de um data package no CKAN"
   },
   {
-    "objectID": "ppt_alinhamento-inicial.html#distribuição",
-    "href": "ppt_alinhamento-inicial.html#distribuição",
+    "objectID": "ppt/ppt_alinhamento-inicial.html#distribuição",
+    "href": "ppt/ppt_alinhamento-inicial.html#distribuição",
     "title": "Reunião Alinhamento Inicial - Visão e Backlog do Produto",
     "section": "Distribuição",
     "text": "Distribuição\n\nTema para customização da identidade visual do CKAN\nExploração, instalação e configuração da extensão ckanext-validation\nEstatísticas de acesso e downloads de conjuntos de dados e arquivos\nURLs dos conjuntos de dados com namespace da organização\nArquivamento (read only) de conjuntos de dados"
   },
   {
-    "objectID": "ppt_alinhamento-inicial.html#acesso-uso",
-    "href": "ppt_alinhamento-inicial.html#acesso-uso",
+    "objectID": "ppt/ppt_alinhamento-inicial.html#acesso-uso",
+    "href": "ppt/ppt_alinhamento-inicial.html#acesso-uso",
     "title": "Reunião Alinhamento Inicial - Visão e Backlog do Produto",
     "section": "Acesso & Uso",
     "text": "Acesso & Uso\n\nBotão para bulk download de conjuntos de dados\nLeitura direta de conjuntos de dados do CKAN com ferramentas frictionless\nVisualização dos metadados da spec table schema no dicionário de dados\nVisualização de diagrama interativo dos recursos\nVisualização dos metadados dos recursos\nVisualização de metadados de estatísticas descritivas"
-  },
-  {
-    "objectID": "exportacao.html",
-    "href": "exportacao.html",
-    "title": "Download",
-    "section": "",
-    "text": "Permitir o download, com controle de versão, de conjuntos de dados como data packages zipados via botão na interface gráfica e URL dedicada."
-  },
-  {
-    "objectID": "exportacao.html#open-questions",
-    "href": "exportacao.html#open-questions",
-    "title": "Download",
-    "section": "Open questions",
-    "text": "Open questions\n\nO download deve ser do arquivo datapackage.json e arquivos de dados ou somente do arquivo datapackage.json? Somente o arquivo datapackage.json impede que o consumidor realize facilmente um backup local dos arquivos de dados. Isso tem valor, especialmente tendo em vista que o CKAN não oferece versionamento de dados.\nNa implementação do CKAN DataHub o botão Download Data Package faz download apenas do arquivo datapackage.json. Isso implica que a propriedade resource.path deve utilizar URLs no lugar de caminhos relativos para que o mesmo funcione localmente.\nfrictionless-r suporta a leitura de data packages zipados?\nO versionamento proporcionado pelo activity_id na versão 2.9 do CKAN somente versiona os metadados (isso não é claro para o usuário). Permitir o download com controle de versão seria permitir que os arquivos de dados de versões anteriores também estivessem acessíveis, por exemplo adicionando activity_id=d5b34496-735a-437d-85a5-d52e61a79d89 na URL\nVide open questions da importação e armazenamento de data packages"
-  },
-  {
-    "objectID": "exportacao.html#examplesresearch",
-    "href": "exportacao.html#examplesresearch",
-    "title": "Download",
-    "section": "Examples/Research",
-    "text": "Examples/Research\n\npackage.to_zip\nCompression of resources\nckanapi - Pacote Python, acessível via interface CLI, que simplifica a interação com a API do CKAN. Ele possui funcionalidade para exportação de conjuntos de dados como pacotes de dados\nckanapi dump datasets --remote https://homologa.cge.mg.gov.br/ violencia-mulher  # outputs dataset metadata\nckanapi dump datasets --remote https://homologa.cge.mg.gov.br/ --datapackages=output violencia-mulher \nckanapi dump datasets --remote https://homologa.cge.mg.gov.br/ --datapackages=. violencia-mulher \nckanapi dump datasets --remote https://dados.gov.br/ --datapackages=. comissao-propria-de-avaliacao\nVide Investigar bug ckanapi dump datasets #454.\nTry this: Frictionless data.world - Exemplo de outro catalogo de dados, data.world, que implementou uma funcionalidade para exportação de pacotes de dados\nCKAN DataHub - Exemplo de botão Download Data Package e URL https://old.datahub.io/dataset/mallzee-dataset/datapackage.json com extensão\nGithub zip archive download\n[[20210623T210814]] frictionless - mime type\nckanext-versions"
   },
   {
     "objectID": "glossario.html",
@@ -203,46 +315,11 @@
     "text": "https://specs.frictionlessdata.io/data-package/"
   },
   {
-    "objectID": "importacao-metadados.html",
-    "href": "importacao-metadados.html",
-    "title": "importação (e armazenamento) de data packages",
-    "section": "",
-    "text": "Context\nWhat\n\nAcceptance criteria\n\nWhy\nHow\nOpen questions\nExamples/Research\n\nLow-fidelity mockup\nOther examples"
-  },
-  {
-    "objectID": "importacao-metadados.html#context",
-    "href": "importacao-metadados.html#context",
-    "title": "importação (e armazenamento) de data packages",
-    "section": "Context",
-    "text": "Context\nApesar de serem ambas iniciativas da Open Knowledge, o CKAN não possui suporte nativo para a importação de pacotes de dados. Atualmente a CGE tem feito a importação por meio de uma ferramenta CLI desenvolvida internamente, o dpckan. O dpckan atualmente faz o mapeamento de algumas propriedades entre frictionless e CKAN, mas ainda armazena o arquivo datapackage.json como um recurso adicional no conjunto de dados do CKAN.\nApesar da importância de um fluxo de importação programático que permita a automatização das publicações e atualizações, as oficinas piloto com os órgãos e entidades tem demonstrado a importância de um fluxo de importação manual via interface gráfica para usuários iniciantes e/ou não técnicos1."
-  },
-  {
-    "objectID": "importacao-metadados.html#open-questions",
-    "href": "importacao-metadados.html#open-questions",
-    "title": "importação (e armazenamento) de data packages",
-    "section": "Open questions",
-    "text": "Open questions\n\nComo o pacote de dados e seu conteúdo devem ser armazenados no CKAN?\nÉ possível uma conversão ida-e-volta sem perda de metadados (lossless) entre um pacote de dados frictionless e um conjunto de dados CKAN?\nComo permitir que alterações nos metadados sejam realizadas pela interface gráfica e/ou interface de linha de comando? Vide dpckan#153"
-  },
-  {
-    "objectID": "importacao-metadados.html#examplesresearch",
-    "href": "importacao-metadados.html#examplesresearch",
-    "title": "importação (e armazenamento) de data packages",
-    "section": "Examples/Research",
-    "text": "Examples/Research\n\nReplicação e sincronização de um data package com CKAN - Discussão sobre o fluxo de importação de pacotes de dados armazenados em um repositório git com indicação de ferramentas possivelmente úteis oferecidas por um ex-desenvolvedor da Open Knowledge. Ele relatou que a extensão ckanext-datapackager é próxima do que precisamos, mas não permite sobrescrever um conjunto de dados já existente.\nFrictionless CKAN Mapper - Bibliotecas em Python e Javascript para conversão de pacotes de dados frictionless e conjuntos de dados CKAN.\nCKAN Client Guide - Guia da Datopian sobre as bibliotecas ckan-client-py e ckan-client-js para interação programática com uma instância do CKAN\nSupport for Simple Data Format Data Packages #778 - Discussão sobre importação e exportação de pacotes de dados usando Open Refine\nAdvance CKAN plugin to the stable state #475\nCKAN - Data Curator Integration"
-  },
-  {
     "objectID": "notes.html",
     "href": "notes.html",
     "title": "Notes",
     "section": "",
     "text": "Além disso, com o intuito de aumentar a qualidade dos dados e metadados publicados, os novos conjuntos de dados serão documentados conforme padrão de metadados legível por máquina. Isso possibilita, por exemplo, a validação automática sobre se os dados estão em conformidade com a documentação."
-  },
-  {
-    "objectID": "validacao.html",
-    "href": "validacao.html",
-    "title": "Validação",
-    "section": "",
-    "text": "https://github.com/frictionlessdata/goodtables-ui"
   },
   {
     "objectID": "resumo-SEPLAG-2021-06-16.html",
@@ -287,32 +364,11 @@
     "text": "Programmatic evaluations should look for\n• Work that is conceptually similar to the agency’s needs. • Work that was centered on user needs, as opposed to leading with solutionism. • Work that was completed by a team of a size that’s similar to the size of the team that they’re proposing. • Design artifacts that show continuous and ongoing usability testing that indicate a user-centered approach to iterative design and development.\n\nRed flags\n• The cited projects bear little evidence that the contractor created them. • The projects are trivial. • There’s a finished product, but no code, or vice versa. • The projects do not include good design artifacts and research plans."
   },
   {
-    "objectID": "metadados-validacao.html",
-    "href": "metadados-validacao.html",
-    "title": "Validação",
-    "section": "",
-    "text": "Exploração, instalação e configuração da extensão ckanext-validation com suporte para CKAN 2.9+/python3 e validação utilizando frictionless-py."
-  },
-  {
-    "objectID": "metadados-validacao.html#how",
-    "href": "metadados-validacao.html#how",
-    "title": "Validação",
-    "section": "How",
-    "text": "How\nPreferenciamento o fork da CGE deve ser realizado em cima da versão da OKFN. No entanto, cabe avaliação se o fork da Keitaro, que parece ser mais atual e já oferecer suporte para o CKAN 2.9, não seria uma alternativa mais simples."
-  },
-  {
-    "objectID": "metadados-validacao.html#examples-research",
-    "href": "metadados-validacao.html#examples-research",
-    "title": "Validação",
-    "section": "Examples / Research",
-    "text": "Examples / Research\n\nupgrading to latest goodtables/frictionless-py #54\n[WIP] CKAN 2.9 / Python 3Py3 #55\nCkan 2.9 #6"
-  },
-  {
     "objectID": "testes-usabilidade.html",
     "href": "testes-usabilidade.html",
     "title": "Testes Usabilidade",
     "section": "",
-    "text": "Identificar qual conjunto de dados possui as informações relevantes\nIdentificar quais tabelas possuem as informações relevantes\nIdentificar quais colunas possuem as informações relevantes\nIdentificar quais linhas possuem as informações relevantes\n\n\n\nO Caderno de Serviços Prodemge descreve os parâmetros que se aplicam a toda e qualquer contratação de Serviços de TIC da Prodemge ($FORNECEDOR) pelos Órgãos e Entidades do Executivo Estadual.\nUm dos itens de serviço existentes no caderno é o de “Hospedagem de Sistemas em Ambiente Dedicado de Baixa Plataforma” ($ITEM_SERVICO).\nEnquanto Gestor de Contratos, você deseja saber\n\nO valor médio anual (\\(VALOR_HOMOLOGADO) dos contratos para os últimos três anos (\\)DATA)\nOs links para os termos contratuais ($FORNECEDOR) dos contratos mais recentes que tenham valor próximo\nMapa comparativo de preços\n\nÓrgão\nContrato\nValor\nURL\n\nhttps://planejamento.mg.gov.br/pagina/gestao-governamental/gestao-de-ti/compras-de-tic#:~:text=Caderno%20de%20Servi%C3%A7os%20Prodemge\nhttps://planejamento.mg.gov.br/sites/default/files/documentos/gestao-governamental/gestao-de-ti/caderno_de_servicos_prodemge_-_v_322.pdf#page=29\nhttps://planejamento.mg.gov.br/sites/default/files/documentos/gestao-governamental/gestao-de-ti/anexo_ii_-codigos_dos_servicos_no_catmas-_v_32.pdf\nhttp://www.pesquisalegislativa.mg.gov.br/LegislacaoCompleta.aspx?cod=180241&marc=\nhttp://www.pesquisalegislativa.mg.gov.br/LegislacaoCompleta.aspx?cod=173778&marc="
+    "text": "Identificar qual conjunto de dados possui as informações relevantes\nIdentificar quais tabelas possuem as informações relevantes\nIdentificar quais colunas possuem as informações relevantes\nIdentificar quais linhas possuem as informações relevantes\n\n\n\nO Caderno de Serviços Prodemge descreve os parâmetros que se aplicam a toda e qualquer contratação de Serviços de TIC da Prodemge ($FORNECEDOR) pelos Órgãos e Entidades do Executivo Estadual.\nUm dos itens de serviço existentes no caderno é o de “Hospedagem de Sistemas em Ambiente Dedicado de Baixa Plataforma” ($ITEM_SERVICO).\nEnquanto Gestor de Contratos, você deseja saber\n\nO valor médio anual (\\(VALOR_HOMOLOGADO) dos contratos para os últimos três anos (\\)DATA)\nOs links para os termos contratuais ($FORNECEDOR) dos contratos mais recentes que tenham valor próximo\nMapa comparativo de preços\n\nÓrgão\nContrato\nValor\nURL\n\nhttps://planejamento.mg.gov.br/pagina/gestao-governamental/gestao-de-ti/compras-de-tic#:~:text=Caderno%20de%20Servi%C3%A7os%20Prodemge\nhttps://planejamento.mg.gov.br/sites/default/files/documentos/gestao-governamental/gestao-de-ti/caderno_de_servicos_prodemge_-_v_322.pdf#page=29\nhttps://planejamento.mg.gov.br/sites/default/files/documentos/gestao-governamental/gestao-de-ti/anexo_ii_-codigos_dos_servicos_no_catmas-_v_32.pdf\nhttp://www.pesquisalegislativa.mg.gov.br/LegislacaoCompleta.aspx?cod=180241&marc=\nhttp://www.pesquisalegislativa.mg.gov.br/LegislacaoCompleta.aspx?cod=173778&marc=\n\n\n\n\n\nQual o saldo de recursos ordinários em 2021?"
   },
   {
     "objectID": "testes-usabilidade.html#links",
@@ -320,20 +376,6 @@
     "title": "Testes Usabilidade",
     "section": "Links",
     "text": "Links\n\nVide https://trello.com/c/t22QaS9M para referências sobre os testes de usabilidade conduzidos para o Portal da Transparência."
-  },
-  {
-    "objectID": "metadados-recurso.html",
-    "href": "metadados-recurso.html",
-    "title": "Recurso",
-    "section": "",
-    "text": "Read more/less… ou View more/less\nSumarização de recursos que possuem o mesmo table schema\nResumo metadados (tamanho, n linhas)\nTooltip para as propriedades (eg. o que significa temporal?)\nConversão para português dos metadados que existem no Frictionless mas não existem no CKAN (temporal, accrualPeriodicity)\nRenderização de propriedades (eg. Email, licença e accrualPeriodicity)"
-  },
-  {
-    "objectID": "metadados-recurso.html#examples",
-    "href": "metadados-recurso.html#examples",
-    "title": "Recurso",
-    "section": "Examples",
-    "text": "Examples\n\nDesigning “Read More” And “Continue Reading” Links"
   },
   {
     "objectID": "dados-abertos-espec.html",
@@ -364,52 +406,17 @@
     "text": "Enquadramento nos requisitos e premissas das normas mais recentes\n\nLei Geral de Proteção de Dados\n\n\nDecreto 10.046/2019\n(dispõe sobre a governança no compartilhamento de dados no âmbito da ADM Federal)\n\nSeção II: Do compartilhamento amplo de dados\nArt. 11. O compartilhamento amplo de dados dispensa autorização prévia pelo gestor de dados e será realizado pelos canais existentes para dados abertos e para transparência ativa, na forma da legislação.\n§ 1º Na hipótese de o dado de compartilhamento amplo de que trata o caput não estar disponível em formato aberto, o solicitante de dados poderá requerer sua abertura junto ao gestor de dados.\n(…)\n§ 3º A Controladoria-Geral da União e o Comitê Interministerial de Governança, de que trata o Decreto nº 9.203, de 22 de novembro de 2017, poderão recomendar, quando econômica e operacionalmente viável, a abertura dos dados de compartilhamento amplo em transparência ativa.\n§ 4º Os solicitantes e recebedores de dados adotarão medidas para manter a integridade e a autenticidade das informações recebidas.\n§ 5º Os dados de compartilhamento amplo serão catalogados no Portal Brasileiro de Dados Abertos em formato aberto.\n\nOBS.: minuta de decreto análogo está sendo discutido pelas instâncias estaduais de governança, com alta probabilidade de replicação das definições sobre as categorias de compartilhamento de dados"
   },
   {
+    "objectID": "apresentacoes.html",
+    "href": "apresentacoes.html",
+    "title": "Apresentações",
+    "section": "",
+    "text": "Alinhamento Inicial - Visão e Backlog do Produto"
+  },
+  {
     "objectID": "legislacao.html",
     "href": "legislacao.html",
     "title": "Legislação",
     "section": "",
     "text": "Lei 14129, de 29/03/2021\nArt. 29. […] § 1º Na promoção da transparência ativa de dados, o poder público deverá observar os seguintes requisitos:\nI - observância da publicidade das bases de dados não pessoais como preceito geral e do sigilo como exceção;\nII - garantia de acesso irrestrito aos dados, os quais devem ser legíveis por máquina e estar disponíveis em formato aberto, respeitadas as Leis nºs 12.527, de 18 de novembro de 2011 (Lei de Acesso à Informação), e 13.709, de 14 de agosto de 2018 (Lei Geral de Proteção de Dados Pessoais);\nIII - descrição das bases de dados com informação suficiente sobre estrutura e semântica dos dados, inclusive quanto à sua qualidade e à sua integridade;\nIV - permissão irrestrita de uso de bases de dados publicadas em formato aberto;\nV - completude de bases de dados, as quais devem ser disponibilizadas em sua forma primária, com o maior grau de granularidade possível, ou referenciar bases primárias, quando disponibilizadas de forma agregada;\nVI - atualização periódica, mantido o histórico, de forma a garantir a perenidade de dados, a padronização de estruturas de informação e o valor dos dados à sociedade e a atender às necessidades de seus usuários;\nVII - designação clara, disponibilizados os dados de contato, de unidade responsável pela publicação, pela atualização, pela evolução e pela manutenção de cada base de dados aberta, incluída a prestação de assistência quanto ao uso dos dados (VETADO);\nVIII - respeito à privacidade dos dados pessoais e dos dados sensíveis, sem prejuízo dos demais requisitos elencados, conforme a Lei nº 13.709, de 14 de agosto de 2018 (Lei Geral de Proteção de Dados Pessoais);\nIX - intercâmbio de dados entre órgãos e entidades dos diferentes Poderes e esferas da Federação, respeitado o disposto no art. 26 da Lei nº 13.709, de 14 de agosto de 2018 (Lei Geral de Proteção de Dados Pessoais); e\nX - fomento ao desenvolvimento de novas tecnologias destinadas à construção de ambiente de gestão pública participativa e democrática e à melhor oferta de serviços públicos.\n\n\nDecreto 45969, de 24/05/2012\n\nRegulamenta o Acesso à Informação no âmbito do Poder Executivo.\n\n\n\nDecreto 48383, de 18/03/2022\n\nRegulamenta o Governo Digital Estadual, no âmbito da Administração Pública direta, autárquica e fundacional do Poder Executivo.\n\nArt. 25 – O compartilhamento de dados entre os órgãos e as entidades, resultado dos mecanismos de interoperabilidade, é categorizado em três níveis, de acordo com sua confidencialidade:\nI – compartilhamento amplo, quando se tratar de dados públicos que não estão sujeitos a nenhuma restrição de acesso, cuja divulgação deve ser pública e garantida a qualquer interessado, na forma da legislação;\n[…]\nArt. 27 – O compartilhamento amplo de dados dispensa autorização prévia pelo gestor de dados e será realizado pelos canais existentes para dados abertos e para transparência ativa, na forma da legislação.\n[…]\n§ 3º – Os dados de compartilhamento amplo serão catalogados no Portal de Dados Abertos do Estado de Minas Gerais, https://www.dados.mg.gov.br, em formato aberto."
-  },
-  {
-    "objectID": "diagramas.html",
-    "href": "diagramas.html",
-    "title": "Diagramas",
-    "section": "",
-    "text": "Diagrama interativo dos recursos (table schemas) de um pacote de dados. Devem ser representados no diagrama:\n\nNomes dos campos (fields.name)\nTipos dos campos (fields.type(fields.format))\nChaves primárias (schema.primaryKey)\nChaves estrangeiras (schema.foreignKeys)\nRelacionamentos\n\nNo CKAN o diagrama deve estar localizado em uma aba própria na raiz do conjunto de dados.\n\n\n\nSe múltiplos recursos compartilham o mesmo table schema (após expansão e dereferenciamento) o diagrama deve apresentar apenas aqueles que são únicos, com indicação que existem outros.\nO objetivo aqui é facilitar a compreensão da modelagem conceitual dos dados. Por exemplo, todos os 100+ recursos do conjunto remuneracao-servidores-ativos compartilham o mesmo table schema?\nInformações adicionais (tooltip) dos campos (fields.title e fields.description) devem ser exibidas quando o cursor do mouse passar em cima do mesmo\nInformações adicionais (tooltip) dos recursos (resource.title e resource.description) devem ser exibidas quando o cursos do mouse passar em cima do mesmo\nExportar para PDF\nExportar diagramas para SVG\nCustomização da visibilidade das colunas nos diagramas\n~~Interatividade entre diagramas e dicionários de dados (Clique redireciona para dicionário de dados relevante em nova página) ~~"
-  },
-  {
-    "objectID": "diagramas.html#why",
-    "href": "diagramas.html#why",
-    "title": "Diagramas",
-    "section": "Why",
-    "text": "Why\nFacilitar a compreensão dos relacionamentos entre recursos por meio de uma representação visual/gráfica."
-  },
-  {
-    "objectID": "diagramas.html#how",
-    "href": "diagramas.html#how",
-    "title": "Diagramas",
-    "section": "How",
-    "text": "How\nO diagrama deve ser implementado como um componente react frictionless antes de ser integrado ao CKAN e ao gerador de site estático."
-  },
-  {
-    "objectID": "diagramas.html#examples",
-    "href": "diagramas.html#examples",
-    "title": "Diagramas",
-    "section": "Examples",
-    "text": "Examples\n\nLow-fidelity mockup\n\n\n\nOther examples\n\nO aspecto de interatividade é capturado no dbdiagram e Quick_DBD\nQliksense Data Model Viewer\nPower BI Model View\nhttps://dbdiagram.io/d\n\nDiagramas interativos ($diagrama)\nTooltip para tabelas e colunas ($diagrama)\nAuto-arrange\n\ndbt docs\n\nDiagrama com controle de visibilidade ($diagrama)\nBotão esquerdo com opções de foco “Hide this and parents” “Hide this and children” ($diagrama)\n\ndataedo\n\nDiagrama responsivo conectado a tabela associada ($diagrama)\n\nData model diagrams in R\n\nFocused Data Model ($diagrama)\nHide non-key columns ($diagrama)\n\nOracle Data Modeler\n\nSelect neighbors ($diagrama)\nResize to visible ($diagrama)"
-  },
-  {
-    "objectID": "diagramas.html#research",
-    "href": "diagramas.html#research",
-    "title": "Diagramas",
-    "section": "Research",
-    "text": "Research\n\nFeature suggestion: Export package to ER diagram #1118\nThe Tabular Data Package as the one source for data definition\n\nOpenReferral already has a Tabular Data Package, an Entity Relation Diagram and an API. I think the second two are manually crafted from the first. I want an automated way of generating the second two (and more) from the first. […] Essentially I want one single machine-readable source defining a data standard from which I can generate ERD, schemas and human-readable documentation.\n\njts_erd: Create an ERD from JSON-table-schemas"
-  },
-  {
-    "objectID": "diagramas.html#open-questions",
-    "href": "diagramas.html#open-questions",
-    "title": "Diagramas",
-    "section": "Open questions",
-    "text": "Open questions\n\nA visualização dos table schemas no lugar dos recursos resolve em alguns casos, como na da remuneração, a questão da igualdade lógica entre recursos diferentes. No entanto, para o caso bastante comum de partições com base em data (eg. ano), mesmo a utilização do table schema não vai funcionar pois eles podem ser diferentes (o table schema do dm_empenho_desp_2002, mas o ft_despesa_2002 é igual do dm_empenho_desp_2003, mas o ft_despesa_2002 é diferente de ft_despesa_2003 por causa das chaves estrangeiras). A utilização da funcionalidade de data in multiple files poderia ser uma solução, mas pode dificultar a manipulação e inspeção das validações. Vale uma investigação de como as ferramentas tradicionais lidam com a visualização em bancos de dados, como dbeaver e Aqua Data Studio."
   }
 ]

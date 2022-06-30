@@ -34,6 +34,10 @@ Enquanto Gestor de Contratos, você deseja saber
 - http://www.pesquisalegislativa.mg.gov.br/LegislacaoCompleta.aspx?cod=180241&marc=
 - http://www.pesquisalegislativa.mg.gov.br/LegislacaoCompleta.aspx?cod=173778&marc=
 
+### Balanço Orçamentário por Fonte/Destinação de recurso
+
+Qual o saldo de recursos ordinários em 2021?
+
 ## Links
 
 - Vide https://trello.com/c/t22QaS9M para referências sobre os testes de usabilidade conduzidos para o Portal da Transparência.

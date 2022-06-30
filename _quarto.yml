@@ -25,29 +25,29 @@ website:
           - motivacao-contexto.md
       - section: Produção
         contents:
-          - criacao.md
-          - validacao.md
+          - necessidades/criacao.md
+          - necessidades/validacao.md
       - section: Publicação
         contents:
-          - catalogacao.md
+          - necessidades/catalogacao.md
           - text: Importação de metadados
-            href: importacao-metadados.md
+            href: necessidades/importacao-metadados.md
           - text: Importação de dados
-            href: importacao-dados.md
+            href: necessidades/importacao-dados.md
       - section: Distribuição
         contents: 
-          - identidade-visual.md
-          - metadados-validacao.md
+          - necessidades/identidade-visual.md
+          - necessidades/metadados-validacao.md
       - section: Acesso
         contents:
-          - exportacao.md
-          - leitura.md
+          - necessidades/exportacao.md
+          - necessidades/leitura.md
       - section: Uso
         contents:
-          - metadados-tableschema.md
-          - diagramas.md
-          - metadados-recurso.md
-          - metadados-stats.md
+          - necessidades/metadados-tableschema.md
+          - necessidades/diagramas.md
+          - necessidades/metadados-recurso.md
+          - necessidades/metadados-stats.md
           
 
 comments:

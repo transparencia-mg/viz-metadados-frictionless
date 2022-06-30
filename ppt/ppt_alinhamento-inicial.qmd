@@ -8,7 +8,7 @@ format: revealjs
 
 ## Pessoas
 
-![Atores no ecossistema de dados abertos. Fonte: @okbr2021](static/20220503T210959.png){#fig-ecossistema-dados}
+![Atores no ecossistema de dados abertos. Fonte: @okbr2021](/static/20220503T210959.png){#fig-ecossistema-dados}
 
 ## Processo
 

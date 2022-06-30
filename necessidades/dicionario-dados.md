@@ -1,5 +1,5 @@
 ---
-title: Table Schema
+title: Dicionário de dados
 toc: true
 ---
 

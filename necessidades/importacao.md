@@ -1,5 +1,5 @@
 ---
-title: importação (e armazenamento) de data packages
+title: Importação
 toc: true
 ---
 

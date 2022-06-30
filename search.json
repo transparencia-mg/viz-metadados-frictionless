@@ -266,6 +266,48 @@
     "text": "de negócio:\n\nuso de especificações de Frictionless Data para garantir qualidade de metadados;\npossibilidade de recepcionamento de dados de múltiplas fontes (i.e. e-mail, servidores de FTP, URL de sítios governamentais, etc)\nuso do CKAN como plataforma de publicação dos dados abertos\n\nde capacitação:\n\npreparação e entrega de conteúdos (vídeos, apostilas, slides) auto-instrucionais sobre instação e operação das soluções a serem implantadas\n\nlegais:\n\nLAI\nLGPD\nLei do Governo Digital\n\nde manutenção:\n\nvia atualizações de pacotes de softwares livres, pelos próprios gestores dos portais\n\ntemporais:\n\ncompatibilidade das extensões com atualizações do python, do CKAN, do frictionless.py\n\nde segurança:\n\ncompliance do processo (preservação do histórico de alterações, garantias para integridade e autenticidade dos dados nos processos de carga, transformação e publicação em que forem envolvidos)\n\nsociais, ambientais e culturais\n\ndocumentação legível e compreensível por humanos, atendendo a políticas, princípios e diretrizes de Governo Aberto, Simplificação, Controle Social e Participação, Integridade e Compliance\n\n\n\n\n\n\nde arquitetura tecnológica, composta de hardware, software, padrões de interoperabilidade, linguagens de programação, interfaces, dentre outros:\nde projeto e de implementação, que estabelecem o processo de desenvolvimento de software, técnicas, métodos, forma de gestão, de documentação, dentre outros:\nde implantação, que definem o processo de disponibilização da solução em ambiente de produção, dentre outros:\n\nimplementação precedida por testes e validação em ambiente de homologação, seguindo analogias de pull requests em branches separados, que não sejam o master/main\n\nde garantia e manutenção, que definem a forma como será conduzida a manutenção e a comunicação entre as partes envolvidas;\nde capacitação, que definem o ambiente tecnológico dos treinamentos a serem ministrados, os perfis dos instrutores, dentre outros;\n\nanalogias com Software Carpentry\n\nde experiência profissional da equipe que executará os serviços relacionados à solução de TIC, que definem a natureza da experiência profissional exigida e as respectivas formas de comprovação dessa experiência, dentre outros:\n\nexperiência e habilidade no desenvolvimento, implementação e capacitação em ferramentas de ETL de dados\nexperiência e habilidade no uso, manutenção e disseminação de software livres, especialmente python e github\n\nde formação da equipe que projetará, implementará e implantará a solução de TIC, que definem cursos acadêmicos e técnicos, formas de comprovação dessa formação, dentre outros;\nde metodologia de trabalho;"
   },
   {
+    "objectID": "ppt_alinhamento-inicial.html#pessoas",
+    "href": "ppt_alinhamento-inicial.html#pessoas",
+    "title": "Reunião Alinhamento Inicial - Visão e Backlog do Produto",
+    "section": "Pessoas",
+    "text": "Pessoas\n\nFigure 1: Atores no ecossistema de dados abertos. Fonte: @okbr2021"
+  },
+  {
+    "objectID": "ppt_alinhamento-inicial.html#processo",
+    "href": "ppt_alinhamento-inicial.html#processo",
+    "title": "Reunião Alinhamento Inicial - Visão e Backlog do Produto",
+    "section": "Processo",
+    "text": "Processo\n\n\n\n\nflowchart LR\n  A[Produção] --> B[Publicação]\n  B --> C[Distribuição]\n  C --> D[Acesso]\n  D --> E[Uso]"
+  },
+  {
+    "objectID": "ppt_alinhamento-inicial.html#tecnologia",
+    "href": "ppt_alinhamento-inicial.html#tecnologia",
+    "title": "Reunião Alinhamento Inicial - Visão e Backlog do Produto",
+    "section": "Tecnologia",
+    "text": "Tecnologia\n\n\n\n\n\n\nFrictionless Software\n\n\n\n\n \n\n\n\n\n\nFrictionless Standards"
+  },
+  {
+    "objectID": "ppt_alinhamento-inicial.html#produção-publicação",
+    "href": "ppt_alinhamento-inicial.html#produção-publicação",
+    "title": "Reunião Alinhamento Inicial - Visão e Backlog do Produto",
+    "section": "Produção & Publicação",
+    "text": "Produção & Publicação\n\nAplicação Web para criação de um data package válido para importação no CKAN\nAplicação Web para atualização de um data package\nAplicação Web para validação dos dados de um data package\nAplicação Web para publicação no CKAN de um data package\nBotão para importação de um data package no CKAN\nBotão para atualização de um data package no CKAN"
+  },
+  {
+    "objectID": "ppt_alinhamento-inicial.html#distribuição",
+    "href": "ppt_alinhamento-inicial.html#distribuição",
+    "title": "Reunião Alinhamento Inicial - Visão e Backlog do Produto",
+    "section": "Distribuição",
+    "text": "Distribuição\n\nTema para customização da identidade visual do CKAN\nExploração, instalação e configuração da extensão ckanext-validation\nEstatísticas de acesso e downloads de conjuntos de dados e arquivos\nURLs dos conjuntos de dados com namespace da organização\nArquivamento (read only) de conjuntos de dados"
+  },
+  {
+    "objectID": "ppt_alinhamento-inicial.html#acesso-uso",
+    "href": "ppt_alinhamento-inicial.html#acesso-uso",
+    "title": "Reunião Alinhamento Inicial - Visão e Backlog do Produto",
+    "section": "Acesso & Uso",
+    "text": "Acesso & Uso\n\nBotão para bulk download de conjuntos de dados\nLeitura direta de conjuntos de dados do CKAN com ferramentas frictionless\nVisualização dos metadados da spec table schema no dicionário de dados\nVisualização de diagrama interativo dos recursos\nVisualização dos metadados dos recursos\nVisualização de metadados de estatísticas descritivas"
+  },
+  {
     "objectID": "ppt/ppt_alinhamento-inicial.html#pessoas",
     "href": "ppt/ppt_alinhamento-inicial.html#pessoas",
     "title": "Reunião Alinhamento Inicial - Visão e Backlog do Produto",

@@ -28,20 +28,29 @@ Esta visualização deve ser disponibilizada tanto durante o processo de produç
 
 ## Histórias de usuário:
 
-1. Como publicador de dados eu quero documentar o dicionário de dados de meu recurso em formulário online, nos moldes da ferramenta [Frictionless Components](https://components.frictionlessdata.io/?path=/story/components-schema--source) (já em implementação), sendo possível incluir tanto as propriedades preconizadas pelo padrão de metadados [Frictionless Data](https://specs.frictionlessdata.io/) quanto ad-hoc.
+1. Como publicador de dados eu quero documentar o dicionário de dados de meu recurso ([table schema](https://specs.frictionlessdata.io/table-schema/#language)) em formulário online (HTML) amigável, com símbolos, filtros e exemplos, sendo possível incluir tanto propriedades ad-hoc quanto as preconizadas pelo padrão de metadados [Frictionless Data](https://specs.frictionlessdata.io/).
 
-2. Como publicador de dados eu quero que a visualização no Pda do dicionário de dados produzido não seja vinculado ao [datastore]().
+2. Como publicador de dados eu quero que a visualização do dicionário de dados no Pda não seja vinculado ao [datastore]().
 
-3. Como publicador de dados eu quero que inserção no [datastore]() ocorra com os tipos de dados corretos.
+4. Como publicador de dados eu quero que a inserção de registros no [datastore]() ocorra com os tipos de dados corretos.
 
-4. Como usuário final de dados eu quero visualização amigável, com símbolos, filtros e exemplos de todas as propriedades listadas no dicionário de dados de determinado recurso.
+5. Como consumidor de dados eu quero ter acesso à página HTML com a mesma visualização amigável utilizada pelo publicador durante o processo de documentação, com símbolos, filtros e exemplos de todas as propriedades listadas no dicionário de dados construído.
 
-## Dependências:
+6. Como consumidor de dados eu quero visualização em página HTML todas as propriedades listadas no dicionário de dados de determinado recurso em formato de diagrama entidade relacionamento (ER).
+
+7. Como publicador de dados eu quero que a visualização amigável em página HTML seja integrada ao Pda via criação de extensão do CKAN.
+
+## Requisitos:
+
+- [ ] Extensão do CKAN para customização das páginas de visualização dos metadados do conjuntos de dados e seus recursos que foram documentados como _data packages_
+
+
+
 
 Para atender esses dois casos de uso devem ser desenvolvidos:
 
-- Programa de linha de comando para geração de site HTML estático para visualização dos metadados constantes de um _data package_ 
-- Extensão do CKAN para customização das páginas de visualização dos metadados do conjuntos de dados e seus recursos que foram documentados como _data packages_
+ 
+
 
 A visualização nos dois casos deve, na medida do possível, ser a mesma.
 
@@ -53,11 +62,6 @@ Na etapa de análise comparativa de soluções deve ser especialmente considerad
 - adaptação de solução de código aberto existente, com eventual contribuição para o projeto original mediante alinhamento de direção com os responsáveis.
 :::
 
-A visualização em uma página HTML dos metadados constantes do `datapackage.json` visa sintetizar, inclusive com utilização de diagramas, os metadados padronizados constantes de [data packages tabulares](https://frictionlessdata.io/data-package/#the-data-package-suite-of-specifications), especialmente os constantes da especificação [table schema](https://specs.frictionlessdata.io/table-schema/#language).
-
-Nesse caso, o trabalho de _design_ de interação e interface para elaboração de uma identidade visual atrativa, mas, principalmente, para representação de todos os metadados presentes nas especificações _Frictionless_ em uma única página HTML será reutilizado tanto no gerador de site estático quando na extensão do CKAN.
-
-A possibilidade de reuso de componentes entre essas duas entregas faz parte das definições arquiteturais.
 
 
 
@@ -72,13 +76,11 @@ A possibilidade de reuso de componentes entre essas duas entregas faz parte das 
 
 
 
-- Full-text fuzzy search no dicionário de dados
-- Renderização do markdown da propriedade `description`
-- Símbolo para representação de chave primária, chave estrangeira, unique e required
-- enum com detalhes adicionais
-- Exemplos de dados (sample values; data preview)
-- Flexibilidade para campos  (estado e município)
-- Footnotes and annotations
+
+
+
+
+
 
 
 
@@ -87,7 +89,7 @@ A possibilidade de reuso de componentes entre essas duas entregas faz parte das 
 
 - https://github.com/fjuniorr/age7-data-dictionary
 
-- [dbt docs](https://www.getdbt.com/mrr-playbook/#!/model/model.acme.customer_churn_month)
+
 
     - Expandir detalhes de coluna (More...) ($tabela)
 
@@ -109,4 +111,32 @@ A possibilidade de reuso de componentes entre essas duas entregas faz parte das 
     
     > Extends the default CKAN Data Dictionary functionality by adding possibility to create data dictionary before actual data is uploaded to datastore. For resources that don't have datastore records, the data dictionary can be edited in every way (adding/removing/editing fields) and even completely deleted. For resources that contain datastore records editing data dictionary is limited only to the info properties of a field. Resource dictionary fields, labels and notes are added to the SOLR index as a resource extras.
 
-- Notas de rodapé é um [caso de uso](https://www.w3.org/annotation/wiki/Use_Cases/Annotating_CSV_Data) importante para dados tabulares, previsto em algumas gramaticas de tabelas (como no [pacote R gt](https://gt.rstudio.com/)). A propriedade [notes](https://www.w3.org/TR/2015/REC-tabular-metadata-20151217/#table-notes) definida no âmbito da W3C pode ser reaproveitada para fins de [anotações gerais](https://www.w3.org/TR/tabular-data-primer/#cell-annotations), mas que deveriam ser tratadas de forma especial no dicionário de dados.
+
+
+
+
+
+
+
+- [ ] Renderização do markdown da propriedade description (**cofirmar se é o backstick de snippet de códigos no conjunto**):  https://homologa.cge.mg.gov.br/dataset/letters-vowel
+
+
+
+- [ ] Exemplos de dados (sample values; data preview)
+![exemplos-valores](https://user-images.githubusercontent.com/52294411/177840096-e6505ab0-0688-4865-96ef-1b811ecb530b.png)
+
+- [ ] propriedade `enum` com detalhes adicionais
+
+- [ ] Flexibilidade para campos ad-hoc (estado e município)
+
+- [ ] notas de rodapé e anotações 
+
+Assim, eu poderia compreender mais facilmente os dados que estão representados no dataset.
+
+## requisitos
+- O dicionário de dados não deve estar vinculado ao datastore; relacionamento entre componentes Filestore, Datastore e Datapusher: https://github.com/transparencia-mg/dpckan/issues/41#issue-939171618
+- Utilizar o componente _react_ da [Frictionless Data](https://components.frictionlessdata.io/?path=/story/components-schema--empty); fork no repositório
+
+## questões
+
+* separação do datastore do datafile é vinculada à história desta necessidade ou é história isolada?

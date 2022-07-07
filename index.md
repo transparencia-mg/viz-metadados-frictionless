@@ -56,35 +56,14 @@ Ela também inclui as atividades de incorporar alterações no _data package_.
 
 ### Uso
 
-Essa demanda visa permitir a visualização em HTML da documentação de um conjunto de dados realizada com o padrão de metadados [Frictionless Data](https://specs.frictionlessdata.io/).
+.
 
 :::{.callout-note}
-A recomendação Boas Práticas para Dados na Web da W3C recomenda em sua [boa prática 1](https://w3c.br/traducoes/DWBP-pt-br/#ProvideMetadata) que
 
-> Fornecer metadados é um requisito fundamental na publicação de dados na Web, porque os publicadores de dados e os consumidores de dados podem não se conhecer mutuamente. __Portanto, é essencial fornecer informações que auxiliem pessoas e aplicações de computadores a compreenderem os dados__, assim como outros aspectos importantes que descrevam o conjunto de dados ou a distribuição.
 
-No padrão de metadados _Frictionless Data_, o fornecimento de metadados legíveis por máquina é feita no arquivo `datapackage.json`. No entanto, o fornecimento de metadados legíveis por pessoas não possui uma opção clara no [ecossistema de ferramentas atual](https://frictionlessdata.io/).
+
 :::
 
-A visualização deve ser possível durante o processo de produção da documentação pelos publicadores de dados, bem como após a catalogação do conjunto de dados na solução de catálogo de dados utilizada em Minas Gerais, o [CKAN](https://ckan.org/).
 
-Para atender esses dois casos de uso devem ser desenvolvidos:
 
-- Programa de linha de comando para geração de site HTML estático para visualização dos metadados constantes de um _data package_ 
-- Extensão do CKAN para customização das páginas de visualização dos metadados do conjuntos de dados e seus recursos que foram documentados como _data packages_
 
-A visualização nos dois casos deve, na medida do possível, ser a mesma.
-
-:::{.callout-important}
-Na etapa de análise comparativa de soluções deve ser especialmente considerado se os esforços de desenvolvimento serão para 
-
-- utilização de uma solução pronta, ou
-- construção de uma solução totalmente customizada, ou 
-- adaptação de solução de código aberto existente, com eventual contribuição para o projeto original mediante alinhamento de direção com os responsáveis.
-:::
-
-A visualização em uma página HTML dos metadados constantes do `datapackage.json` visa sintetizar, inclusive com utilização de diagramas, os metadados padronizados constantes de [data packages tabulares](https://frictionlessdata.io/data-package/#the-data-package-suite-of-specifications), especialmente os constantes da especificação [table schema](https://specs.frictionlessdata.io/table-schema/#language).
-
-Nesse caso, o trabalho de _design_ de interação e interface para elaboração de uma identidade visual atrativa, mas, principalmente, para representação de todos os metadados presentes nas especificações _Frictionless_ em uma única página HTML será reutilizado tanto no gerador de site estático quando na extensão do CKAN.
-
-A possibilidade de reuso de componentes entre essas duas entregas faz parte das definições arquiteturais.

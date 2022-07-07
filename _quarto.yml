@@ -2,6 +2,10 @@ project:
   type: website
   output-dir: docs
 
+format:
+  html: 
+    css: styles.css
+
 website:
   repo-url: https://github.com/transparencia-mg/viz-metadados-frictionless
   repo-actions: [edit, issue]

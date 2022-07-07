@@ -1,6 +1,6 @@
 project:
   type: website
-  output-dir: docs
+  output-dir: latest
 
 format:
   html: 
@@ -11,10 +11,13 @@ website:
   repo-actions: [edit, issue]
   navbar:
     left:
-    - href: index.qmd
+    - href: index.md
       text: Home
     right:
-      - href: glossario.qmd
+      - href: apresentacoes.md
+      - href: testes-usabilidade.md
+      - href: legislacao.md
+      - href: glossario.md
       - icon: github
         href: https://github.com/transparencia-mg/viz-metadados-frictionless
   sidebar:
@@ -23,30 +26,35 @@ website:
     contents:
       - section: Visão Geral
         contents: 
-          - index.qmd
-          - motivacao-contexto.qmd
+          - index.md
+          - motivacao-contexto.md
       - section: Produção
         contents:
-          - criacao.qmd
+          - necessidades/web-app-criacao.md
+          - necessidades/web-app-atualizacao.md
+          - necessidades/web-app-validacao.md
+          - necessidades/web-app-catalogacao.md
       - section: Publicação
         contents:
-          - catalogacao.qmd
-          - text: Importação de metadados
-            href: importacao-metadados.qmd
-          - text: Importação de dados
-            href: importacao-dados.qmd
-      - section: Visualização
-        contents:
-          - metadados-tableschema.qmd
-          - diagramas.qmd
-          - metadados-recurso.qmd
-          - metadados-validacao.qmd
-          - metadados-stats.qmd
-          - identidade-visual.qmd
+          - necessidades/importacao.md
+          - necessidades/atualizacao.md
+      - section: Distribuição
+        contents: 
+          - necessidades/identidade-visual.md
+          - necessidades/validacao.md
+          - necessidades/web-analytics.md
+          - necessidades/dataset-namespace.md
+          - necessidades/dataset-archive.md
       - section: Acesso
         contents:
-          - exportacao.qmd
-          - leitura.qmd
+          - necessidades/exportacao.md
+          - necessidades/leitura.md
+      - section: Uso
+        contents:
+          - necessidades/dicionario-dados.md
+          - necessidades/diagramas.md
+          - necessidades/metadados.md
+          - necessidades/estatisticas-descritivas.md
           
 
 comments:

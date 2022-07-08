@@ -27,35 +27,13 @@ website:
       - section: Visão Geral
         contents: 
           - index.md
-          - motivacao-contexto.md
-      - section: Produção
+      - section: Épicos
         contents:
-          - necessidades/web-app-criacao.md
-          - necessidades/web-app-atualizacao.md
-          - necessidades/web-app-validacao.md
-          - necessidades/web-app-catalogacao.md
-      - section: Publicação
-        contents:
-          - necessidades/importacao.md
-          - necessidades/atualizacao.md
-      - section: Distribuição
-        contents: 
-          - necessidades/identidade-visual.md
-          - necessidades/validacao.md
-          - necessidades/web-analytics.md
-          - necessidades/dataset-namespace.md
-          - necessidades/dataset-archive.md
-      - section: Acesso
-        contents:
-          - necessidades/exportacao.md
-          - necessidades/leitura.md
-      - section: Uso
-        contents:
-          - necessidades/dicionario-dados.md
-          - necessidades/diagramas.md
-          - necessidades/metadados.md
-          - necessidades/estatisticas-descritivas.md
-          
+          - necessidades/producao.md
+          - necessidades/publicacao.md
+          - necessidades/distribuicao.md
+          - necessidades/acesso.md
+          - necessidades/uso.md         
 
 comments:
   hypothesis: true

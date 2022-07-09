@@ -12,9 +12,9 @@ A visualização do dicionário de dados ([table schema](https://specs.frictionl
 
 ![Dicionário de Dados [letters-vowel](https://homologa.cge.mg.gov.br/dataset/letters-vowel/resource/313f43f1-d375-41c4-9646-81508ae7451c) homologa em 07/07/2022](https://i.imgur.com/Khbeiy5.png)
 
-O principal problema encontrado neste sentido é a inviabilidade de demonstrar graficamente todas as propriedades listadas para o dicionário de dados de determinado recurso.
+O principal problema encontrado é a inviabilidade de demonstrar graficamente todas as propriedades listadas para o dicionário de dados de determinado recurso.
 
-Neste sendido os usuário do Pda deverão visualizar, de maneira amigável, todas as propriedades existentes no dicionário de dados de cada recurso listado no `datapackage.json` de um conjunto de dados.
+Neste sendido os usuário do Pda deverão, dentre outros, visualizar de maneira amigável todas as propriedades existentes no dicionário de dados de cada recurso listado no `datapackage.json` do conjunto de dados.
 
 ## Porque
 
@@ -26,18 +26,18 @@ No padrão de metadados _Frictionless Data_, o fornecimento de metadados legíve
 
 ## Como
 
-Essa demanda visa permitir a visualização em HTML da documentação de um conjunto de dados realizada com o padrão de metadados [Frictionless Data](https://specs.frictionlessdata.io/).
+Essa demanda visa permitir a visualização em HTML da documentação do conjunto de dados realizada com o padrão de metadados [Frictionless Data](https://specs.frictionlessdata.io/).
 Esta visualização deve ser disponibilizada tanto durante o processo de produção da documentação (publicadores de dados) quanto durante o utilização dos dados publicados (consumidores de dados).
 
 ## Histórias de usuário:
 
 -  [História 51](https://github.com/transparencia-mg/viz-metadados-frictionless/issues/15): Como publicador de dados eu quero documentar o dicionário de dados de meu recurso ([table schema](https://specs.frictionlessdata.io/table-schema/#language)) em formulário web amigável, com símbolos, filtros, exemplos e notas de rodapé, sendo possível incluir tanto propriedades ad-hoc quanto as preconizadas pelo padrão de metadados [Frictionless Data](https://specs.frictionlessdata.io/) e o resultado do trabalho facilmente visualizado ao longo do processo.
 
-- [História 52](https://github.com/transparencia-mg/viz-metadados-frictionless/issues/16): Como publicador de dados eu quero que o formulário web amigável desenvolvido na [História 41](https://github.com/transparencia-mg/viz-metadados-frictionless/issues/15) seja _agnóstico_, podendo este ser utilizado em ambiente local, web ou até mesmo inserido dentro do próprio CKAN.
+- [História 52](https://github.com/transparencia-mg/viz-metadados-frictionless/issues/16): Como publicador de dados eu quero que o formulário web amigável desenvolvido na [História 51](https://github.com/transparencia-mg/viz-metadados-frictionless/issues/15) seja _agnóstico_, podendo este ser utilizado em ambiente local, web ou até mesmo inserido dentro do próprio CKAN.
 
-- [História 53](https://github.com/transparencia-mg/viz-metadados-frictionless/issues/17): Como publicador de dados eu quero que a aplicação web desenvolvido na [História 42](https://github.com/transparencia-mg/viz-metadados-frictionless/issues/16) seja integrada ao GitHub, permitindo documentar o dicionário de dados de meu recurso de maneira integrada com meu repositório online.
+- [História 53](https://github.com/transparencia-mg/viz-metadados-frictionless/issues/17): Como publicador de dados eu quero que a aplicação web desenvolvido na [História 52](https://github.com/transparencia-mg/viz-metadados-frictionless/issues/16) seja integrada ao GitHub, permitindo documentar o dicionário de dados de meu recurso de maneira integrada com meu repositório online.
 
-- [História 54]():Como publicador de dados eu quero que a visualização do dicionário de dados no Pda não seja vinculado ao [datastore]().
+- [História 54](): Como publicador de dados eu quero que a visualização do dicionário de dados no Pda não seja vinculado ao [datastore](https://github.com/transparencia-mg/dpckan/issues/41).
 
 - [História 55](): Como publicador de dados eu quero que a inserção de registros no [datastore]() ocorra com os tipos de dados corretos.
 

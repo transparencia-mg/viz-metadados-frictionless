@@ -1,6 +1,9 @@
 ---
 title: Produção
 toc: true
+format:
+  html:
+    css: ../style.css
 ---
 
 ## Contexto

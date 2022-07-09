@@ -1,6 +1,9 @@
 ---
 title: Distribuição
 toc: true
+format:
+  html:
+    css: ../style.css
 ---
 
 ## Contexto

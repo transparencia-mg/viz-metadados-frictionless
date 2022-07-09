@@ -1,13 +1,16 @@
 ---
 title: Uso
 toc: true
+format:
+  html:
+    css: ../style.css
 ---
 
 ## Contexto
 
-A visualização do dicionário de dados ([table schema](https://specs.frictionlessdata.io/table-schema/#language)) de [recursos](https://specs.frictionlessdata.io/data-resource/#language) no Pda atualmente é bastante limitada, conforme pode ser demonstrado na figura abaixo:
+A visualização do dicionário de dados ([table schema](https://specs.frictionlessdata.io/table-schema/#language)) de recursos ([resources](https://specs.frictionlessdata.io/data-resource/#language)) no Pda atualmente é bastante limitada, conforme pode ser demonstrado na figura abaixo:
 
-![Dicionário de Dados letters-vowel homologa em 07/07/2022](https://i.imgur.com/Khbeiy5.png)
+![Dicionário de Dados [letters-vowel](https://homologa.cge.mg.gov.br/dataset/letters-vowel/resource/313f43f1-d375-41c4-9646-81508ae7451c) homologa em 07/07/2022](https://i.imgur.com/Khbeiy5.png)
 
 O principal problema encontrado neste sentido é a inviabilidade de demonstrar graficamente todas as propriedades listadas para o dicionário de dados de determinado recurso.
 

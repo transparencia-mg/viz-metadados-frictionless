@@ -1,6 +1,9 @@
 ---
 title: Validação
 toc: true
+format:
+  html:
+    css: ./style.css
 ---
 
 ## What

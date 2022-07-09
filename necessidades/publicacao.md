@@ -1,6 +1,9 @@
 ---
 title: Publicação
 toc: true
+format:
+  html:
+    css: ../style.css
 ---
 
 ## Contexto

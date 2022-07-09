@@ -1,6 +1,9 @@
 ---
 title: Acesso
 toc: true
+format:
+  html:
+    css: ../style.css
 ---
 
 ## Contexto

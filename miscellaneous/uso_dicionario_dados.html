@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Metadados</title>
+<title>uso_dicionario_dados</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -58,7 +58,7 @@ ul.task-list{list-style: none;}
 
 </head>
 
-<body class="nav-sidebar floating nav-fixed">
+<body class="nav-sidebar floating nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -98,7 +98,7 @@ ul.task-list{list-style: none;}
     </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Metadados</h1>
+      <h1 class="quarto-secondary-nav-title">(Untitled)</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -170,46 +170,36 @@ ul.task-list{list-style: none;}
     </div>
 </nav>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#examples" id="toc-examples" class="nav-link active" data-scroll-target="#examples">Examples</a></li>
-  </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/transparencia-mg/viz-metadados-frictionless/edit/main/necessidades/metadados.md" class="toc-action">Edit this page</a></p><p><a href="https://github.com/transparencia-mg/viz-metadados-frictionless/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
-    </div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title d-none d-lg-block">Metadados</h1>
-</div>
 
 
-
-<div class="quarto-title-meta">
-
-    
-    
-  </div>
-  
-
-</header>
-
-<ul>
-<li><em>Read more/less…</em> ou <em>View more/less</em></li>
-<li>Sumarização de recursos que possuem o mesmo table schema</li>
-<li>Resumo metadados (tamanho, n linhas)</li>
-<li>Tooltip para as propriedades (eg. o que significa <code>temporal</code>?)</li>
-<li>Conversão para português dos metadados que existem no Frictionless mas não existem no CKAN (<code>temporal</code>, <code>accrualPeriodicity</code>)</li>
-<li>Renderização de propriedades (eg. Email, licença e <code>accrualPeriodicity</code>)</li>
+<ul class="task-list">
+<li><p><input type="checkbox" disabled="">
+Renderização do markdown da propriedade description (<strong>cofirmar se é o backstick de snippet de códigos no conjunto</strong>): https://homologa.cge.mg.gov.br/dataset/letters-vowel</p></li>
+<li><p><input type="checkbox" disabled="">
+Exemplos de dados (sample values; data preview) <img src="https://user-images.githubusercontent.com/52294411/177840096-e6505ab0-0688-4865-96ef-1b811ecb530b.png" class="img-fluid" alt="exemplos-valores"></p></li>
+<li><p><input type="checkbox" disabled="">
+propriedade <code>enum</code> com detalhes adicionais</p></li>
+<li><p><input type="checkbox" disabled="">
+Flexibilidade para campos ad-hoc (estado e município)</p></li>
+<li><p><input type="checkbox" disabled="">
+notas de rodapé e anotações</p></li>
 </ul>
-<section id="examples" class="level2">
-<h2 class="anchored" data-anchor-id="examples">Examples</h2>
+<p>Assim, eu poderia compreender mais facilmente os dados que estão representados no dataset.</p>
+<section id="requisitos" class="level2">
+<h2 class="anchored" data-anchor-id="requisitos">requisitos</h2>
 <ul>
-<li><a href="https://www.smashingmagazine.com/2009/07/designing-read-more-and-continue-reading-links/">Designing “Read More” And “Continue Reading” Links</a></li>
+<li>O dicionário de dados não deve estar vinculado ao datastore; relacionamento entre componentes Filestore, Datastore e Datapusher: https://github.com/transparencia-mg/dpckan/issues/41#issue-939171618</li>
+<li>Utilizar o componente <em>react</em> da <a href="https://components.frictionlessdata.io/?path=/story/components-schema--empty">Frictionless Data</a>; fork no repositório</li>
+</ul>
+</section>
+<section id="questões" class="level2">
+<h2 class="anchored" data-anchor-id="questões">questões</h2>
+<ul>
+<li>separação do datastore do datafile é vinculada à história desta necessidade ou é história isolada?</li>
 </ul>
 
 

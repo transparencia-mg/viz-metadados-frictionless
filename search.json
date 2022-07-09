@@ -35,27 +35,6 @@
     "text": "Examples / Research\n\nData Package Creator (datapackage-ui e tableschema-ui) - Aplicativo WEB para criação de data packages gerenciado pela OKFN. Atenderia a necessidade (de não ser necessário edição manual do datapackage.json gerado) se permitisse a inclusão de propriedade adicionais. As seguintes são particularmente problemáticas tendo em vista nossa experiência:\n\nowner_org: obrigatória para publicação no PdA\ndialect.delimiter: CSVs no Brasil utilizam ;\nschema.fields.number.decimalChar e schema.fields.number.groupChar: CSVs exportados do excel\narquivos dentro da pasta data\n\nAlém disso, a inferência dos tipos das colunas parece ser pior que a do frictionless-py.\nEle foi utilizado em algumas oficinas mão na massa conduzidas pela DTA (adicionar links para gravações) e foi substituída durante a a inclusão do frictionless-py describe na oficina.\nVide Trello para uma discussão sobre metadados obrigatórios relevante para essa discussão.\nO projeto schema-collaboration teve como objetivo resolver o problema de criação colaborativa de data packages. O issue Integration with git #14 serve de inspiração sobre como o Data Package Creator pode ser um hackmd para data packages em relação a integração com repositórios de controle de versão.\nFrictionless Components - Schema Editor (Repo)\n\nFrictionless Application (Repo) - Data management application for Browser and Desktop that provides functionality to describe, extract, validate, and transform tabular data\nData Curator - Data Curator is a simple desktop data editor to help describe, validate and share usable open data.\nMetatab and Metapack\nPlanilhas Templates STN\nckanext-validation - label:“Schema Creator” CKAN extension for validating Data Packages using Table Schema.\nhttps://github.com/transparencia-mg/acordo-judicial-reparacao-vale\nCreate a UI element/workflow that allows a user to add properties and values to the data package that may not have been defined in the Data Package’s JSON Schema #11\n\nclosing. the built in json-editor functionality is good enough for our use case\n\nUI for editing YAML/JSON backed by version control\n\nI built something like that when I needed expose config changes to non-technical peers using https://github.com/rjsf-team/react-jsonschema-form + one POST function that checkouts git and commit a change\n\nMultiple types does not work #700\n[Proposal] JSON UI Schema: define UI behaviours for all current elements #252\nhttps://github.com/brutusin/json-forms\nhttps://github.com/eclipsesource/jsonforms\nhttps://github.com/jsonform/jsonform"
   },
   {
-    "objectID": "necessidades/dicionario-dados.html",
-    "href": "necessidades/dicionario-dados.html",
-    "title": "Dicionário de dados",
-    "section": "",
-    "text": "Full-text fuzzy search no dicionário de dados\nRenderização do markdown da propriedade description\nSímbolo para representação de chave primária, chave estrangeira, unique e required\nenum com detalhes adicionais\nExemplos de dados (sample values; data preview)\nFlexibilidade para campos ad-hoc (estado e município)\nFootnotes and annotations\nO dicionário de dados não deve estar vinculado ao datastore"
-  },
-  {
-    "objectID": "necessidades/dicionario-dados.html#examples",
-    "href": "necessidades/dicionario-dados.html#examples",
-    "title": "Dicionário de dados",
-    "section": "Examples",
-    "text": "Examples\n\nhttps://github.com/fjuniorr/age7-data-dictionary\ndbt docs\n\nExpandir detalhes de coluna (More…) ($tabela)\n\ndataedo\n\nChave estrangeira clicavel ($tabela)\nSímbolo para representação de chave primária e estrangeira ($tabela)\nBacklinks com chaves estrangeiras de outras tabelas ($tabela)\n\nModelo de Dados Projeto Lins (ModeloDados_Lins_v0.9_junho2020.pdf)\nIncluir coluna com exemplos dos valores"
-  },
-  {
-    "objectID": "necessidades/dicionario-dados.html#research",
-    "href": "necessidades/dicionario-dados.html#research",
-    "title": "Dicionário de dados",
-    "section": "Research",
-    "text": "Research\n\nckanext-resourcedictionary. CKAN extension that extends the default CKAN Data Dictionary functionality by adding the possibility to create a data dictionary before actual data is uploaded to datastore.\n\nExtends the default CKAN Data Dictionary functionality by adding possibility to create data dictionary before actual data is uploaded to datastore. For resources that don’t have datastore records, the data dictionary can be edited in every way (adding/removing/editing fields) and even completely deleted. For resources that contain datastore records editing data dictionary is limited only to the info properties of a field. Resource dictionary fields, labels and notes are added to the SOLR index as a resource extras.\n\nNotas de rodapé é um caso de uso importante para dados tabulares, previsto em algumas gramaticas de tabelas (como no pacote R gt). A propriedade notes definida no âmbito da W3C pode ser reaproveitada para fins de anotações gerais, mas que deveriam ser tratadas de forma especial no dicionário de dados."
-  },
-  {
     "objectID": "necessidades/atualizacao.html",
     "href": "necessidades/atualizacao.html",
     "title": "Atualização",
@@ -68,6 +47,69 @@
     "title": "Atualização",
     "section": "Links",
     "text": "Links\n\nPublish Data - Datopian\nPublish functionality covers the whole area of creating and editing datasets and resources, including data upload. The core job story is something like:\n\nWhen a Data Curator has a data file or dataset they want to add it to their data portal/platform quickly and easily so that it is available there.\n\nPublication can be divided by its mode:\n\nManual: publication is done by people via a user interfaces or other tool\nProgrammatic: publication is done programatically using APIs and is usually part of automated processes\nHybrid: which combines manual and programmatic. An example would be harvesting where setup and configuration may be done in a UI manually with the process then running automatically and programmatically (in addition, some new harvesting flows require manual programmatic setup e.g. writing a harvester in Python for a new source data format)."
+  },
+  {
+    "objectID": "necessidades/acesso.html#porque",
+    "href": "necessidades/acesso.html#porque",
+    "title": "Acesso",
+    "section": "Porque",
+    "text": "Porque"
+  },
+  {
+    "objectID": "necessidades/acesso.html#como",
+    "href": "necessidades/acesso.html#como",
+    "title": "Acesso",
+    "section": "Como",
+    "text": "Como"
+  },
+  {
+    "objectID": "necessidades/acesso.html#histórias-de-usuário",
+    "href": "necessidades/acesso.html#histórias-de-usuário",
+    "title": "Acesso",
+    "section": "Histórias de usuário:",
+    "text": "Histórias de usuário:\n\nHistória 41:"
+  },
+  {
+    "objectID": "necessidades/acesso.html#requisitos",
+    "href": "necessidades/acesso.html#requisitos",
+    "title": "Acesso",
+    "section": "Requisitos:",
+    "text": "Requisitos:\n\nIncluir aqui requisitos"
+  },
+  {
+    "objectID": "necessidades/producao.html",
+    "href": "necessidades/producao.html",
+    "title": "Produção",
+    "section": "",
+    "text": "A macroetapa de Produção consiste nas atividades necessárias para que um data package válido seja produzido. Ela também inclui as atividades de incorporar alterações no data package.\n\nDEVT Framework"
+  },
+  {
+    "objectID": "necessidades/producao.html#porque",
+    "href": "necessidades/producao.html#porque",
+    "title": "Produção",
+    "section": "Porque",
+    "text": "Porque"
+  },
+  {
+    "objectID": "necessidades/producao.html#como",
+    "href": "necessidades/producao.html#como",
+    "title": "Produção",
+    "section": "Como",
+    "text": "Como"
+  },
+  {
+    "objectID": "necessidades/producao.html#histórias-de-usuário",
+    "href": "necessidades/producao.html#histórias-de-usuário",
+    "title": "Produção",
+    "section": "Histórias de usuário:",
+    "text": "Histórias de usuário:\n\nHistória 11:"
+  },
+  {
+    "objectID": "necessidades/producao.html#requisitos",
+    "href": "necessidades/producao.html#requisitos",
+    "title": "Produção",
+    "section": "Requisitos:",
+    "text": "Requisitos:\n\nIncluir aqui requisitos"
   },
   {
     "objectID": "necessidades/leitura.html",
@@ -89,6 +131,34 @@
     "title": "Leitura",
     "section": "Examples/Research",
     "text": "Examples/Research\n\nPublish Your Data Package Online - Explicação das alternativas para disponibização na internet de pacotes de dados (It’s Only Files Online). O CKAN precisaria ser alterado para seguir as Key Tips desse artigo.\nConflito entre nome dos conjuntos de dados criados de forma descentralizada por ausência de namespaces #52\nA proposta de valor do frictionless é fazer com que o capítulo não seja https://r4ds.had.co.nz/data-import.html\nSe a instalação de ferramentas é uma fonte de custo e fricção, conseguimos permitir a integração do CKAN com notebooks computacional, como Binder? Vide Binder + Zenodo: A how-to guide e Six easy ways to run your Jupyter Notebook in the cloud"
+  },
+  {
+    "objectID": "necessidades/publicacao.html#porque",
+    "href": "necessidades/publicacao.html#porque",
+    "title": "Publicação",
+    "section": "Porque",
+    "text": "Porque"
+  },
+  {
+    "objectID": "necessidades/publicacao.html#como",
+    "href": "necessidades/publicacao.html#como",
+    "title": "Publicação",
+    "section": "Como",
+    "text": "Como"
+  },
+  {
+    "objectID": "necessidades/publicacao.html#histórias-de-usuário",
+    "href": "necessidades/publicacao.html#histórias-de-usuário",
+    "title": "Publicação",
+    "section": "Histórias de usuário:",
+    "text": "Histórias de usuário:\n\nHistória 21:"
+  },
+  {
+    "objectID": "necessidades/publicacao.html#requisitos",
+    "href": "necessidades/publicacao.html#requisitos",
+    "title": "Publicação",
+    "section": "Requisitos:",
+    "text": "Requisitos:\n\nIncluir aqui requisitos"
   },
   {
     "objectID": "necessidades/exportacao.html",
@@ -119,6 +189,41 @@
     "text": "Amostra dos dados\nMetadados de diff"
   },
   {
+    "objectID": "necessidades/uso.html",
+    "href": "necessidades/uso.html",
+    "title": "Uso",
+    "section": "",
+    "text": "A visualização do dicionário de dados (table schema) de recursos (resources) no Pda atualmente é bastante limitada, conforme pode ser demonstrado na figura abaixo:\n\n\n\nDicionário de Dados letters-vowel homologa em 07/07/2022\n\n\nO principal problema encontrado é a inviabilidade de demonstrar graficamente todas as propriedades listadas para o dicionário de dados de determinado recurso.\nNeste sendido os usuário do Pda deverão, dentre outros, visualizar de maneira amigável todas as propriedades existentes no dicionário de dados de cada recurso listado no datapackage.json do conjunto de dados."
+  },
+  {
+    "objectID": "necessidades/uso.html#porque",
+    "href": "necessidades/uso.html#porque",
+    "title": "Uso",
+    "section": "Porque",
+    "text": "Porque\nA W3C recomenda em sua boa prática 1 que:\n\nFornecer metadados é um requisito fundamental na publicação de dados na Web, porque os publicadores de dados e os consumidores de dados podem não se conhecer mutuamente. Portanto, é essencial fornecer informações que auxiliem pessoas e aplicações de computadores a compreenderem os dados, assim como outros aspectos importantes que descrevam o conjunto de dados ou a distribuição.\n\nNo padrão de metadados Frictionless Data, o fornecimento de metadados legíveis por máquina é feita no arquivo datapackage.json. No entanto, o fornecimento de metadados legíveis por pessoas não possui uma opção clara no ecossistema de ferramentas atual."
+  },
+  {
+    "objectID": "necessidades/uso.html#como",
+    "href": "necessidades/uso.html#como",
+    "title": "Uso",
+    "section": "Como",
+    "text": "Como\nEssa demanda visa permitir a visualização em HTML da documentação do conjunto de dados realizada com o padrão de metadados Frictionless Data. Esta visualização deve ser disponibilizada tanto durante o processo de produção da documentação (publicadores de dados) quanto durante o utilização dos dados publicados (consumidores de dados)."
+  },
+  {
+    "objectID": "necessidades/uso.html#histórias-de-usuário",
+    "href": "necessidades/uso.html#histórias-de-usuário",
+    "title": "Uso",
+    "section": "Histórias de usuário:",
+    "text": "Histórias de usuário:\n\nHistória 51: Como publicador de dados eu quero documentar o dicionário de dados de meu recurso (table schema) em formulário web amigável, com símbolos, filtros, exemplos e notas de rodapé, sendo possível incluir tanto propriedades ad-hoc quanto as preconizadas pelo padrão de metadados Frictionless Data e o resultado do trabalho facilmente visualizado ao longo do processo.\nHistória 52: Como publicador de dados eu quero que o formulário web amigável desenvolvido na História 51 seja agnóstico, podendo este ser utilizado em ambiente local, web ou até mesmo inserido dentro do próprio CKAN.\nHistória 53: Como publicador de dados eu quero que a aplicação web desenvolvido na História 52 seja integrada ao GitHub, permitindo documentar o dicionário de dados de meu recurso de maneira integrada com meu repositório online.\nHistória 54: Como publicador de dados eu quero que a visualização do dicionário de dados no Pda não seja vinculado ao datastore.\nHistória 55: Como publicador de dados eu quero que a inserção de registros no datastore ocorra com os tipos de dados corretos.\nHistória 56: Como consumidor de dados eu quero ter acesso à página HTML com a mesma visualização amigável utilizada pelo publicador durante o processo de documentação, com símbolos, filtros e exemplos de todas as propriedades listadas no dicionário de dados construído.\nHistória 57: Como consumidor de dados eu quero visualização em página HTML todas as propriedades listadas no dicionário de dados de determinado recurso em formato de diagrama entidade relacionamento (ER).\nHistória 58: Como publicador de dados eu quero que a visualização amigável em página HTML seja integrada ao Pda via criação de extensão do CKAN."
+  },
+  {
+    "objectID": "necessidades/uso.html#requisitos",
+    "href": "necessidades/uso.html#requisitos",
+    "title": "Uso",
+    "section": "Requisitos:",
+    "text": "Requisitos:\n\nAdaptações de solução de código aberto existente, com eventual contribuição para o projeto original (upstream) mediante alinhamento da DTA com os responsáveis;"
+  },
+  {
     "objectID": "necessidades/validacao.html",
     "href": "necessidades/validacao.html",
     "title": "Validação",
@@ -138,6 +243,34 @@
     "title": "Validação",
     "section": "Examples / Research",
     "text": "Examples / Research\n\nupgrading to latest goodtables/frictionless-py #54\n[WIP] CKAN 2.9 / Python 3Py3 #55\nCkan 2.9 #6"
+  },
+  {
+    "objectID": "necessidades/distribuicao.html#porque",
+    "href": "necessidades/distribuicao.html#porque",
+    "title": "Distribuição",
+    "section": "Porque",
+    "text": "Porque"
+  },
+  {
+    "objectID": "necessidades/distribuicao.html#como",
+    "href": "necessidades/distribuicao.html#como",
+    "title": "Distribuição",
+    "section": "Como",
+    "text": "Como"
+  },
+  {
+    "objectID": "necessidades/distribuicao.html#histórias-de-usuário",
+    "href": "necessidades/distribuicao.html#histórias-de-usuário",
+    "title": "Distribuição",
+    "section": "Histórias de usuário:",
+    "text": "Histórias de usuário:\n\nHistória 31:"
+  },
+  {
+    "objectID": "necessidades/distribuicao.html#requisitos",
+    "href": "necessidades/distribuicao.html#requisitos",
+    "title": "Distribuição",
+    "section": "Requisitos:",
+    "text": "Requisitos:\n\nIncluir aqui requisitos"
   },
   {
     "objectID": "necessidades/metadados.html",
@@ -249,7 +382,7 @@
     "href": "index.html#necessidades",
     "title": "Introdução",
     "section": "Necessidades",
-    "text": "Necessidades\nUma descrição detalhada de cada necessidade está disponível via menu lateral, essa seção visa oferecer uma visão de alto nível sobre cada uma das macroetapas do ciclo de vida idealizado para os dados abertos no EMG.\n\nProdução\nA macroetapa de Produção consiste nas atividades necessárias para que um data package válido seja produzido. Ela também inclui as atividades de incorporar alterações no data package.\n\nDEVT Framework\n\n\n\nPublicação\n\n\nAcesso\n\n\nUso\nEssa demanda visa permitir a visualização em HTML da documentação de um conjunto de dados realizada com o padrão de metadados Frictionless Data.\n\n\n\n\n\n\nNote\n\n\n\nA recomendação Boas Práticas para Dados na Web da W3C recomenda em sua boa prática 1 que\n\nFornecer metadados é um requisito fundamental na publicação de dados na Web, porque os publicadores de dados e os consumidores de dados podem não se conhecer mutuamente. Portanto, é essencial fornecer informações que auxiliem pessoas e aplicações de computadores a compreenderem os dados, assim como outros aspectos importantes que descrevam o conjunto de dados ou a distribuição.\n\nNo padrão de metadados Frictionless Data, o fornecimento de metadados legíveis por máquina é feita no arquivo datapackage.json. No entanto, o fornecimento de metadados legíveis por pessoas não possui uma opção clara no ecossistema de ferramentas atual.\n\n\nA visualização deve ser possível durante o processo de produção da documentação pelos publicadores de dados, bem como após a catalogação do conjunto de dados na solução de catálogo de dados utilizada em Minas Gerais, o CKAN.\nPara atender esses dois casos de uso devem ser desenvolvidos:\n\nPrograma de linha de comando para geração de site HTML estático para visualização dos metadados constantes de um data package\nExtensão do CKAN para customização das páginas de visualização dos metadados do conjuntos de dados e seus recursos que foram documentados como data packages\n\nA visualização nos dois casos deve, na medida do possível, ser a mesma.\n\n\n\n\n\n\nImportant\n\n\n\nNa etapa de análise comparativa de soluções deve ser especialmente considerado se os esforços de desenvolvimento serão para\n\nutilização de uma solução pronta, ou\nconstrução de uma solução totalmente customizada, ou\nadaptação de solução de código aberto existente, com eventual contribuição para o projeto original mediante alinhamento de direção com os responsáveis.\n\n\n\nA visualização em uma página HTML dos metadados constantes do datapackage.json visa sintetizar, inclusive com utilização de diagramas, os metadados padronizados constantes de data packages tabulares, especialmente os constantes da especificação table schema.\nNesse caso, o trabalho de design de interação e interface para elaboração de uma identidade visual atrativa, mas, principalmente, para representação de todos os metadados presentes nas especificações Frictionless em uma única página HTML será reutilizado tanto no gerador de site estático quando na extensão do CKAN.\nA possibilidade de reuso de componentes entre essas duas entregas faz parte das definições arquiteturais."
+    "text": "Necessidades\nUma descrição detalhada de cada necessidade está disponível via menu lateral, essa seção visa oferecer uma visão de alto nível sobre cada uma das macroetapas do ciclo de vida idealizado para os dados abertos no EMG."
   },
   {
     "objectID": "resumo-SEPLAG-2021-06-02.html",
@@ -257,6 +390,27 @@
     "title": "",
     "section": "",
     "text": "esquema de atendimento de demandas do Portal com PRODEMGE\ninterpretação da adequação do modelo AGILE da PRODEMGE\n\n\nLucas\nRP de ponta de função não deu;\nedital com requisitos técnicos da PRODEMGE\nmuitas demandas da SEMAD em sistemas que não estão com PRODEMGE (ex.: solicitar um sprint com X profissionais)\n\n\n\n\n\nadequação ao objeto: método agile X demanda\n\nmétrica da UST mais abrangente, acabando por ficar bem próxima à da hora técnica do profissional\n1.1 - Quem é responsável inicialmente por estimar as USTs de uma OS?\nCONTATADA: o que precisa saber para contratar (java, php, linguagens mais comuns basearam a listagem de USTs)\n1.2 - O dimensionamento da uma OS em UST pode mudar ao longo da execução? Qual o processo?\nSim, o repertório foi feito ‘a grosso modo’ necessário para desenovlvimento de sistemas; o demandante precisa saber e informar o padrão de ambiente tecnológico que possui\n\nprecisa de uma equipe AGILE ou mão-de-obra (time mais enxuto)?\n\n\nprocesso de adesão à ata no SIRP\n\n2.1 - entender se a gente vai ter que indicar uma estimativa da demanda de USTs\nSIM (horas e especificidade) - arquitetura, linguagem, escopo - verificar correspondência com o repertório de USTs (ANEXO D)\n2.2 - em caso positivo, se a SEPLAG/PRODEMGE vai oferecer auxilio e como demandar esse auxilio\nsim, preferencialmente informal antes da SEPALG colocar os preços no SIRP; TR feito sob demanda (híbrido) no momento da adesão à ata quando o preço estiver registrado no SIRP\n\nexperiência em OS anteriores com a metodologia agile (fluxo, artefatos e UST)\n\n\nprimeiro edital nesse modelo\npreço estimado pelo modelo da PRODEMGE\n\n\nexpectativa de entrada no SIRP:\n\n\nfinal da próxima semana"
+  },
+  {
+    "objectID": "miscellaneous/uso_dicionario_dados.html",
+    "href": "miscellaneous/uso_dicionario_dados.html",
+    "title": "",
+    "section": "",
+    "text": "Renderização do markdown da propriedade description (cofirmar se é o backstick de snippet de códigos no conjunto): https://homologa.cge.mg.gov.br/dataset/letters-vowel\n\nExemplos de dados (sample values; data preview) \n\npropriedade enum com detalhes adicionais\n\nFlexibilidade para campos ad-hoc (estado e município)\n\nnotas de rodapé e anotações\nAssim, eu poderia compreender mais facilmente os dados que estão representados no dataset."
+  },
+  {
+    "objectID": "miscellaneous/uso_dicionario_dados.html#requisitos",
+    "href": "miscellaneous/uso_dicionario_dados.html#requisitos",
+    "title": "",
+    "section": "requisitos",
+    "text": "requisitos\n\nO dicionário de dados não deve estar vinculado ao datastore; relacionamento entre componentes Filestore, Datastore e Datapusher: https://github.com/transparencia-mg/dpckan/issues/41#issue-939171618\nUtilizar o componente react da Frictionless Data; fork no repositório"
+  },
+  {
+    "objectID": "miscellaneous/uso_dicionario_dados.html#questões",
+    "href": "miscellaneous/uso_dicionario_dados.html#questões",
+    "title": "",
+    "section": "questões",
+    "text": "questões\n\nseparação do datastore do datafile é vinculada à história desta necessidade ou é história isolada?"
   },
   {
     "objectID": "requisitos-contratacao.html",

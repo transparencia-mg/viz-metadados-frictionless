@@ -19,9 +19,10 @@ Valor está no uso, sendo assim, quanto mais fácil acessar os dados mais valor 
 ## Como
 
 Essa demanda visa:
-	- Permitir o download, com controle de versão, de conjuntos de dados como data packages zipados via botão na interface gráfica e URL dedicada.
+
+- Permitir o download, com controle de versão, de conjuntos de dados como data packages zipados via botão na interface gráfica e URL dedicada.
 	
-	- Permitir a leitura direta, com controle de versão, de conjuntos de dados do CKAN com as ferramentas frictionless (Python, R, JS):
+- Permitir a leitura direta, com controle de versão, de conjuntos de dados do CKAN com as ferramentas frictionless (Python, R, JS):
 	
 
 ## Histórias de usuário:

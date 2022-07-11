@@ -2,7 +2,7 @@ name: Render and deploy static website
 
 on:
   push:
-    branches: build-users-history
+    branches: main
 
 jobs:
   build-deploy:

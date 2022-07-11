@@ -20,7 +20,12 @@ O CKAN armazena o arquivo `datapackage.json` como um recurso adicional no conjun
 
 Não existe forma de importação do pacote de dados integral.
 
-Apesar da importância de um fluxo de importação programático que permita a automatização da criação, validação e catalogação, as oficinas piloto com as organizações publicadoras de dados têm demonstrado a importância de um fluxo de importação manual via interface gráfica para usuários iniciantes e/ou não técnicos. Portanto, faz sentido que seja ofertado para os publicadores uma experiência integrada. (Ver[^3] e [^4]).
+Apesar da importância de um fluxo de importação programático que permita a automatização da importação e atualização, as oficinas piloto com as organizações publicadoras de dados têm demonstrado a importância de um fluxo de importação manual via interface gráfica para usuários iniciantes e/ou não técnicos. Portanto, faz sentido que seja ofertado para os publicadores uma experiência integrada (Ver[^3] e [^4]):
+
+- GUI Desktop
+- GUI Web
+- CLI
+- Github Actions
 
 ## Como
 

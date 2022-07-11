@@ -26,7 +26,7 @@ No padrão de metadados _Frictionless Data_, o fornecimento de metadados legíve
 
 ## Como
 
-Essa demanda visa permitir a visualização em HTML da documentação do conjunto de dados realizada com o padrão de metadados [Frictionless Data](https://specs.frictionlessdata.io/).
+Essa demanda visa permitir a visualização web da documentação do conjunto de dados realizada com o padrão de metadados [Frictionless Data](https://specs.frictionlessdata.io/).
 Esta visualização deve ser disponibilizada tanto durante o processo de produção da documentação (publicadores de dados) quanto durante o utilização dos dados publicados (consumidores de dados).
 
 ## Histórias de usuário:
@@ -41,11 +41,11 @@ Esta visualização deve ser disponibilizada tanto durante o processo de produç
 
 - [História 55](): Como publicador de dados eu quero que a inserção de registros no [datastore]() ocorra com os tipos de dados corretos.
 
-- [História 56](): Como consumidor de dados eu quero ter acesso à página HTML com a mesma visualização amigável utilizada pelo publicador durante o processo de documentação, com símbolos, filtros e exemplos de todas as propriedades listadas no dicionário de dados construído.
+- [História 56](): Como consumidor de dados eu quero ter acesso à página web com a mesma visualização amigável utilizada pelo publicador durante o processo de documentação, com símbolos, filtros e exemplos de todas as propriedades listadas no dicionário de dados construído.
 
-- [História 57](): Como consumidor de dados eu quero visualização em página HTML todas as propriedades listadas no dicionário de dados de determinado recurso em formato de diagrama entidade relacionamento (ER).
+- [História 57](): Como consumidor de dados eu quero visualização em página web todas as propriedades listadas no dicionário de dados de determinado recurso em formato de diagrama entidade relacionamento (ER).
 
-- [História 58](): Como publicador de dados eu quero que a visualização amigável em página HTML seja integrada ao Pda via criação de extensão do CKAN.
+- [História 58](): Como publicador de dados eu quero que a visualização amigável em página web seja integrada ao Pda via criação de extensão do CKAN.
 
 ## Requisitos:
 

@@ -28,7 +28,12 @@ A interface gráfica do CKAN não exige que: haja um datapackage no padrão Fric
 
 ## Porque
 
+Apesar da importância de um fluxo de importação programático que permita a automatização da criação, validação e catalogação, as oficinas piloto com as organizações publicadoras de dados têm demonstrado a importância de um fluxo de importação manual via interface gráfica para usuários iniciantes e/ou não técnicos. Portanto, faz sentido que seja ofertado para os publicadores uma experiência integrada.
 
+GUI Desktop
+GUI Web
+CLI
+Github Actions
 
 ## Como
 
@@ -45,6 +50,7 @@ A interface gráfica do CKAN não exige que: haja um datapackage no padrão Fric
 
 ## Requisitos:
 
+- Oferecer uma interface Web GUI para a criação, validação e catalogação de um datapackage no CKAN.
 - Aplicação web deve ser agnóstica
 - Aplicação web deve interface amigável (vide exemplos)
 - Aplicação web deve interfacear com CKAN

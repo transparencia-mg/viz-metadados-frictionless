@@ -8,7 +8,8 @@ format:
 
 ## Contexto
 
-A visualização do dicionário de dados ([table schema](https://specs.frictionlessdata.io/table-schema/#language)) de recursos ([resources](https://specs.frictionlessdata.io/data-resource/#language)) no Pda atualmente é bastante limitada, conforme pode ser demonstrado na figura abaixo:
+A visualização dos metadados de um conjunto de dados no Pda atualmente é bastante limitada. 
+Um exemplo são os dicionários de dados ([table schema](https://specs.frictionlessdata.io/table-schema/#language)) de recursos ([resources](https://specs.frictionlessdata.io/data-resource/#language)), conforme pode ser demonstrado na figura abaixo:
 
 ![Dicionário de Dados [letters-vowel](https://homologa.cge.mg.gov.br/dataset/letters-vowel/resource/313f43f1-d375-41c4-9646-81508ae7451c) homologa em 07/07/2022](https://i.imgur.com/Khbeiy5.png)
 

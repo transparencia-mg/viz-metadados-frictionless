@@ -16,11 +16,11 @@ Atualmente, o CKAN não possui suporte nativo para a importação de pacotes de 
 
 O CKAN armazena o arquivo `datapackage.json` como um recurso adicional no conjunto de dados do CKAN [^2].
 
-Apesar da importância de um fluxo de importação programático que permita a automatização das publicações e atualizações, as oficinas piloto com os órgãos e entidades tem demonstrado a importância de um fluxo de importação manual via interface gráfica para usuários iniciantes e/ou não técnicos (Ver[^3] e [^4]).
-
 ## Porque
 
 Não existe forma de importação do pacote de dados integral.
+
+Apesar da importância de um fluxo de importação programático que permita a automatização da criação, validação e catalogação, as oficinas piloto com as organizações publicadoras de dados têm demonstrado a importância de um fluxo de importação manual via interface gráfica para usuários iniciantes e/ou não técnicos. Portanto, faz sentido que seja ofertado para os publicadores uma experiência integrada. (Ver[^3] e [^4]).
 
 ## Como
 
@@ -28,8 +28,8 @@ Não existe forma de importação do pacote de dados integral.
 
 ## Histórias de usuário:
 
--  [História 2.1](): Botão para importação de um data package no CKAN
--  [História 2.2](): Botão para atualização de um data package no CKAN
+-  [História 2.1](https://github.com/transparencia-mg/viz-metadados-frictionless/issues/19): Botão para importação de um data package no CKAN
+-  [História 2.2](https://github.com/transparencia-mg/viz-metadados-frictionless/issues/25): Botão para atualização de um data package no CKAN
 
 ## Requisitos:
 
